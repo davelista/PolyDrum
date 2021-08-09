@@ -1,0 +1,76 @@
+.btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 42px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: none;
+    font-weight: 500;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+/*Da modificare - BOTTONI CON NUMERI*/
+.btn--primary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: #FB5849;
+    line-height: 42px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.btn--primary:hover{
+    background: white;
+    color: #FB5849;
+    box-shadow: 0 20px 20px 0 rgba(255, 255, 255, 0.42);
+}
+
+.btn--primary:hover{
+    background: white;
+    color: #FB5849;
+    box-shadow: 0 20px 20px 0 rgba(255, 255, 255, 0.42);
+}
+/*Da modificare -> BOTTONI SOTTO AL DISPLAY*/
+.btn--secondary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    line-height: 42px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: none;
+    color: #FB5849;
+    font-weight: 500;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.btn--secondary:hover{
+    background: white;
+    color: #FB5849;
+    box-shadow: 0 20px 20px 0 rgba(255, 255, 255, 0.42);
+}

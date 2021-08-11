@@ -1,3 +1,20 @@
 .container{
-    /*width, height, background-color*/
+    width: 31px;
+    height: 31px;
+    background-color: #202020;
+    border: 2px solid #181818;
+    margin: 1px;
 }
+
+.container:hover{
+    cursor: pointer;
+}
+
+.active{
+    width: 31px;
+    height: 31px;
+    background-color: #35cac5;
+    border: 2px solid #181818;
+    margin: 1px;
+}
+

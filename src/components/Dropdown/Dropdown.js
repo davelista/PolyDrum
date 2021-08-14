@@ -22,16 +22,16 @@ const Dropdown = (props) => {
     return (
         <>
             <FormControl className={classes.formControl}>
-                <InputLabel id="demo-simple-select-label">Age</InputLabel>
+                <InputLabel id="demo-simple-select-label">First tempo</InputLabel>
                 <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
                     value={state}
                     onChange={handleChange}
                 >
-                    <MenuItem value={1}>First</MenuItem>
-                    <MenuItem value={2}>Second</MenuItem>
-                    <MenuItem value={3}>Third</MenuItem>
+                    <MenuItem value={1}>2/4</MenuItem>
+                    <MenuItem value={2}>3/4</MenuItem>
+                    <MenuItem value={3}>4/4</MenuItem>
                 </Select>
             </FormControl>
         </>

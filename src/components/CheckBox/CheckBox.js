@@ -16,9 +16,9 @@ const CheckBox = (props) => {
 
     const ColorCheckBox = withStyles({
         root: {
-            color: "red",
+            color: "#B388FF",
             '&$checked': {
-                color: "blue",
+                color: "#B388FF",
             },
         },
         checked: {},

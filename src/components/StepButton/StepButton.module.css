@@ -2,8 +2,9 @@
     width: 31px;
     height: 31px;
     background-color: #202020;
-    border: 2px solid #181818;
+    border: 2px solid #B388FF;
     margin: 1px;
+    border-radius: 7px;
 }
 
 .container:hover{
@@ -13,8 +14,9 @@
 .active{
     width: 31px;
     height: 31px;
-    background-color: #35cac5;
-    border: 2px solid #181818;
+    background-color: white;
+    border: 2px solid darkred;
     margin: 1px;
+    border-radius: 7px;
 }
 

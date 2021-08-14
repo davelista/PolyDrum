@@ -5,7 +5,8 @@ const useStyles = makeStyles((theme) => ({
     root: {
         '& .MuiTextField-root': {
             margin: theme.spacing(1),
-            width: '10ch',
+            width: '15ch',
+            /*Da modificare -> COLORI DA INSERIRE*/
         },
     },
 }));
@@ -17,12 +18,12 @@ const NumberControl = (props) => {
             <form className={classes.root} noValidate autoComplete="off">
                 <TextField
                     id="outlined-number"
-                    label="Tempo - bpm"
+                    label="Tempo (BPM)"
                     type="number"
                     InputLabelProps={{
                         shrink: true,
                     }}
-                    inputProps={{min: 0, style: { textAlign: 'center' }}}
+                    inputProps={{min: 1, style: { textAlign: 'center' }}}
                     variant="outlined"
                     defaultValue={80}
                 />

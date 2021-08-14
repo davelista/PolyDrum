@@ -12,13 +12,14 @@ const useStyles = makeStyles((theme) => ({
 
 const RoundSlider = withStyles({
     root: {
-        color: '#52af77',
+        color: 'black',
         height: 8,
     },
     thumb: {
         height: 24,
         width: 24,
         backgroundColor: '#fff',
+        // : '#B388FF',
         border: '2px solid currentColor',
         marginTop: -8,
         marginLeft: -12,

@@ -1,3 +1,3 @@
-import Drum from "./Drum";
+import Drumbit from "./Drumbit";
 
-export {Drum}
+export {Drumbit}

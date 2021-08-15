@@ -5,7 +5,7 @@ import {CheckBox, ControlSlider, Dropdown, NumberControl, SampleLine, StepButton
 function Drumbit(props) {
     return (
         <div className={styles.container}>
-            <CheckBox label={"Ciao"}/>
+            <CheckBox label={"Pippo"}/>
             <Dropdown/>
             <SampleLine/>
             <ControlSlider/>

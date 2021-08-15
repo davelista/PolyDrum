@@ -1,16 +1,11 @@
 
 import './App.css';
-import {CheckBox, ControlSlider, Dropdown, NumberControl, SampleLine, StepButton} from "./components";
+import {Drumbit} from "./view";
 
 function App() {
   return (
     <>
-      <CheckBox label={"Ciao"}/>
-      <Dropdown/>
-      <SampleLine/>
-      <ControlSlider/>
-      <StepButton/>
-        <NumberControl/>
+      <Drumbit/>
     </>
   );
 }

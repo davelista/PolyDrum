@@ -12,10 +12,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const NumberControl = (props) => {
+    const {tempo} = props /*NON CAMBIARE*/
     const classes = useStyles();
     return (
         <>
             <form className={classes.root} noValidate autoComplete="off">
+
                 <TextField
                     id="outlined-number"
                     label="Tempo (BPM)"
@@ -25,8 +27,11 @@ const NumberControl = (props) => {
                     }}
                     inputProps={{min: 1, style: { textAlign: 'center' }}}
                     variant="outlined"
-                    defaultValue={80}
+                    defaultValue={tempo.bpm}/*NON CAMBIARE*/
+                    onChange={(e) => tempo.setBpm(e.target.value)}/*NON CAMBIARE*/
+
                 />
+
             </form>
         </>
     );

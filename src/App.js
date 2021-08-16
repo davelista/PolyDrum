@@ -1,11 +1,14 @@
-
 import './App.css';
 import {Drumbit} from "./view";
+import { AppContext, useAppContext } from "./context/AppContext";
 
 function App() {
+    const appData = useAppContext();
   return (
     <>
-      <Drumbit/>
+        <AppContext.Provider value={appData}>
+            <Drumbit/>
+        </AppContext.Provider>
     </>
   );
 }

@@ -1,3 +1,8 @@
+# Usefull links
+* https://reactronica.com/
+* https://drumbit.app/
+
+
 # Getting Started
 
 Clone the repo with

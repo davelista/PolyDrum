@@ -1,3 +1,10 @@
+:root {
+  --firstColor: darkred;
+  --secondColor: #B388FF;
+  --thirdColor: white;
+  --fourthColor: black;
+}
+
 body {
   padding: 10%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

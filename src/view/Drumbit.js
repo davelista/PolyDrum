@@ -10,6 +10,7 @@ function Drumbit(props) {
         <div className={styles.container}>
 
             <CheckBox label={"Pippo"}/>
+
             <Dropdown/>
             <SampleLine/>
             <ControlSlider title={"Volume"} defaultValue={appData.volume.value} onChangeValue={appData.volume.setValue}/>

@@ -4,7 +4,7 @@ import SampleLine from "./SampleLine/SampleLine";
 import Dropdown from "./Dropdown/Dropdown";
 import CheckBox from "./CheckBox/CheckBox";
 import NumberControl from "./NumberControl/NumberControl";
-import Keyboard from "./Keyboard/Keyboard";
+import Drumpad from "./Drumpad/Drumpad";
 import Button from "./Button/Button"
 
-export {StepButton, ControlSlider, SampleLine, Dropdown, CheckBox, NumberControl, Keyboard, Button}
+export {StepButton, ControlSlider, SampleLine, Dropdown, CheckBox, NumberControl, Drumpad, Button}

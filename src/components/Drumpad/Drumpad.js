@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Song, Track, Instrument } from 'reactronica';
 
-const Keyboard = (props) => {
+const Drumpad = (props) => {
     const {tempo, play} = props;
     return(
         <>
@@ -12,4 +12,4 @@ const Keyboard = (props) => {
     );
 }
 
-export default Keyboard;
+export default Drumpad;

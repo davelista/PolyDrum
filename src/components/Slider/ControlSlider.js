@@ -44,14 +44,14 @@ const RoundSlider = withStyles({
 
 const ControlSlider = (props) => {
 
-    const {title, defaultValue, onChangeValue} = props;
+    const {title, defaultValue} = props;
     const classes = useStyles();
 
     return (
         <>
             <div className={classes.root}>
                 <Typography gutterBottom>{title}</Typography>
-                <RoundSlider valueLabelDisplay="auto" aria-label="pretto slider" defaultValue={defaultValue} min={1} max={100} step={1} onChange={(e, value) => onChangeValue(value)} />
+                <RoundSlider valueLabelDisplay="auto" aria-label="pretto slider" defaultValue={defaultValue} />
             </div>
         </>
     );

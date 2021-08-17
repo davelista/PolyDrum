@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import styles from "./Drumbit.module.css";
-import {CheckBox, ControlSlider, Dropdown, NumberControl, SampleLine, StepButton, Button} from "../components";
+import {CheckBox, ControlSlider, Dropdown, NumberControl, SampleLine, StepButton, Button, Drumpad} from "../components";
 import {AppContext} from "../context/AppContext";
 import {FaPlay} from "react-icons/all";
 
@@ -21,6 +21,7 @@ function Drumbit(props) {
             {console.log("ho cambiato il VOLUME in: ", appData.volume.value)}
             {/*NON ELIMINARE NUMBERCONTROL*/}
             <NumberControl tempo={appData.tempo} play={appData.play}/>
+            <Drumpad tempo={appData.tempo} volume={appData.volume} play={appData.play}/>
         </div>
     );
 }

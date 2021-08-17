@@ -13,6 +13,9 @@ export function useAppContext() {
               isPlay,
               setPlay
             },
+            rhythm: {
+
+            },
             tempo: {
                 bpm,
                 setBpm

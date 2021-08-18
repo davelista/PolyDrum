@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {FormControl, InputLabel, makeStyles, MenuItem, Select} from "@material-ui/core";
+import {AppContext} from "../../context/AppContext";
 
 const useStyles = makeStyles((theme) => ({
     formControl: {
@@ -12,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Dropdown = (props) => {
-
+    const appData = useContext(AppContext);
     const classes = useStyles();
     const [state, setState] = React.useState('');
 
@@ -29,11 +30,14 @@ const Dropdown = (props) => {
                     value={state}
                     onChange={handleChange}
                 >
-                    <MenuItem value={1}>2/4</MenuItem>
-                    <MenuItem value={2}>3/4</MenuItem>
-                    <MenuItem value={3}>4/4</MenuItem>
+                    {appData.rhythmsList.map((x) => {
+                        return <MenuItem value={x.n} onClick={() => appData.stepButtons.setNumStepButton(x.n)}>{x.value}</MenuItem>
+
+                    })}
+
                 </Select>
             </FormControl>
+            {console.log("il numero di stepbutton è: ", appData.stepButtons.numStepButtons)}
         </>
     );
 }

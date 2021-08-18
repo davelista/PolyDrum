@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Clap",
+    "dir": "claps"
+  },
+  {
+    "name": "Kick",
+    "dir": "kicks"
+  },
+  {
+    "name": "Open Hats",
+    "dir": "open-hats"
+  }
+]

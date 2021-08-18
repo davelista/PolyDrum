@@ -21,7 +21,7 @@ function Drumbit(props) {
             {console.log("ho cambiato il VOLUME in: ", appData.volume.value)}
             {/*NON ELIMINARE NUMBERCONTROL*/}
             <NumberControl tempo={appData.tempo} play={appData.play}/>
-            <Drumpad tempo={appData.tempo} volume={appData.volume} play={appData.play}/>
+            <Drumpad tempo={appData.tempo} volume={appData.volume} play={appData.play} numberStepButton={appData.stepButtons.numStepButtons} samplesList={appData.samplesList}/>
         </div>
     );
 }

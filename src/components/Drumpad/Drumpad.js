@@ -5,7 +5,7 @@ import {StepButton} from "../index";
 
 const generatePad = (length) => {
     let pad = [];
-    for (let i = 1; i <= length; i++) {
+    for (let i = 0; i < length; i++) {
         pad.push(<StepButton id={i} key={i} />);
     }
     return pad;

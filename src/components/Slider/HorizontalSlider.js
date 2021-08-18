@@ -41,7 +41,7 @@ const RoundSlider = withStyles({
 })(Slider);
 
 
-const ControlSlider = (props) => {
+const HorizontalSlider = (props) => {
 
     const {title, defaultValue, onChangeValue} = props;
     const classes = useStyles();
@@ -56,40 +56,5 @@ const ControlSlider = (props) => {
     );
 }
 
-export default ControlSlider;
+export default HorizontalSlider;
 
-/*
-export default function VerticalSlider() {
-    const classes = useStyles();
-
-    return (
-        <React.Fragment>
-            <Typography id="vertical-slider" gutterBottom>
-                Temperature
-            </Typography>
-            <div className={classes.root}>
-                <Slider
-                    orientation="vertical"
-                    getAriaValueText={Pinguini}
-                    defaultValue={30}
-                    aria-labelledby="vertical-slider"
-                />
-                <Slider
-                    disabled
-                    orientation="vertical"
-                    getAriaValueText={valuetext}
-                    defaultValue={30}
-                    aria-labelledby="vertical-slider"
-                />
-                <Slider
-                    orientation="vertical"
-                    defaultValue={[20, 37]}
-                    aria-labelledby="vertical-slider"
-                    getAriaValueText={valuetext}
-                    marks={marks}
-                />
-            </div>
-        </React.Fragment>
-    );
-}
-*/

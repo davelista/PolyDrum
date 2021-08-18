@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import styles from "./Drumbit.module.css";
-import {CheckBox, ControlSlider, Dropdown, NumberControl, SampleLine, StepButton, Button, Drumpad} from "../components";
+import {CheckBox, HorizontalSlider, Dropdown, NumberControl, SampleLine, StepButton, Button, Drumpad, VerticalSlider} from "../components";
 import {AppContext} from "../context/AppContext";
 import {FaPlay} from "react-icons/all";
 
@@ -13,7 +13,8 @@ function Drumbit(props) {
 
             <Dropdown/>
             <SampleLine/>
-            <ControlSlider title={"Volume"} defaultValue={appData.volume.value} onChangeValue={appData.volume.setValue}/>
+            <HorizontalSlider title={"Volume"} defaultValue={appData.volume.value} onChangeValue={appData.volume.setValue}/>
+            <VerticalSlider title={"Volume"} defaultValue={appData.volume.value} onChangeValue={appData.volume.setValue}/>
             <StepButton/>
             <Button onClick={() => appData.play.setPlay(!appData.play.isPlay)} ><FaPlay/> </Button>
             {console.log("play è: ", appData.play.isPlay)}

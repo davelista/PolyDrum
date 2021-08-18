@@ -33,14 +33,13 @@ const marks = [
 ];
 
 export default function VerticalSlider(props) {
-    const classes = useStyles();
     const {title, defaultValue, onChangeValue} = props;
     return (
         <React.Fragment>
             <Typography id="vertical-slider" gutterBottom>
                 {title}
             </Typography>
-            <div className={classes.root}>
+            <div style={{height:"300px"}}>
                 <Slider
                     orientation="vertical"
                     getAriaValueText={valuetext}

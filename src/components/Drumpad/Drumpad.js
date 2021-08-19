@@ -3,10 +3,10 @@ import styles from './Drumpad.module.css';
 import { Song, Track, Instrument } from 'reactronica';
 import {StepButton} from "../index";
 
-const generatePad = (length) => {
+const generatePad = (length, rhythm) => {
     let pad = [];
     for (let i = 0; i < length; i++) {
-        pad.push(<StepButton id={i} key={i} />);
+        pad.push(<StepButton id={i} key={i} rhythm={i} />);
     }
     return pad;
 

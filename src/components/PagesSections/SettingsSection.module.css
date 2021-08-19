@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-right: 100px black;
+    background: antiquewhite;
+    padding: 1rem 3rem;
+    width: 30%;
+}
+
+/* slider part*/
+.sliders {
+    height: 15rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: #61dafb;
+}

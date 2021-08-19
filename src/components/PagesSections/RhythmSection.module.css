@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: #B388FF;
+    padding: 1rem 2rem;
+
+}
+/* drumpad section */
+.drumpad {
+    height: 50%;
+    width: 80%;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: darkred;
+
+}
+
+.display{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 80%;
+}

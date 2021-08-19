@@ -10,6 +10,12 @@ export function useAppContext() {
     const [value, setValue] = useState(50);
     const [rhythmValue, setRhythm] = useState(null);
     const [numStepButtons, setNumStepButton] = useState(null);
+    const rhythms = {
+        0: {
+
+        }
+
+    }
 
     return useMemo(
         () => ({

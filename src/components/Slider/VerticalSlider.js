@@ -2,33 +2,35 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
+import Grid from "@material-ui/core/Grid";
+import {VolumeDown} from "@material-ui/icons";
+import VolumeUp from '@material-ui/icons/VolumeUp';
 
 const useStyles = makeStyles({
     root: {
-        height: 300,
+        height: 100,
     },
 });
 
 function valuetext(value) {
-    return `${value}°C`;
+    return `${value}`;
 }
 
 const marks = [
     {
         value: 0,
-        label: '0',
     },
     {
-        value: 20,
-        label: '20°C',
+        value: 25,
     },
     {
-        value: 37,
-        label: '37°C',
+        value: 50,
+    },
+    {
+        value: 75,
     },
     {
         value: 100,
-        label: '100°C',
     },
 ];
 
@@ -39,7 +41,10 @@ export default function VerticalSlider(props) {
             <Typography id="vertical-slider" gutterBottom>
                 {title}
             </Typography>
-            <div style={{height:"300px"}}>
+            <Grid item>
+                <VolumeUp/>
+            </Grid>
+            <div style={{height:"100px"}}>
                 <Slider
                     orientation="vertical"
                     getAriaValueText={valuetext}

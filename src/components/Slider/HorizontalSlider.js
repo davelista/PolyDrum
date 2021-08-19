@@ -1,5 +1,9 @@
 import React from 'react';
 import {makeStyles, Slider, Typography, withStyles} from "@material-ui/core";
+import Grid from "@material-ui/core/Grid";
+import {VolumeDown} from "@material-ui/icons";
+import VolumeUp from '@material-ui/icons/VolumeUp';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -49,7 +53,11 @@ const HorizontalSlider = (props) => {
     return (
         <>
             <div className={classes.root}>
-                <Typography gutterBottom>{title}</Typography>
+                <Typography gutterBottom>{title}
+                    <Grid item>
+                        <VolumeUp/>
+                    </Grid>
+                </Typography>
                 <RoundSlider valueLabelDisplay="auto" aria-label="pretto slider" defaultValue={defaultValue} min={1} max={100} step={1} onChange={(e, value) => onChangeValue(value)} />
             </div>
         </>

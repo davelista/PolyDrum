@@ -30,12 +30,13 @@ const NumberControl = (props) => {
                     label="Tempo (BPM)"
                     type="number"
                     variant="outlined"
+                    color="secondary"
 
                     InputLabelProps={{
                         shrink: true,
 
                     }}
-                    inputProps={{min: 1, style: { textAlign: 'center', color:"red", background:"yellow", border:"3px solid yellowgreen"}}}
+                    inputProps={{min: 1, style: { textAlign: 'center', color:"black", background:"white", border:"3px solid darkred"}}}
 
                     defaultValue={tempo.bpm}/*NON CAMBIARE*/
                     onChange={(e) => tempo.setBpm(e.target.value)}/*NON CAMBIARE*/

@@ -1,14 +1,49 @@
 .container {
     display: flex;
+    flex-direction: row;
+    background: #efefef;
+    border: 10rem black;
+}
+/* left side with volume etc*/
+.firstSection {
+    height: 40rem;
+    width: 25rem;
+    display: flex;
     flex-direction: column;
-    background: #efefef
+    justify-content: space-around;
+    align-items: center;
+    border-right: 100px black;
+    background: antiquewhite;
 }
 
-.firstSection {
-    height: 5rem;
+/* slider part*/
+.secondSection {
+    height: 15rem;
+    width: 20rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    background: gray;
+    background: #61dafb;
+}
+
+/* right side (display and then drumpad */
+.thirdSection {
+    height: 40rem;
+    width: 45rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: #B388FF;
+}
+/* drumpad section */
+.fourthSection {
+    height: 30rem;
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: darkred;
 }

@@ -14,7 +14,7 @@ const RhythmSection = (props) => {
             {/*FOURTH SECTION --> DRUMPAD */}
             <div className={styles.drumpad}>
                 <CheckBox label={"Drumpad"}/>
-                <Drumpad tempo={tempo} volume={volume} play={play} numberStepButton={stepButtons.numStepButtons} samplesList={samplesList}/>
+                <Drumpad tempo={tempo} volume={volume} play={play} numberStepButton={stepButtons.numStepButtons} samplesList={samplesList} />
             </div>
 
         </div>

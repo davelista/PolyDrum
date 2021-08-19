@@ -8,10 +8,9 @@
     "dir": "808"
   },
   {
-  "name": "Snare",
-  "dir": "snare"
+    "name": "Snare",
+    "dir": "snare"
   },
-
   {
     "name": "Clap",
     "dir": "claps"

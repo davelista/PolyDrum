@@ -22,7 +22,17 @@ const Drumpad = (props) => {
                 </Song>*/}
 
                     {samplesList.map((x) => {
-                        return <div className={styles.line}>{x.name} {generatePad(numberStepButton)}</div>
+                        return <>
+                            <div className={styles.line}>
+                                <div className={styles.title}>
+                                    {x.name}
+                                </div>
+                                <div className={styles.stepButton}>
+                                    {generatePad(numberStepButton)}
+                                </div>
+
+                            </div>
+                        </>
                     })}
 
             </div>

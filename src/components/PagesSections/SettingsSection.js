@@ -4,7 +4,7 @@ import {Button, CheckBox, Dropdown, HorizontalSlider, NumberControl, VerticalSli
 import {FaPlay} from "react-icons/all";
 
 const SettingsSection = (props) => {
-    const {volume, play, tempo} = props;
+    const {volume, play, tempo, samplesList} = props;
 
     return (
         <>
@@ -20,7 +20,17 @@ const SettingsSection = (props) => {
                 <Dropdown/>
 
                 <div className={styles.sliders} >
-                    <VerticalSlider title={"Volume"} defaultValue={volume.value} onChangeValue={volume.setValue}/>
+                    {samplesList.map((x, i) => { /*Guarda la funzione .filter */
+                        return <>
+                            <VerticalSlider title={x.name} defaultValue={volume.value} onChangeValue={volume.setValue}/>
+                        </>
+                    })}
+                    <br/>
+                    {/*samplesList.map((x, i) => {
+                        return <>
+                            <VerticalSlider title={x.name} defaultValue={volume.value} onChangeValue={volume.setValue}/>
+                        </>
+                    })*/}
                 </div>
             </div>
         </>

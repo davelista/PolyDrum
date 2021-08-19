@@ -15,6 +15,7 @@
     padding: 3rem;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     background: #61dafb;

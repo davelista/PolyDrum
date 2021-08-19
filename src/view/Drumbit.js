@@ -14,7 +14,7 @@ function Drumbit(props) {
         <div className={styles.container}>
 
             {/*FIRST SECTION --> AUX AND BUTTONS*/}
-            <SettingsSection volume={appData.volume} tempo={appData.tempo} play={appData.play}/>
+            <SettingsSection volume={appData.volume} tempo={appData.tempo} play={appData.play} samplesList={appData.samplesList}/>
             {/*THIRD SECTION ON THE RIGHT */}
             <RhythmSection tempo={appData.tempo} volume={appData.volume} play={appData.play} stepButtons={appData.stepButtons} samplesList={appData.samplesList}/>
 

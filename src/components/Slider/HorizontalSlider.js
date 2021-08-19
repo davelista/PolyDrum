@@ -18,6 +18,8 @@ const RoundSlider = withStyles({
     root: {
         color: 'black',
         height: 8,
+        display: 'flex',
+        flexDirection: 'row'
     },
     thumb: {
         height: 24,

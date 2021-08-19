@@ -2,7 +2,7 @@
     display: flex;
     width: 70%;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background: #B388FF;
     padding: 1rem 2rem;

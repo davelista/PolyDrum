@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
 import Grid from "@material-ui/core/Grid";
-import {VolumeDown} from "@material-ui/icons";
 import VolumeUp from '@material-ui/icons/VolumeUp';
 
 const useStyles = makeStyles({
@@ -34,16 +33,19 @@ const marks = [
     },
 ];
 
-export default function VerticalSlider(props) {
+const VerticalSlider = (props) => {
     const {title, defaultValue, onChangeValue} = props;
+    const classes = useStyles();
     return (
-        <React.Fragment>
+        <>
+            <div className={classes.root}>
+
             <Typography id="vertical-slider" gutterBottom>
                 {title}
             </Typography>
-            <Grid item>
+            {/* ICONA <Grid item>
                 <VolumeUp/>
-            </Grid>
+            </Grid>*/}
             <div style={{height:"100px"}}>
                 <Slider
                     orientation="vertical"
@@ -54,6 +56,8 @@ export default function VerticalSlider(props) {
                     onChange={(e, value) => onChangeValue(value)}
                 />
             </div>
-        </React.Fragment>
+            </div>
+        </>
     );
 }
+export default VerticalSlider

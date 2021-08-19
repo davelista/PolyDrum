@@ -1,14 +1,31 @@
 [
   {
-    "name": "Clap",
-    "dir": "claps"
-  },
-  {
     "name": "Kick",
     "dir": "kicks"
   },
   {
+    "name": "808",
+    "dir": "808"
+  },
+  {
+  "name": "Snare",
+  "dir": "snare"
+  },
+
+  {
+    "name": "Clap",
+    "dir": "claps"
+  },
+  {
     "name": "Open Hats",
     "dir": "open-hats"
+  },
+  {
+    "name": "Hi-hats",
+    "dir": "hi-hats"
+  },
+  {
+    "name": "Percs",
+    "dir": "perc"
   }
 ]

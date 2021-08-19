@@ -54,10 +54,10 @@ const HorizontalSlider = (props) => {
         <>
             <div className={classes.root}>
                 <Typography gutterBottom>{title}
-                    <Grid item>
-                        <VolumeUp/>
-                    </Grid>
                 </Typography>
+                <Grid item>
+                    <VolumeUp />
+                </Grid>
                 <RoundSlider valueLabelDisplay="auto" aria-label="pretto slider" defaultValue={defaultValue} min={1} max={100} step={1} onChange={(e, value) => onChangeValue(value)} />
             </div>
         </>

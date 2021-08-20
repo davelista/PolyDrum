@@ -1,31 +1,33 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import styles from "./SettingsSection.module.css";
 import {Button, CheckBox, Dropdown, HorizontalSlider, NumberControl, VerticalSlider} from "../index";
 import {FaPlay,HiVolumeUp, HiVolumeOff} from "react-icons/all";
+import {AppContext} from "../../context/AppContext";
 
 const SettingsSection = (props) => {
-    const {volume, play, tempo, samplesList} = props;
+    const appData = useContext(AppContext);
 
     return (
         <>
             <div className={styles.container}>
-                <HorizontalSlider title={"Volume"} defaultValue={50} icon={!volume.mute ? <HiVolumeUp /> : <HiVolumeOff />}
-                                  volumeValue={volume.value}
-                                  onChangeValue={volume.setValue}
-                                  mute={volume.mute}
-                                  onChangeMute={volume.setMute}/>
-                <Button onClick={() => play.setPlay(!play.isPlay)} ><FaPlay/> </Button>
-                {console.log("play è: ", play.isPlay)}
-                {console.log("ho cambiato il TEMPO in: ", tempo.bpm)}
-                {console.log("ho cambiato il VOLUME in: ", volume.value)}
+                <HorizontalSlider title={"Volume"} defaultValue={50} icon={!appData.volume.mute ? <HiVolumeUp /> : <HiVolumeOff />}
+                                  volumeValue={appData.volume.value}
+                                  onChangeValue={appData.volume.setValue}
+                                  mute={appData.mute.value}
+                                  onChangeMute={appData.mute.setValue}/>
+                <Button onClick={() => appData.play.setValue(!appData.play.value)} ><FaPlay/> </Button>
+                {console.log("play è: ", appData.play.value)}
+                {console.log("ho cambiato la VELOCITA' in: ", appData.tempo.value)}
+                {console.log("ho cambiato il VOLUME in: ", appData.volume.value)}
+                {console.log("ho cambiato il TEMPO in: ", appData.timeSignature.value)}
                 {/*NON ELIMINARE NUMBERCONTROL*/}
-                <NumberControl tempo={tempo} play={play}/>
+                <NumberControl tempo={appData.tempo} play={appData.play}/>
                 <Dropdown/>
 
                 <div className={styles.sliders} >
-                    {samplesList.filter((vs,i) => i < 4).map((x, i) => {
+                    {appData.samplesList.filter((vs,i) => i < 4).map((x, i) => {
                         return <>
-                            <VerticalSlider title={x.name} defaultValue={volume.value} onChangeValue={volume.setValue}/>
+                            <VerticalSlider title={x.name} defaultValue={appData.volume.value} onChangeValue={appData.volume.setValue}/>
                         </>
                     })}
                     <br/>

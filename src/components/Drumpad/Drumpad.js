@@ -1,21 +1,17 @@
 import React, {useContext, useEffect, useState} from 'react';
 import styles from './Drumpad.module.css';
 import { Song, Track, Instrument } from 'reactronica';
-import {Button, StepButton} from "../index";
+import {Button, StepButton, StepButtonsList} from "../index";
 import {AppContext} from "../../context/AppContext";
 
-const generatePad = (length, idRhythm, instrument) => {
-    let array = [];
-    for (let i = 0; i < length; i++) {
-        array.push(<StepButton id={i} instrument={instrument} rhythm={idRhythm} />);
-    }
-    return array;
-}
+
 
 const Drumpad = (props) => {
     const appData = useContext(AppContext);
     const [numRhythm, setNumRhythm] = useState([0]);
     const [selectedRhythm, setSelectedRhythm] = useState(0);
+    const [stepButtonList, setStepButtonList] = useState([]); /*array da inserire nell'ogggetto json per salvare lo stato dei pads*/
+    const [instruments, setInstruments] = useState([]) /* array di strumenti con i relativi stati dei pads */
 
     return(
         <>
@@ -23,26 +19,28 @@ const Drumpad = (props) => {
                 {/*<Song bpm={appData.tempo.bpm} isPlaying={appData.play.isPlay} volume={appData.volume.value}>
 
                 </Song>*/}
+                {/*Inizio per i bottoni per i vari ritmi*/}
                 <div className={styles.rhythmButtons}>
                     {numRhythm.map((x) => {
                         return <Button onClick={() => setSelectedRhythm(x)}>{x}</Button>
                     })}
                     <Button onClick={() => setNumRhythm(numRhythm.concat(numRhythm.length))}> + </Button>
                 </div>
+                {/*FINE*/}
 
-                {appData.stepButtons.numStepButtons !== null ? appData.samplesList.map((x) => {
+                {/*Inizio per i vari ritmi*/}
+                {appData.stepButtons.value !== null ? appData.samplesList.map((x) => {
                     return <>
                         <div className={styles.line}>
                             <div className={styles.title}>
                                 {x.name}
                             </div>
                             <div className={styles.stepButton}>
-                                {generatePad(appData.stepButtons.numStepButtons, selectedRhythm, x.name)}
-
+                                <StepButtonsList instrument={x.name} />
                             </div>
-
                         </div>
                     </>
+
                 }) : null}
 
             </div>

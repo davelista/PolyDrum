@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import rhythmsList from '../rhythmsList.json'
+import timeSignaturesList from '../timeSignaturesList.json'
 import samplesList from '../samplesList.json'
 
 export const AppContext = React.createContext({});
@@ -7,47 +7,47 @@ export const AppContext = React.createContext({});
 export function useAppContext() {
     const [bpm, setBpm] = useState(80);
     const [isPlay, setPlay] = useState(false);
-    const [value, setValue] = useState(50);
+    const [volume, setVolume] = useState(50);
+    const [timeSignature, setTimeSignature] = useState(null);
     const [mute, setMute] = useState(false);
-    const [oldValue, setOldValue] = useState(0)
-    const [rhythmValue, setRhythm] = useState(null);
     const [numStepButtons, setNumStepButton] = useState(null);
     const [array, setArray] = useState([]); /*Salva le informazioni di un ritmo*/
 
     return useMemo(
         () => ({
-            rhythmsList,
+            timeSignaturesList,
             samplesList,
             play:{
-              isPlay,
-              setPlay
+              value: isPlay,
+              setValue: setPlay
             },
             stepButtons:{
-                numStepButtons,
-                setNumStepButton
+                value: numStepButtons,
+                setValue: setNumStepButton
             },
             userRhythms: {
                 array,
                 setArray
             },
-            rhythm: {
-                rhythmValue,
-                setRhythm
+            timeSignature: {
+                value: timeSignature,
+                setValue: setTimeSignature
             },
             tempo: {
-                bpm,
-                setBpm
+                value: bpm,
+                setValue: setBpm
             },
             volume: {
-                value,
-                setValue,
-                mute,
-                setMute,
-                oldValue,
+                value: volume,
+                setValue: setVolume,
+            },
+            mute: {
+                value: mute,
+                setValue: setMute
             }
         }),
-        [bpm, setBpm, isPlay, setPlay, value, setValue, mute, setMute,
-            oldValue, rhythmValue, setRhythm, numStepButtons, setNumStepButton,
+        [bpm, setBpm, isPlay, setPlay, volume, setVolume, mute, setMute,
+            timeSignature, setTimeSignature, numStepButtons, setNumStepButton,
             array, setArray]
     );
 }

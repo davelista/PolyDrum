@@ -9,5 +9,6 @@ import Button from "./Button/Button";
 import VerticalSlider from "./Slider/VerticalSlider";
 import SettingsSection from "./PagesSections/SettingsSection";
 import RhythmSection from "./PagesSections/RhythmSection";
+import StepButtonsList from "./Drumpad/StepButtonsList";
 
-export {StepButton, HorizontalSlider, SampleLine, Dropdown, CheckBox, NumberControl, Drumpad, Button, VerticalSlider,SettingsSection, RhythmSection}
+export {StepButton, HorizontalSlider, SampleLine, Dropdown, CheckBox, NumberControl, Drumpad, Button, VerticalSlider,SettingsSection, RhythmSection, StepButtonsList}

@@ -30,14 +30,17 @@ const Dropdown = (props) => {
                     value={state}
                     onChange={handleChange}
                 >
-                    {appData.rhythmsList.map((x) => {
-                        return <MenuItem value={x.n} onClick={() => appData.stepButtons.setNumStepButton(x.n)}>{x.value}</MenuItem>
+                    {appData.timeSignaturesList.map((x) => {
+                        return <MenuItem value={x.n} onClick={() => {
+                            appData.stepButtons.setValue(x.n);
+                            appData.timeSignature.setValue(x.value)
+                        }}>{x.value}</MenuItem>
 
                     })}
 
                 </Select>
             </FormControl>
-            {console.log("il numero di stepbutton è: ", appData.stepButtons.numStepButtons)}
+            {console.log("il numero di stepbutton è: ", appData.stepButtons.value)}
         </>
     );
 }

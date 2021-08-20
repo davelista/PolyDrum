@@ -26,5 +26,9 @@
   {
     "name": "Percs",
     "dir": "perc"
+  },
+  {
+    "name": "Vox",
+    "dir": "vox"
   }
 ]

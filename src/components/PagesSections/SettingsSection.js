@@ -20,18 +20,14 @@ const SettingsSection = (props) => {
                 <Dropdown/>
 
                 <div className={styles.sliders} >
-                    {samplesList.map((x, i) => { /*Guarda la funzione .filter */
+                    {samplesList.filter((vs,i) => i < 4).map((x, i) => {
                         return <>
                             <VerticalSlider title={x.name} defaultValue={volume.value} onChangeValue={volume.setValue}/>
                         </>
                     })}
                     <br/>
-                    {/*samplesList.map((x, i) => {
-                        return <>
-                            <VerticalSlider title={x.name} defaultValue={volume.value} onChangeValue={volume.setValue}/>
-                        </>
-                    })*/}
                 </div>
+
             </div>
         </>
     );

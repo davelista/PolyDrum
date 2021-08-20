@@ -3,10 +3,10 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border-right: 100px black;
-    background: antiquewhite;
+    border-right: 3px solid #B388FF;
     padding: 1rem 3rem;
     width: 30%;
+    background: linear-gradient(#3C3B3D, black);
 }
 
 /* slider part*/
@@ -14,9 +14,10 @@
     height: 15rem;
     padding: 3rem;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
     align-items: center;
-    background: #61dafb;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
 }

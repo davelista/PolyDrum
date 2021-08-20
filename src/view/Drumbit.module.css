@@ -2,5 +2,17 @@
     display: flex;
     flex-direction: row;
     background: #efefef;
-    border: 1px solid black;
+    min-height: 108px;
+    min-width: 192px;
+    border: 5px groove #515151;
+    background: linear-gradient(#3C3B3D, black);
+    border-radius: 5px;
+}
+
+.margin {
+    display: flex;
+    flex-direction: row;
+    background: darkred;
+    width: 50%;
+    height: 100%;
 }

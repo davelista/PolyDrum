@@ -8,6 +8,8 @@ import VolumeUp from '@material-ui/icons/VolumeUp';
 const useStyles = makeStyles({
     root: {
         height: 100,
+        color: "white",
+        columnFill: "white",
     },
 });
 

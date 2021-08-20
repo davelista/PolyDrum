@@ -5,7 +5,6 @@ import {
     SettingsSection, RhythmSection
 } from "../components";
 import {AppContext} from "../context/AppContext";
-import {FaPlay} from "react-icons/all";
 
 function Drumbit(props) {
     const appData = useContext(AppContext);
@@ -16,7 +15,7 @@ function Drumbit(props) {
             {/*FIRST SECTION --> AUX AND BUTTONS*/}
             <SettingsSection volume={appData.volume} tempo={appData.tempo} play={appData.play} samplesList={appData.samplesList}/>
             {/*THIRD SECTION ON THE RIGHT */}
-            <RhythmSection tempo={appData.tempo} volume={appData.volume} play={appData.play} stepButtons={appData.stepButtons} samplesList={appData.samplesList}/>
+            <RhythmSection />
 
             <SampleLine/>
 

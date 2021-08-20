@@ -3,7 +3,6 @@ import styles from "./RhythmSection.module.css";
 import {CheckBox, Drumpad} from "../index";
 
 const RhythmSection = (props) => {
-    const {tempo, volume, play, stepButtons, samplesList} = props;
     return (
         <>
             <div className={styles.container}>
@@ -14,7 +13,7 @@ const RhythmSection = (props) => {
             {/*FOURTH SECTION --> DRUMPAD */}
             <div className={styles.drumpad}>
                 <CheckBox label={"Drumpad"}/>
-                <Drumpad tempo={tempo} volume={volume} play={play} numberStepButton={stepButtons.numStepButtons} samplesList={samplesList} />
+                <Drumpad />
             </div>
 
         </div>

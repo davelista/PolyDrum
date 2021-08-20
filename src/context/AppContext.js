@@ -8,9 +8,11 @@ export function useAppContext() {
     const [bpm, setBpm] = useState(80);
     const [isPlay, setPlay] = useState(false);
     const [value, setValue] = useState(50);
+    const [mute, setMute] = useState(false);
+    const [oldValue, setOldValue] = useState(0)
     const [rhythmValue, setRhythm] = useState(null);
     const [numStepButtons, setNumStepButton] = useState(null);
-    const [item, addItem] = useState({}); /*Salva le informazioni di un ritmo*/
+    const [array, setArray] = useState([]); /*Salva le informazioni di un ritmo*/
 
     return useMemo(
         () => ({
@@ -24,9 +26,9 @@ export function useAppContext() {
                 numStepButtons,
                 setNumStepButton
             },
-            dbRhythms: {
-                item,
-                addItem
+            userRhythms: {
+                array,
+                setArray
             },
             rhythm: {
                 rhythmValue,
@@ -38,9 +40,14 @@ export function useAppContext() {
             },
             volume: {
                 value,
-                setValue
+                setValue,
+                mute,
+                setMute,
+                oldValue,
             }
         }),
-        [bpm, setBpm, isPlay, setPlay, value, setValue, rhythmValue, setRhythm, numStepButtons, setNumStepButton, item, addItem]
+        [bpm, setBpm, isPlay, setPlay, value, setValue, mute, setMute,
+            oldValue, rhythmValue, setRhythm, numStepButtons, setNumStepButton,
+            array, setArray]
     );
 }

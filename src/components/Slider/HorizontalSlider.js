@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 import {makeStyles, Slider, Typography, withStyles} from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 import {VolumeDown} from "@material-ui/icons";
@@ -46,11 +46,21 @@ const RoundSlider = withStyles({
     },
 })(Slider);
 
+const changeVolume = (mute, onChangeVolumeValue, defaultValue) => {
+    if(mute){
+        onChangeVolumeValue(0);
+    } else {
+        onChangeVolumeValue(defaultValue)
+    }
+}
 
 const HorizontalSlider = (props) => {
-
-    const {title, defaultValue, onChangeValue} = props;
+    const {title, defaultValue, volumeValue, onChangeValue, icon, mute, onChangeMute} = props;
     const classes = useStyles();
+
+    useEffect(() => {
+        changeVolume(mute, onChangeValue, defaultValue)
+    }, [mute]);
 
     return (
         <>
@@ -58,9 +68,12 @@ const HorizontalSlider = (props) => {
                 <Typography gutterBottom>{title}
                 </Typography>
                 <Grid item>
-                    <VolumeUp />
+                    <div onClick={() => {
+                        onChangeMute(!mute);
+                    }}>{icon}</div>
                 </Grid>
-                <RoundSlider valueLabelDisplay="auto" aria-label="pretto slider" defaultValue={defaultValue} min={1} max={100} step={1} onChange={(e, value) => onChangeValue(value)} />
+                <RoundSlider valueLabelDisplay="auto" aria-label="pretto slider" defaultValue={defaultValue} min={0} max={100} step={1} value={volumeValue} onChange={(e, value) => onChangeValue(value)} />
+
             </div>
         </>
     );

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from "./SettingsSection.module.css";
 import {Button, CheckBox, Dropdown, HorizontalSlider, NumberControl, VerticalSlider} from "../index";
-import {FaPlay} from "react-icons/all";
+import {FaPlay,HiVolumeUp, HiVolumeOff} from "react-icons/all";
 
 const SettingsSection = (props) => {
     const {volume, play, tempo, samplesList} = props;
@@ -9,8 +9,11 @@ const SettingsSection = (props) => {
     return (
         <>
             <div className={styles.container}>
-                <CheckBox label={"Mute"}/>
-                <HorizontalSlider title={"Volume"} defaultValue={volume.value} onChangeValue={volume.setValue}/>
+                <HorizontalSlider title={"Volume"} defaultValue={50} icon={!volume.mute ? <HiVolumeUp /> : <HiVolumeOff />}
+                                  volumeValue={volume.value}
+                                  onChangeValue={volume.setValue}
+                                  mute={volume.mute}
+                                  onChangeMute={volume.setMute}/>
                 <Button onClick={() => play.setPlay(!play.isPlay)} ><FaPlay/> </Button>
                 {console.log("play è: ", play.isPlay)}
                 {console.log("ho cambiato il TEMPO in: ", tempo.bpm)}

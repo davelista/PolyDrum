@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import styles from './StepButton.module.css'
 
 const StepButton = (props) => {
+    const {id, instrument, idRhythm} = props;
     const [active, setActive] = useState(false);
     const {children} = props
     return (

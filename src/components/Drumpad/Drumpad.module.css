@@ -18,3 +18,8 @@
 .title{
     width: 10%;
 }
+
+.rhythmButtons{
+    display: flex;
+    flex-direction: row;
+}

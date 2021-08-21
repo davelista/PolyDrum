@@ -6,6 +6,8 @@ const useStyles = makeStyles((theme) => ({
     formControl: {
         margin: theme.spacing(1),
         minWidth: 120,
+        color: "white",
+
     },
     selectEmpty: {
         marginTop: theme.spacing(2),
@@ -23,12 +25,13 @@ const Dropdown = (props) => {
     return (
         <>
             <FormControl className={classes.formControl}>
-                <InputLabel id="demo-simple-select-label">First tempo</InputLabel>
+                <InputLabel id="demo-simple-select-label">Time Signature</InputLabel>
                 <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
                     value={state}
                     onChange={handleChange}
+                    variant="filled"
                 >
                     {appData.timeSignaturesList.map((x) => {
                         return <MenuItem value={x.n} onClick={() => {

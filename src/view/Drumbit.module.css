@@ -8,11 +8,3 @@
     background: linear-gradient(#3C3B3D, black);
     border-radius: 5px;
 }
-
-.margin {
-    display: flex;
-    flex-direction: row;
-    background: darkred;
-    width: 50%;
-    height: 100%;
-}

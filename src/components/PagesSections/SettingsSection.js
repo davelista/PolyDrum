@@ -10,7 +10,7 @@ const SettingsSection = (props) => {
     return (
         <>
             <div className={styles.container}>
-                <HorizontalSlider title={"Volume"} defaultValue={50} icon={!appData.volume.mute ? <HiVolumeUp /> : <HiVolumeOff />}
+                <HorizontalSlider title={"Volume"} defaultValue={50} icon={!appData.mute.value ? <HiVolumeUp /> : <HiVolumeOff />}
                                   volumeValue={appData.volume.value}
                                   onChangeValue={appData.volume.setValue}
                                   mute={appData.mute.value}
@@ -24,13 +24,21 @@ const SettingsSection = (props) => {
                 <NumberControl tempo={appData.tempo} play={appData.play}/>
                 <Dropdown/>
 
-                <div className={styles.sliders} >
-                    {appData.samplesList.filter((vs,i) => i < 4).map((x, i) => {
+                <div className={styles.slidersContainer} >
+                    <div className={styles.section}>
+                    {appData.samplesList.filter((vs) => vs.id < 4).map((x, i) => {
                         return <>
                             <VerticalSlider title={x.name} defaultValue={appData.volume.value} onChangeValue={appData.volume.setValue}/>
                         </>
                     })}
-                    <br/>
+                </div>
+                    <div className={styles.section}>
+                    {appData.samplesList.filter((vs) => vs.id > 3).map((x, i) => {
+                        return <>
+                            <VerticalSlider title={x.name} defaultValue={appData.volume.value} onChangeValue={appData.volume.setValue}/>
+                        </>
+                    })}
+                </div>
                 </div>
 
             </div>

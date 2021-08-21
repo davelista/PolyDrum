@@ -1,6 +1,6 @@
 .container{
-    width: 31px;
-    height: 31px;
+    width: 2rem;
+    height: 2rem;
     background-color: #202020;
     border: 2px solid #B388FF;
     margin: 1px;
@@ -12,8 +12,8 @@
 }
 
 .active{
-    width: 31px;
-    height: 31px;
+    width: 2rem;
+    height: 2rem;
     background-color: white;
     border: 2px solid var(--secondColor);
     margin: 1px;

@@ -43,7 +43,7 @@ const Drumpad = (props) => {
                 {addItemToObj(appData.rhythm.number, appData.userRhythms, appData.timeSignature)}
                 {console.log("I RITMI DELL'UTENTE SONO: ", appData.userRhythms.data)}
                 {/*Inizio per i vari ritmi*/}
-                {appData.stepButtons.value !== null ? appData.samplesList.map((x) => {
+                {appData.samplesList.map((x) => {
                     return <>
                         <div className={styles.line}>
                             <div className={styles.title}>
@@ -55,7 +55,7 @@ const Drumpad = (props) => {
                         </div>
                     </>
 
-                }) : null}
+                })}
 
             </div>
 

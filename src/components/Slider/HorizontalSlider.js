@@ -72,7 +72,9 @@ const HorizontalSlider = (props) => {
                         onChangeMute(!mute);
                     }}>{icon}</div>
                 </Grid>
-                <RoundSlider valueLabelDisplay="auto" aria-label="pretto slider" defaultValue={defaultValue} min={0} max={100} step={1} value={volumeValue} onChange={(e, value) => onChangeValue(value)} />
+                <RoundSlider valueLabelDisplay="auto" aria-label="pretto slider"
+                             defaultValue={defaultValue} min={0} max={100} step={1}
+                             value={volumeValue} onChange={(e, value) => onChangeValue(value)} />
 
             </div>
         </>

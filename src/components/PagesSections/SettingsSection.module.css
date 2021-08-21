@@ -30,3 +30,8 @@
     width: 100%;
     margin-bottom: 1rem;
 }
+
+.rhythmButtons{
+    display: flex;
+    flex-direction: row;
+}

@@ -22,9 +22,6 @@ const addItemToObj = (selectedRhythm, userRhythms, timeSignature) => {
 
 const Drumpad = (props) => {
     const appData = useContext(AppContext);
-    const [numRhythm, setNumRhythm] = useState([0]);
-
-
 
     return(
         <>
@@ -32,15 +29,8 @@ const Drumpad = (props) => {
                 {/*<Song bpm={appData.tempo.bpm} isPlaying={appData.play.isPlay} volume={appData.volume.value}>
 
                 </Song>*/}
-                {/*Inizio per i bottoni per i vari ritmi*/}
-                <div className={styles.rhythmButtons}>
-                    {numRhythm.map((x) => {
-                        return <Button onClick={() => appData.rhythm.setNumber(x)}>{x}</Button>
-                    })}
-                    <Button onClick={() => setNumRhythm(numRhythm.concat(numRhythm.length))}> + </Button>
-                </div>
-                {/*FINE*/}
-                {addItemToObj(appData.rhythm.number, appData.userRhythms, appData.timeSignature)}
+
+                {addItemToObj(appData.selectedRhythm.number, appData.userRhythms, appData.timeSignature)}
                 {console.log("I RITMI DELL'UTENTE SONO: ", appData.userRhythms.data)}
                 {/*Inizio per i vari ritmi*/}
                 {appData.samplesList.map((x) => {
@@ -50,7 +40,7 @@ const Drumpad = (props) => {
                                 {x.name}
                             </div>
                             <div className={styles.stepButton}>
-                                <StepButtonsList idInstrument={x.id} instrument={x.name} idRhythm={appData.rhythm.number} />
+                                <StepButtonsList idInstrument={x.id} instrument={x.name} idRhythm={appData.selectedRhythm.number} />
                             </div>
                         </div>
                     </>

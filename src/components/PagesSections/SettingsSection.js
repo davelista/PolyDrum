@@ -22,6 +22,14 @@ const SettingsSection = (props) => {
                 {console.log("ho cambiato il TEMPO in: ", appData.timeSignature.value)}
                 {/*NON ELIMINARE NUMBERCONTROL*/}
                 <NumberControl tempo={appData.tempo} play={appData.play}/>
+                {/*Inizio per i bottoni per i vari ritmi*/}
+                <div className={styles.rhythmButtons}>
+                    {appData.rhythmsList.item.map((x) => {
+                        return <Button onClick={() => appData.selectedRhythm.setNumber(x)}>{x}</Button>
+                    })}
+                    <Button onClick={() => appData.rhythmsList.setItem(appData.rhythmsList.item.concat(appData.rhythmsList.item.length))}> + </Button>
+                </div>
+                {/*FINE*/}
                 <Dropdown/>
 
                 <div className={styles.slidersContainer} >

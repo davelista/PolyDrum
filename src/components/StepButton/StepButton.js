@@ -1,13 +1,17 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from './StepButton.module.css'
+import produce from "immer"
 
 const StepButton = (props) => {
-    const {id, instrument, idRhythm} = props;
-    const [active, setActive] = useState(false);
+    const {id, idInstrument, idRhythm, userRhythms, active} = props;
     const {children} = props
+
     return (
         <>
-            <div className={active ? styles.active : styles.container} onClick={() => setActive(!active)}>
+            <div className={active ? styles.active : styles.container}
+                 onClick={() => {userRhythms.setData(produce(userRhythms.data, draft => { /*Cambia lo stato dello stepButton all'interno del JSON*/
+                     draft[idRhythm].instruments[idInstrument].pad[id] = !active;
+                 }))}}>
                 {children}
             </div>
 

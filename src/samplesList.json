@@ -1,33 +1,41 @@
 [
   {
+    "id": 0,
     "name": "Kick",
     "dir": "kicks"
   },
   {
+    "id": 1,
     "name": "808",
     "dir": "808"
   },
   {
+    "id": 2,
     "name": "Snare",
     "dir": "snare"
   },
   {
+    "id": 3,
     "name": "Clap",
     "dir": "claps"
   },
   {
+    "id": 4,
     "name": "Open Hats",
     "dir": "open-hats"
   },
   {
+    "id": 5,
     "name": "Hi-hats",
     "dir": "hi-hats"
   },
   {
+    "id": 6,
     "name": "Percs",
     "dir": "perc"
   },
   {
+    "id": 7,
     "name": "Vox",
     "dir": "vox"
   }

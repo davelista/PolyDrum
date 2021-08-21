@@ -12,6 +12,7 @@ export function useAppContext() {
     const [mute, setMute] = useState(false);
     const [numStepButtons, setNumStepButton] = useState(null);
     const [array, setArray] = useState([]); /*Salva le informazioni di un ritmo*/
+    const [selectedRhythm, setSelectedRhythm] = useState(0);
 
     return useMemo(
         () => ({
@@ -25,9 +26,14 @@ export function useAppContext() {
                 value: numStepButtons,
                 setValue: setNumStepButton
             },
+            rhythm: {
+                number: selectedRhythm,
+                setNumber: setSelectedRhythm
+
+            },
             userRhythms: {
-                array,
-                setArray
+                data: array,
+                setData: setArray
             },
             timeSignature: {
                 value: timeSignature,

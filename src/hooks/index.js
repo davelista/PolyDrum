@@ -1,3 +1,3 @@
-import useItemInstrument from "./useItemInstrument";
+import useSelectedRhythm from "./useSelectedRhythm";
 
-export {useItemInstrument}
+export {useSelectedRhythm}

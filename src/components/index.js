@@ -11,6 +11,7 @@ import SettingsSection from "./PagesSections/SettingsSection/SettingsSection";
 import RhythmSection from "./PagesSections/RhythmSection/RhythmSection";
 import StepButtonsList from "./PagesSections/RhythmSection/Drumpad/StepButtonsList";
 import ButtonsList from "./PagesSections/SettingsSection/ButtonsList";
+import SlidersContainer from "./PagesSections/SettingsSection/SlidersContainer";
 
 export {StepButton, HorizontalSlider, SampleLine, Dropdown, CheckBox,
-    NumberControl, Drumpad, Button, VerticalSlider,SettingsSection, RhythmSection, StepButtonsList, ButtonsList}
+    NumberControl, Drumpad, Button, VerticalSlider,SettingsSection, RhythmSection, StepButtonsList, ButtonsList, SlidersContainer}

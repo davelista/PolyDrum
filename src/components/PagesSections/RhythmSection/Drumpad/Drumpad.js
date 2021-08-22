@@ -3,25 +3,25 @@ import styles from './Drumpad.module.css';
 import { Song, Track, Instrument } from 'reactronica';
 import {Button, StepButton, StepButtonsList} from "../../../index";
 import {AppContext} from "../../../../context/AppContext";
+import produce from "immer";
 
-const addItemToObj = (selectedRhythm, userRhythms, timeSignature) => {
-
-    if(userRhythms.data[selectedRhythm] === undefined) {
-        let item = {
-            timeSignature : timeSignature.value,
-            instruments: []
-        }
-        userRhythms.data[selectedRhythm] = item;
-    } else {
-        if(timeSignature.value !== userRhythms.data[selectedRhythm].timeSignature){
-            userRhythms.data[selectedRhythm].timeSignature = timeSignature.value
+const updateItemObj = (idRhythm, userRhythms, timeSignature) => {
+    if(userRhythms.data[idRhythm] !== undefined) {
+        if (timeSignature !== userRhythms.data[idRhythm].timeSignature) { /*Se non c'è il ritmo*/
+            /*produce(userRhythms.data, draft => { /!*Cambia lo stato del timeSignature all'interno del JSON*!/
+                draft[idRhythm].timeSignature = timeSignature
+            })*/
+            userRhythms.data[idRhythm].timeSignature = timeSignature;
         }
     }
-
 }
 
 const Drumpad = (props) => {
     const appData = useContext(AppContext);
+
+   useEffect(() => {
+           updateItemObj(appData.selectedRhythm.number, appData.userRhythms, appData.timeSignature.value)
+    }, [appData.selectedRhythm.number, appData.timeSignature.value])
 
     return(
         <>
@@ -29,9 +29,8 @@ const Drumpad = (props) => {
                 {/*<Song bpm={appData.tempo.bpm} isPlaying={appData.play.isPlay} volume={appData.volume.value}>
 
                 </Song>*/}
+                {updateItemObj(appData.selectedRhythm.number, appData.userRhythms, appData.timeSignature.value)}
 
-                {addItemToObj(appData.selectedRhythm.number, appData.userRhythms, appData.timeSignature)}
-                {console.log("I RITMI DELL'UTENTE SONO: ", appData.userRhythms.data)}
                 {/*Inizio per i vari ritmi*/}
                 {appData.samplesList.map((x) => {
                     return <>
@@ -48,8 +47,9 @@ const Drumpad = (props) => {
                 })}
 
             </div>
-
+            {console.log("I RITMI DELL'UTENTE SONO: ", appData.userRhythms.data)}
         </>
+
     );
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./RhythmSection.module.css";
-import {CheckBox, Drumpad} from "../index";
+import {CheckBox, Drumpad} from "../../index";
 
 const RhythmSection = (props) => {
     return (

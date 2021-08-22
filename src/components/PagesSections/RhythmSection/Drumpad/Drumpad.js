@@ -1,8 +1,8 @@
 import React, {useContext, useEffect, useState} from 'react';
 import styles from './Drumpad.module.css';
 import { Song, Track, Instrument } from 'reactronica';
-import {Button, StepButton, StepButtonsList} from "../index";
-import {AppContext} from "../../context/AppContext";
+import {Button, StepButton, StepButtonsList} from "../../../index";
+import {AppContext} from "../../../../context/AppContext";
 
 const addItemToObj = (selectedRhythm, userRhythms, timeSignature) => {
 

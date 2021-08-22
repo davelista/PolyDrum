@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
-import {StepButton} from "../index";
-import {AppContext} from "../../context/AppContext";
+import {StepButton} from "../../../index";
+import {AppContext} from "../../../../context/AppContext";
 
 
 const StepButtonsList = (props) => {

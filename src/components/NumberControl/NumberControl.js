@@ -19,7 +19,7 @@ const useStyles = makeStyles ((theme) => ({
 
 
 const NumberControl = (props) => {
-    const {tempo} = props /*NON CAMBIARE*/
+    const {tempo} = props
     const classes = useStyles();
     return (
         <>
@@ -38,8 +38,8 @@ const NumberControl = (props) => {
                     }}
                     inputProps={{min: 1, style: { textAlign: 'center', color:"black", background:"white", border:"3px solid darkred"}}}
 
-                    defaultValue={tempo.bpm}/*NON CAMBIARE*/
-                    onChange={(e) => tempo.setBpm(e.target.value)}/*NON CAMBIARE*/
+                    defaultValue={tempo.value}/*NON CAMBIARE*/
+                    onChange={(e) => tempo.setValue(e.target.value)}/*NON CAMBIARE*/
 
                 />
 

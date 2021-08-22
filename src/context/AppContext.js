@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, {useMemo, useRef, useState} from "react";
 import timeSignaturesList from '../timeSignaturesList.json'
 import samplesList from '../samplesList.json'
 import {useSelectedRhythm} from "../hooks";
@@ -16,8 +16,50 @@ export function useAppContext() {
     const [numRhythm, setNumRhythm] = useState([0]);
     const [numStepButtons, setNumStepButton] = useState(null);
     /*JSON*/
-    const [array, setArray] = useState([]); /*Salva le informazioni di un ritmo*/
-    const [itemSelectedRhythm, setItemSelectedRhythm] = useSelectedRhythm(idRhythm, array);
+    const [db, setDb] = useState([{
+        timeSignature : "",
+        numStepButtons: 0,
+        instruments: []
+    }]); /*Salva le informazioni di un ritmo*/
+    const [itemSelectedRhythm, setItemSelectedRhythm] = useSelectedRhythm(idRhythm, db, setDb);
+
+        const updatePad = (temp, idRhythm) => {
+
+            samplesList.map((x) => {
+                let pad = [];
+                let itemInstrument = {
+                    name: x.name,
+                    pad: []
+                };
+                if(temp[idRhythm].instruments.length - 1 < x.id){ /* se non sono stati inseriti tutti gli strumenti */
+                    temp[idRhythm].instruments.push(itemInstrument) /* Aggiunge l'elemento all'array */
+                } else { /* ALTRIMENTI */
+                    temp[idRhythm].instruments.map((y, i) => { /* Sostituisce il numero di stepButton all'interno di pad se l'utente cambia il ritmo */
+                        if(y.pad.length !== pad.length) {
+                            y.pad = pad;
+                        }
+                    })
+                }
+            })
+        }
+
+
+        const updateUserRhythms = (newNumStepButton, newTimeSignature) => {
+
+        setNumStepButton(newNumStepButton);
+        setTimeSignature(newTimeSignature);
+
+        setDb((db) => {
+            let temp = [...db];
+
+            temp[idRhythm].timeSignature = newTimeSignature;
+            temp[idRhythm].numStepButtons = newNumStepButton;
+            updatePad(temp, idRhythm)
+            return temp
+        });
+
+
+    }
 
     return useMemo(
         () => ({
@@ -37,13 +79,14 @@ export function useAppContext() {
                 item: itemSelectedRhythm, /*oggetto json del ritmo scelto dall'utente*/
                 setItem:  setItemSelectedRhythm /*set oggetto json del ritmo scelto dall'utente*/
             },
-            rhythmsList: { /*LIsta di ritmi per i bottoni*/
+            rhythmsList: { /*Lista di ritmi per i bottoni*/
                 item: numRhythm,
                 setItem: setNumRhythm
             },
             userRhythms: { /*Array di JSON con tutti i ritmi dell'utente*/
-                data: array,
-                setData: setArray
+                data: db,
+                setData: setDb,
+                update: updateUserRhythms
             },
             timeSignature: { /*tempo della battuta */
                 value: timeSignature,
@@ -62,8 +105,7 @@ export function useAppContext() {
                 setValue: setMute
             }
         }),
-        [bpm, setBpm, isPlay, setPlay, volume, setVolume, mute, setMute,
-            timeSignature, setTimeSignature, numStepButtons, setNumStepButton,
-            array, setArray, numRhythm, setNumRhythm, idRhythm, setIdRhythm, itemSelectedRhythm, setItemSelectedRhythm]
+        [bpm, setBpm, isPlay, volume, mute, timeSignature,
+            numStepButtons, numRhythm, idRhythm, itemSelectedRhythm,]
     );
 }

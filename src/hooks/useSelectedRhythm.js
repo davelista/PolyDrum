@@ -1,7 +1,7 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {AppContext} from "../context/AppContext";
 
-const useSelectedRhythm = (idRhythm, userRhythms) => {
+const useSelectedRhythm = (idRhythm, userRhythms, setUserRhythms) => {
     const appData = useContext(AppContext);
     const [selectedRhythm, setSelectedRhythm] = useState({})
 
@@ -14,11 +14,14 @@ const useSelectedRhythm = (idRhythm, userRhythms) => {
     }, [idRhythm, userRhythms]);
 
     const initRhythmObj = () => { /*Crea un oggetto vuoto e lo inserisce*/
+        let temp = [...userRhythms];
         let item = {
             timeSignature : "",
+            numStepButtons: 0,
             instruments: []
         }
-        userRhythms[idRhythm] = item;
+        temp[idRhythm] = item;
+        setUserRhythms(temp);
         setSelectedRhythm(userRhythms[idRhythm])
     }
 

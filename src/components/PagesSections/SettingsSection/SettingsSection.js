@@ -1,8 +1,8 @@
 import React, {useContext, useState} from 'react';
 import styles from "./SettingsSection.module.css";
 import {Button, CheckBox, Dropdown, HorizontalSlider, NumberControl, VerticalSlider, ButtonsList} from "../../index";
-import {FaPlay,HiVolumeUp, HiVolumeOff} from "react-icons/all";
-import {AppContext} from "../../../context/AppContext";
+import {FaPlay, HiVolumeUp, HiVolumeOff, FaStop, FaPause} from "react-icons/all";
+import {AppContext} from "../../context/AppContext";
 
 const SettingsSection = (props) => {
     const appData = useContext(AppContext);
@@ -16,10 +16,8 @@ const SettingsSection = (props) => {
                                   mute={appData.mute.value}
                                   onChangeMute={appData.mute.setValue}/>
 
-                {console.log("play è: ", appData.play.value)}
-                {console.log("ho cambiato la VELOCITA' in: ", appData.tempo.value)}
-                {console.log("ho cambiato il VOLUME in: ", appData.volume.value)}
-                {console.log("ho cambiato il TEMPO in: ", appData.timeSignature.value)}
+                <Button onClick={() => appData.play.setValue(!appData.play.value)} >{appData.play.value ?<FaPause/> : <FaPlay/>} </Button>
+                <Button><FaStop/></Button>
 
                 <ButtonsList/>
 
@@ -44,7 +42,10 @@ const SettingsSection = (props) => {
                     })}
                 </div>
                 </div>
-
+                {console.log("play è: ", appData.play.value)}
+                {console.log("ho cambiato la VELOCITA' in: ", appData.tempo.value)}
+                {console.log("ho cambiato il VOLUME in: ", appData.volume.value)}
+                {console.log("ho cambiato il TEMPO in: ", appData.timeSignature.value)}
             </div>
         </>
     );

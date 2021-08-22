@@ -16,8 +16,7 @@ const SettingsSection = (props) => {
                                   mute={appData.mute.value}
                                   onChangeMute={appData.mute.setValue}/>
 
-                <Button onClick={() => appData.play.setValue(!appData.play.value)} >{appData.play.value ?<FaPause/> : <FaPlay/>} </Button>
-                <Button><FaStop/></Button>
+
 
                 <ButtonsList/>
 

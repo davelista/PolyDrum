@@ -2,7 +2,7 @@ import React, {useContext, useState} from 'react';
 import styles from "./SettingsSection.module.css";
 import {Button, CheckBox, Dropdown, HorizontalSlider, NumberControl, VerticalSlider, ButtonsList} from "../../index";
 import {FaPlay, HiVolumeUp, HiVolumeOff, FaStop, FaPause} from "react-icons/all";
-import {AppContext} from "../../context/AppContext";
+import {AppContext} from "../../../context/AppContext";
 
 const SettingsSection = (props) => {
     const appData = useContext(AppContext);

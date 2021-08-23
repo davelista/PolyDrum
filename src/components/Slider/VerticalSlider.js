@@ -9,8 +9,6 @@ import {withStyles} from "@material-ui/core";
 const useStyles = makeStyles({ /*come avere un file VerticalSlider.module.css*/
     root: {
         width: "20%",
-        color: "white",
-        columnFill: "white",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -24,7 +22,7 @@ const useStyles = makeStyles({ /*come avere un file VerticalSlider.module.css*/
 
 const CustomSlider = withStyles({
 root: {
-    color: '#52af77',
+    color: 'black',
         height: 8,
         '&$vertical': {
         width: 8
@@ -38,10 +36,10 @@ thumb: {
         marginTop: -8,
         marginLeft: -12,
         '&:focus, &:hover': {
-        boxShadow: '0px 0px 0px 8px rgba(84, 199, 97, 0.16)'
+        boxShadow: '0px 0px 0px 5px rgba(220, 220, 220, 0.16)'
     },
     '&$active': {
-        boxShadow: '0px 0px 0px 12px rgba(84, 199, 97, 0.16)'
+        boxShadow: '0px 0px 0px 8px rgba(220, 220, 220, 0.16)'
     }
 },
 active: {},

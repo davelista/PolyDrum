@@ -6,7 +6,8 @@
     border-right: 3px solid #B388FF;
     padding: 1rem 2.5rem;
     width: 30%;
-    background: linear-gradient(#3C3B3D, black);
+    /*background: linear-gradient(#3C3B3D, black); */
+    background: linear-gradient(black, #3C3B3D);
 }
 
 /* slider part*/

@@ -2,9 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
-import Grid from "@material-ui/core/Grid";
-import VolumeUp from '@material-ui/icons/VolumeUp';
 import {withStyles} from "@material-ui/core";
+import produce from "immer";
 
 const useStyles = makeStyles({ /*come avere un file VerticalSlider.module.css*/
     root: {
@@ -91,7 +90,7 @@ const marks = [
 ];
 
 const VerticalSlider = (props) => {
-    const {title, defaultValue, onChangeValue} = props;
+    const {title, defaultValue, userRhythms, idInstrument, idRhythm} = props;
     const classes = useStyles();
     return (
         <>
@@ -120,7 +119,10 @@ const VerticalSlider = (props) => {
                         defaultValue={defaultValue}
                         aria-labelledby="vertical-slider"
                         marks={marks}
-                        onChange={(e, value) => onChangeValue(value)}
+                        onChange={(e, value) => userRhythms.setData(
+                            produce(userRhythms.data, draft => {
+                                draft[idRhythm].instruments[idInstrument].volume = value;
+                            }))}
                     />
                 </div>
             </div>

@@ -29,7 +29,8 @@ export function useAppContext() {
                 let pad = [];
                 let itemInstrument = {
                     name: x.name,
-                    pad: []
+                    pad: [],
+                    volume: 10
                 };
                 if(temp[idRhythm].instruments.length - 1 < x.id){ /* se non sono stati inseriti tutti gli strumenti */
                     temp[idRhythm].instruments.push(itemInstrument) /* Aggiunge l'elemento all'array */

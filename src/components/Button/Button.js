@@ -1,7 +1,7 @@
 import React from "react";
 import "./Button.css";
 
-const STYLES = ['btn--primary', 'btn--secondary'];
+const STYLES = ['btn--primary', 'btn--secondary', 'btn--primary--active', 'btn--secondary--active'];
 
 const Button = ({ children, type, onClick, buttonStyle, buttonSize, buttonColor, ...props }) => {
     //Se è stato definito uno stile del bottone inserisci lo stile altrimenti consideri il primo nell'array (btn primary)

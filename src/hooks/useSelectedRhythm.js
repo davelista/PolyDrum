@@ -1,32 +1,32 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {AppContext} from "../context/AppContext";
 
-const useSelectedRhythm = (idRhythm, userRhythms, setUserRhythms) => {
+const useSelectedRhythm = (idRhythm, db, setDb) => {
     const appData = useContext(AppContext);
     const [selectedRhythm, setSelectedRhythm] = useState({})
 
     useEffect(() => {
-        if(userRhythms[idRhythm] === undefined){
+        if(db[idRhythm] === undefined){
             initRhythmObj();
         } else {
             setRhythmObj();
         }
-    }, [idRhythm, userRhythms]);
+    }, [idRhythm, db]);
 
     const initRhythmObj = () => { /*Crea un oggetto vuoto e lo inserisce*/
-        let temp = [...userRhythms];
+        let temp = [...db];
         let item = {
             timeSignature : "",
             numStepButtons: 0,
             instruments: []
         }
         temp[idRhythm] = item;
-        setUserRhythms(temp);
-        setSelectedRhythm(userRhythms[idRhythm])
+        setDb(temp);
+        setSelectedRhythm(db[idRhythm])
     }
 
     const setRhythmObj = () => { /*seleziona l'oggetto nell'array di JSON*/
-        setSelectedRhythm(userRhythms[idRhythm])
+        setSelectedRhythm(db[idRhythm])
     }
 
     return [selectedRhythm, setSelectedRhythm];

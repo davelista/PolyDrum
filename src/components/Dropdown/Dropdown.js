@@ -52,6 +52,10 @@ const Dropdown = (props) => {
 
                 </Select>
             </FormControl>
+
+            {appData.userRhythms.data[appData.selectedRhythm.number]!== undefined ?
+                console.log("-------------\n IL TEMPO È : ", appData.userRhythms.data[appData.selectedRhythm.number].timeSignature, "\n-------------\n")
+                : null}
             {console.log("il numero di stepbutton è: ", appData.stepButtons.value)}
         </>
     );

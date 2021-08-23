@@ -10,10 +10,10 @@ function App() {
             <Drumbit/>
         </AppContext.Provider>
 
-        {console.log("play è: ", appData.play.value)}
+        {console.log("-----------\nplay è: ", appData.play.value)}
         {console.log("ho cambiato la VELOCITA' in: ", appData.tempo.value)}
-        {console.log("ho cambiato il VOLUME in: ", appData.volume.value)}
-        {console.log("ho cambiato il TEMPO in: ", appData.timeSignature.value)}
+        {console.log("ho cambiato il VOLUME in: ", appData.volume.value, "\n-------------\n")}
+
         {console.log("Il ritmo selezionato è :", appData.selectedRhythm.number)}
         {console.log("il JSON del ritmo è: ", appData.selectedRhythm.item)}
         {console.log("I RITMI DELL'UTENTE SONO: ", appData.userRhythms.data)}

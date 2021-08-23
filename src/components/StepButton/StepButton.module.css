@@ -9,6 +9,7 @@
 
 .container:hover{
     cursor: pointer;
+    box-shadow: 0 5px 10px rgba(220, 220, 220, 0.6);
 }
 
 .active{
@@ -18,5 +19,6 @@
     border: 2px solid var(--secondColor);
     margin: 1px;
     border-radius: 7px;
+    box-shadow: 1px 2px 2px 1px rgba(255, 255, 255, 0.50);
 }
 

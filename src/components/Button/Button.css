@@ -44,7 +44,7 @@
 .btn--primary:hover{
     color: var(--thirdColor);
     background: var(--firstColor);
-    box-shadow: 0 20px 20px 0 rgba(255, 255, 255, 0.42);
+    box-shadow: 0 5px 10px rgba(220, 220, 220, 0.6);
 }
 
 .btn--primary--active {
@@ -66,6 +66,7 @@
     font-size: 14px;
     width: 80px;
     height: 30px;
+    box-shadow: 1px 2px 2px 1px rgba(255, 255, 255, 0.50);
 }
 
 /*Da modificare -> BOTTONI SOTTO AL DISPLAY*/

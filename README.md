@@ -1,7 +1,7 @@
 # Usefull links
 * https://reactronica.com/
 * https://drumbit.app/
-
+* https://www.youtube.com/watch?v=Dxxkma4F-oA
 
 # Getting Started
 

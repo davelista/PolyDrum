@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: row;
     background: #efefef;
-    height: 87vh;
+    height: 50rem;
+    width: 110rem;
     min-height: 108px;
     min-width: 192px;
     border: 5px groove #515151;

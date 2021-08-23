@@ -22,6 +22,7 @@ const SlidersContainer = (props) => {
                 </>
             })}
         </div>
+
         <div className={styles.section}>
             {appData.samplesList.filter((vs) => vs.id > 3).map((x, i) => {
                 return <>

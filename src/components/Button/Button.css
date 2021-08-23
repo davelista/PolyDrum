@@ -38,13 +38,14 @@
     font-size: 14px;
     width: 80px;
     height: 30px;
-
+    box-shadow: 1px 2px 2px 1px rgba(226, 43, 43, 0.5);
 }
 
 .btn--primary:hover{
     color: var(--thirdColor);
     background: var(--firstColor);
-    box-shadow: 0 5px 10px rgba(220, 220, 220, 0.6);
+    box-shadow: 0 2px 2px rgba(220, 220, 220, 0.6);
+
 }
 
 .btn--primary--active {
@@ -56,7 +57,9 @@
     line-height: 42px;
     padding-left: 5px;
     padding-right: 5px;
-    border: 2px solid var(--firstColor);
+    /*border: 3px inset var(--thirdColor); */
+    border-right: 1px solid var(--thirdColor);
+    border-bottom: 1px solid var(--thirdColor);
     color: var(--thirdColor);
     font-weight: 500;
     transition: all 0.3s ease 0s;
@@ -66,7 +69,6 @@
     font-size: 14px;
     width: 80px;
     height: 30px;
-    box-shadow: 1px 2px 2px 1px rgba(255, 255, 255, 0.50);
 }
 
 /*Da modificare -> BOTTONI SOTTO AL DISPLAY*/

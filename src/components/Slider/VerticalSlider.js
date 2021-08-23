@@ -11,7 +11,9 @@ const useStyles = makeStyles({ /*come avere un file VerticalSlider.module.css*/
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
+        borderColor: "white",
+        border: 2
     },
     title: {
         marginBottom: "0.5rem",
@@ -21,17 +23,17 @@ const useStyles = makeStyles({ /*come avere un file VerticalSlider.module.css*/
 
 const CustomSlider = withStyles({
 root: {
-    color: 'black',
+    color: 'darkred',
         height: 8,
         '&$vertical': {
         width: 8
     }
 },
 thumb: {
-    height: 24,
-        width: 24,
+    height: 20,
+        width: 20,
         backgroundColor: '#fff',
-        border: '2px solid currentColor',
+        border: '3px solid currentColor',
         marginTop: -8,
         marginLeft: -12,
         '&:focus, &:hover': {
@@ -43,25 +45,33 @@ thumb: {
 },
 active: {},
 valueLabel: {
-    left: 'calc(-50% + 4px)'
+    left: 'calc(-50% + 4px)',
 },
 track: {
     height: 8,
-        borderRadius: 4
+        borderRadius: 4,
+        border: "2px inset",
+        borderColor: "darkred",
+        borderBottom: "0",
+        color: "black"
 },
 rail: {
     height: 8,
-        borderRadius: 4
+        borderRadius: 4,
+        border: "2px inset",
+        borderColor: "white",
+        borderBottom: "0",
+        color: "black",
 },
 vertical: {
     '& $rail': {
-        width: 8
+        width: 8,
     },
     '& $track': {
         width: 8
     },
     '& $thumb': {
-        marginLeft: -8,
+        marginLeft: -4.5 ,
             marginBottom: -11
     }
 }
@@ -70,7 +80,7 @@ vertical: {
 function valuetext(value) {
     return `${value}`;
 }
-
+/*
 const marks = [
     {
         value: 0,
@@ -88,7 +98,7 @@ const marks = [
         value: 100,
     },
 ];
-
+*/
 const VerticalSlider = (props) => {
     const {title, defaultValue, userRhythms, idInstrument, idRhythm} = props;
     const classes = useStyles();
@@ -118,7 +128,7 @@ const VerticalSlider = (props) => {
                         getAriaValueText={valuetext}
                         defaultValue={defaultValue}
                         aria-labelledby="vertical-slider"
-                        marks={marks}
+                        /*marks={marks}*/
                         onChange={(e, value) => userRhythms.setData(
                             produce(userRhythms.data, draft => {
                                 draft[idRhythm].instruments[idInstrument].volume = value;

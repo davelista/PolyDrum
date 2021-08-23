@@ -3,11 +3,21 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border-right: 3px solid #B388FF;
+    border-right: 3px solid #515151;
     padding: 1rem 2.5rem;
     width: 30%;
-    /*background: linear-gradient(#3C3B3D, black); */
-    background: linear-gradient(black, #3C3B3D);
+    background: linear-gradient(#3C3B3D, black);
+
+}
+
+/* Solid border */
+.divider {
+    display: flex;
+    border-top: 3px solid #515151;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 120%;
+
 }
 
 /* slider part*/
@@ -22,6 +32,7 @@
     background: transparent;
     border: 2px solid white;
     border-radius: 5px;
+    margin-top: 1rem;
 }
 
 .section{
@@ -35,4 +46,18 @@
 .rhythmButtons{
     display: flex;
     flex-direction: row;
+}
+
+.playButtons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+
+}
+
+.auxButtons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
 }

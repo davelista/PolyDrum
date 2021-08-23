@@ -8,15 +8,24 @@ import VolumeUp from '@material-ui/icons/VolumeUp';
 const useStyles = makeStyles((theme) => ({
     root: {
         width: 300 + theme.spacing(3) * 2,
+        textAlign: "center"
     },
     margin: {
         height: theme.spacing(3),
     },
+    line: {
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center"
+    },
+    icon: {
+        marginRight: "1rem"
+    }
 }));
 
 const RoundSlider = withStyles({
     root: {
-        color: 'black',
+        color: 'darkred',
         height: 8,
         display: 'flex',
         flexDirection: 'row'
@@ -24,8 +33,8 @@ const RoundSlider = withStyles({
     thumb: {
         height: 24,
         width: 24,
-        backgroundColor: '#fff',
-        border: '2px solid currentColor',
+        backgroundColor: 'white',
+        border: '3px solid currentColor',
         marginTop: -8,
         marginLeft: -12,
         '&:focus, &:hover, &$active': {
@@ -39,10 +48,12 @@ const RoundSlider = withStyles({
     track: {
         height: 8,
         borderRadius: 4,
+        color: "white"
     },
     rail: {
         height: 8,
         borderRadius: 4,
+        color: "black"
     },
 })(Slider);
 
@@ -67,16 +78,22 @@ const HorizontalSlider = (props) => {
             <div className={classes.root}>
                 <Typography gutterBottom>{title}
                 </Typography>
-                <Grid item>
-                    <div onClick={() => {
-                        onChangeMute(!mute);
-                    }}>{icon}</div>
-                </Grid>
-                <RoundSlider valueLabelDisplay="auto" aria-label="pretto slider"
-                             // defaultValue={defaultValue}
-                             min={0} max={100} step={1}
-                             value={volumeValue}
-                             onChange={(e, value) => onChangeValue(value)} />
+                <div className={classes.line}>
+                    <div className={classes.icon}>
+                        <Grid item>
+                            <div onClick={() => {
+                                onChangeMute(!mute);
+                            }}>{icon}</div>
+                        </Grid>
+                    </div>
+                    
+                    <RoundSlider valueLabelDisplay="auto" aria-label="pretto slider"
+                        // defaultValue={defaultValue}
+                                 min={0} max={100} step={1}
+                                 value={volumeValue}
+                                 onChange={(e, value) => onChangeValue(value)} />
+                </div>
+
 
             </div>
         </>

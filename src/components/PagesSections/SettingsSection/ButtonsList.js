@@ -9,8 +9,11 @@ const ButtonsList = (props) => {
 
     return (
         <>
-            <Button onClick={() => appData.play.setValue(!appData.play.value)} >{appData.play.value ?<FaPause/> : <FaPlay/>} </Button>
-            <Button><FaStop/></Button>
+            <div className={styles.playButtons}>
+                <Button onClick={() => appData.play.setValue(!appData.play.value)} >{appData.play.value ?<FaPause/> : <FaPlay/>} </Button>
+                <Button><FaStop/></Button>
+            </div>
+
             <div className={styles.rhythmButtons}>
                 {appData.rhythmsList.item.map((x) => {
                     return <Button buttonStyle={appData.selectedRhythm.number === x ? 'btn--primary--active' : 'btn--primary'} onClick={() => appData.selectedRhythm.setNumber(x)}>{x}</Button>

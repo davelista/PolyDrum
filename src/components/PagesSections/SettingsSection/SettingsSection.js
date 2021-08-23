@@ -13,14 +13,20 @@ const SettingsSection = (props) => {
             <div className={styles.container}>
 
                 <HorizontalSlider title={"Volume"} defaultValue={50}
-                                  icon={!appData.mute.value ? <HiVolumeUp /> : <HiVolumeOff />}
+                                  icon={!appData.mute.value ? <HiVolumeUp size={24} /> : <HiVolumeOff size={24} />}
                                   volumeValue={appData.volume.value}
                                   onChangeValue={appData.volume.setValue}
                                   mute={appData.mute.value}
                                   onChangeMute={appData.mute.setValue}/>
                 <ButtonsList/>
-                <NumberControl tempo={appData.tempo} play={appData.play}/>
-                <Dropdown/>
+
+                <div className={styles.divider}></div>
+
+                <div className={styles.auxButtons}>
+                    <NumberControl tempo={appData.tempo} play={appData.play}/>
+                    <Dropdown/>
+                </div>
+
                 <SlidersContainer />
             </div>
         </>

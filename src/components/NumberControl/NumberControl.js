@@ -10,7 +10,11 @@ const CustomTextField = withStyles({
             color: "darkred",
         },
         "& .MuiInput-underline:after": {
-            borderBottomColor: "#E53A1E",
+            borderBottomColor: "darkred",
+            color: "white"
+        },
+        "& .MuiInput-underline:before": {
+            borderBottomColor: "darkred",
             color: "white"
         },
         "& .MuiOutlinedInput-root": {
@@ -21,11 +25,27 @@ const CustomTextField = withStyles({
             "&.Mui-focused fieldset": {
                 borderColor: "darkred",
             },
+            "&.Mui-focused fieldset:hover": {
+                borderColor: "darkred",
+            },
+        },
+
+        "& .MuiOutlinedInput-root:hover":{
+            borderColor: "white"
         },
         "& .MuiInputLabel-outlined":{
             color:"white",
             borderColor:"white"
-        }
+        },
+        "& .MuiOutlinedInput-outlined:hover":{
+            borderColor: "white"
+        },
+        "& .MuiOutlinedInput-notchedOutline":{
+            borderColor: "white"
+        },
+        "& .MuiOutlinedInput-notchedOutline:hover":{
+            borderColor: "white"
+        },
     },
 })(TextField);
 
@@ -41,7 +61,6 @@ const NumberControl = (props) => {
                     type="number"
                     variant="outlined"
                     color="secondary"
-
                     InputLabelProps={{
                         shrink: true,
 

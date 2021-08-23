@@ -1,28 +1,45 @@
 import React, {useContext, useEffect, useState} from 'react';
-import {FormControl, InputLabel, makeStyles, MenuItem, Select} from "@material-ui/core";
+import {FormControl, InputLabel, makeStyles, MenuItem, Select, TextField, withStyles} from "@material-ui/core";
 import {AppContext} from "../../context/AppContext";
 
-
-
-const useStyles = makeStyles((theme) => ({
-    formControl: {
-        margin: theme.spacing(1),
-        minWidth: 120,
+const CustomTextField = withStyles({
+    root: {
         color: "white",
-
+        width: "9.5rem",
+        textAlign: "center",
+        "& label.Mui-focused": {
+            color: "darkred",
+        },
+        "& .MuiInput-underline:after": {
+            borderBottomColor: "#E53A1E",
+            color: "white"
+        },
+        "& .MuiOutlinedInput-root": {
+            borderRadius: "0.8rem",
+            width: "100%",
+            color: "white",
+            textAlign: "center",
+            "&.Mui-focused fieldset": {
+                borderColor: "darkred",
+            },
+        },
+        "& .MuiInputLabel-outlined":{
+            color:"white",
+            borderColor:"white"
+        },
+        "& .MuiSelect-icon": {
+            color: "white"
+        },
+        "& .MuiOutlinedInput-notchedOutline":{
+            borderColor: "white"
+        }
     },
-    text: {
-        color: "white"
-    },
-    selectEmpty: {
-        marginTop: theme.spacing(2),
-    },
-}));
+})(TextField);
 
 const Dropdown = (props) => {
     //const {list, fun} = props
     const appData = useContext(AppContext);
-    const classes = useStyles();
+
     const [state, setState] = React.useState('');
 
     const handleChange = (event) => {
@@ -32,16 +49,14 @@ const Dropdown = (props) => {
 
     return (
         <>
-            <FormControl className={classes.formControl}>
-                <InputLabel id="demo-simple-select-label">Time Signature</InputLabel>
-                <Select
-                    classes={{root: classes.text}}
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
+            <FormControl >
+                <CustomTextField
+                    id="outlined-select-currency"
+                    select
+                    label="Time Signature"
                     value={state}
                     onChange={handleChange}
-                    variant="filled"
-                    color="primary"
+                    variant="outlined"
                 >
                     {appData.timeSignaturesList.map((x) => {
                         return <MenuItem value={x.n} onClick={() => {
@@ -49,8 +64,8 @@ const Dropdown = (props) => {
                         }} key={x.value}>{x.value}</MenuItem>
 
                     })}
+                </CustomTextField>
 
-                </Select>
             </FormControl>
 
             {appData.userRhythms.data[appData.selectedRhythm.number]!== undefined ?

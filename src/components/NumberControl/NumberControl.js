@@ -13,10 +13,6 @@ const CustomTextField = withStyles({
             borderBottomColor: "darkred",
             color: "white"
         },
-        "& .MuiInput-underline:before": {
-            borderBottomColor: "darkred",
-            color: "white"
-        },
         "& .MuiOutlinedInput-root": {
             borderRadius: "0.8rem",
             width: "100%",
@@ -25,26 +21,10 @@ const CustomTextField = withStyles({
             "&.Mui-focused fieldset": {
                 borderColor: "darkred",
             },
-            "&.Mui-focused fieldset:hover": {
-                borderColor: "darkred",
-            },
-        },
-
-        "& .MuiOutlinedInput-root:hover":{
-            borderColor: "white"
         },
         "& .MuiInputLabel-outlined":{
             color:"white",
             borderColor:"white"
-        },
-        "& .MuiOutlinedInput-outlined:hover":{
-            borderColor: "white"
-        },
-        "& .MuiOutlinedInput-notchedOutline":{
-            borderColor: "white"
-        },
-        "& .MuiOutlinedInput-notchedOutline:hover":{
-            borderColor: "white"
         },
     },
 })(TextField);

@@ -9,8 +9,8 @@ import C3 from "../../../../samples/kicks/kick-1.wav"
 
 const Drumpad = (props) => {
     const appData = useContext(AppContext);
-    const [steps, setSteps] = useSteps(appData.selectedRhythm.item);
-    console.log("gli steps sono: ", steps)
+    /*const [steps, setSteps] = useSteps(appData.selectedRhythm.item);
+    console.log("gli steps sono: ", steps)*/
     const [currentIndex, setCurrentStepIndex] = useState(0);
 
 

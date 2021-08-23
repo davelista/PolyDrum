@@ -1,31 +1,41 @@
 import React from 'react';
-import {makeStyles, TextField} from "@material-ui/core";
+import {makeStyles, TextField, withStyles} from "@material-ui/core";
 
-const useStyles = makeStyles ((theme) => ({
+const CustomTextField = withStyles({
     root: {
-        '& .MuiTextField-root': {
-            margin: theme.spacing(1),
-            width: '15ch',
-            /*color: "#fff",*/
-            /*Da modificare -> COLORI DA INSERIRE*/
-
+        color: "white",
+        width: "7rem",
+        textAlign: "center",
+        "& label.Mui-focused": {
+            color: "darkred",
         },
+        "& .MuiInput-underline:after": {
+            borderBottomColor: "#E53A1E",
+            color: "white"
+        },
+        "& .MuiOutlinedInput-root": {
+            borderRadius: "0.8rem",
+            width: "100%",
+            color: "white",
+            textAlign: "center",
+            "&.Mui-focused fieldset": {
+                borderColor: "darkred",
+            },
+        },
+        "& .MuiInputLabel-outlined":{
+            color:"white",
+            borderColor:"white"
+        }
     },
-    specialOutline: {
-        borderColor: "pink",
-        borderWidth: 4
-    }
-}));
-
+})(TextField);
 
 const NumberControl = (props) => {
     const {tempo} = props
-    const classes = useStyles();
     return (
         <>
-            <form className={classes.root} noValidate autoComplete="off">
+            <form  noValidate autoComplete="off">
 
-                <TextField
+                <CustomTextField
                     id="outlined-number"
                     label="Tempo (BPM)"
                     type="number"
@@ -36,7 +46,7 @@ const NumberControl = (props) => {
                         shrink: true,
 
                     }}
-                    inputProps={{min: 1, style: { textAlign: 'center', color:"black", background:"white", border:"3px solid darkred"}}}
+                    inputProps={{min: 1, style: {textAlign: 'center'}}}
 
                     defaultValue={tempo.value}/*NON CAMBIARE*/
                     onChange={(e) => tempo.setValue(e.target.value)}/*NON CAMBIARE*/

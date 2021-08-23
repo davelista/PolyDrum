@@ -4,7 +4,8 @@ import {
     SettingsSection, RhythmSection
 } from "../components";
 
-function Drumbit(props) {
+function Drumbit() {
+
     return (
         <div className={styles.container}>
             <SettingsSection />

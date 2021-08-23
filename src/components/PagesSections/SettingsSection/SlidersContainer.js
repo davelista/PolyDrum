@@ -9,7 +9,7 @@ const SlidersContainer = (props) => {
 
     let slidersContainer;
 
-    appData.userRhythms.data[appData.selectedRhythm.number].instruments.length === 8 ? slidersContainer = (<div className={styles.slidersContainer} >
+    appData.userRhythms.data[appData.selectedRhythm.number] !== undefined && appData.userRhythms.data[appData.selectedRhythm.number].instruments.length === 8 ? slidersContainer = (<div className={styles.slidersContainer} >
         <div className={styles.section}>
             {appData.samplesList.filter((vs) => vs.id < 4).map((x, i) => {
                 return <>

@@ -11,6 +11,7 @@ const ButtonsList = (props) => {
         <>
             <div className={styles.playButtons}>
                 <Button onClick={() => appData.play.setValue(!appData.play.value)} >{appData.play.value ?<FaPause/> : <FaPlay/>} </Button>
+                {console.log("PLAY È:", appData.play.value)}
                 <Button><FaStop/></Button>
             </div>
 

@@ -1,27 +1,32 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {AppContext} from "../context/AppContext";
 
-const useSteps = (item) => {
+const useSteps = (item, length) => {
     const appData = useContext(AppContext);
     const [steps, setSteps] = useState([])
 
+    const noteDict = ["A1", "A#1", "B1", "C1", "C#1", "D1", "D#1", "E1"]
     useEffect(() => {
-        console.log("ITEM È: ", item)
         if(item !== undefined && item.instruments !== undefined) {
-
-            createSteps()
+            updateSteps();
         }
     }, [item]);
 
-    const createSteps = () => {
+    const updateSteps = () => {
         let temp = [];
-        for (let i = 0; i < item.instruments[0].pad.length; i++){
-            if(item.instruments[0].pad[i]){
-                temp.push('C3');
-                console.log("HO PUSHATO KEKKO!")
-            }
+        for (let j = 0; j < length; j++){
+            let column = []
+            item.instruments.map((x, i) =>{
+                if(x.pad[j]){
+                    column.push(noteDict[i]);
+                }
+            })
+            temp.push(column)
         }
-        console.log("----TEMP È: ", temp)
+
+
+
+        console.log("\n\nTEMP DI MERDA È: ",temp)
         setSteps(temp);
     }
     return [steps, setSteps];

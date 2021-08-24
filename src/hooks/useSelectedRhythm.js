@@ -28,10 +28,7 @@ const useSelectedRhythm = (idRhythm, db, setDb) => {
     const setRhythmObj = () => { /*seleziona l'oggetto nell'array di JSON*/
         setSelectedRhythm(db[idRhythm])
     }
-
     return [selectedRhythm, setSelectedRhythm];
-
-
 }
 
 export default useSelectedRhythm;

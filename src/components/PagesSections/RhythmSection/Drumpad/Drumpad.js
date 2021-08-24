@@ -1,36 +1,47 @@
 import React, {useContext, useEffect, useState} from 'react';
 import styles from './Drumpad.module.css';
 import { Song, Track, Instrument } from 'reactronica';
-import {Button, StepButton, StepButtonsList} from "../../../index";
+import {StepButtonsList} from "../../../index";
 import {AppContext} from "../../../../context/AppContext";
-import produce from "immer";
-import {useSteps} from "../../../../hooks";
-import C3 from "../../../../samples/kicks/kick-1.wav"
+import {useSteps, useMusic} from "../../../../hooks";
 
 const Drumpad = (props) => {
     const appData = useContext(AppContext);
-    /*const [steps, setSteps] = useSteps(appData.selectedRhythm.item);
-    console.log("gli steps sono: ", steps)*/
-    const [currentIndex, setCurrentStepIndex] = useState(0);
-
-
+    const [steps, setSteps] = useSteps(appData.selectedRhythm.item, appData.stepButtons.value);
+    const [currentColumn, setCurrentColumn] = useState(null); //non c'
+    // const [music, setMusic] = useMusic(grid); // Variable for storing our note in a appropriate format for our synth
+    //
     return(
         <>
             <div className={styles.container}>
-                {/*<Song bpm={appData.tempo.bpm} isPlaying={appData.play.value} volume={appData.volume.value}>
-                    <Track steps={steps}
-                           onStepPlay={(stepNotes, index) => {
-                               setCurrentStepIndex(index);
-                           }} ><Instrument
-                        type="sampler"
-                        samples={{
-                            C3: `../../../../samples/kicks/kick-1.wav`,
-                        }}
-                    />
+                <Song isPlaying={appData.play.value} bpm={appData.tempo.value}>
+                    <Track
+                        steps={steps}
+                    >
+                        <Instrument
+                            type="sampler"
+                            samples={appData.noteDict[0]}
+                        />
+                    </Track>
+                </Song>
+                {/*<Song isPlaying={appData.play.value} bpm={appData.tempo.value*2}>
+                    <Track
+                        steps={['C3', 'C3', 'C3', null]}
+                    >
+                        <Instrument
+                            type="synth"
+                        />
+                    </Track>
+                </Song>
+                <Song isPlaying={appData.play.value} bpm={appData.tempo.value*4}>
+                    <Track
+                        steps={['E3', 'E3', 'E3', null]}
+                    >
+                        <Instrument
+                            type="synth"
+                        />
                     </Track>
                 </Song>*/}
-
-                {/*Inizio per i vari ritmi*/}
                 {appData.samplesList.map((x) => {
                     return <>
                         <div className={styles.line} >
@@ -38,7 +49,12 @@ const Drumpad = (props) => {
                                 {x.name}
                             </div>
                             <div className={styles.stepButton}>
-                                {appData.selectedRhythm.item !== undefined ? <StepButtonsList key={x.id} idInstrument={x.id} instrument={x.name} idRhythm={appData.selectedRhythm.number} /> : null}
+                                {appData.selectedRhythm.item !== undefined ?
+                                    <StepButtonsList key={x.id}
+                                                     idInstrument={x.id}
+                                                     instrument={x.name}
+                                                     idRhythm={appData.selectedRhythm.number}
+                                    /> : null}
                             </div>
                         </div>
                     </>

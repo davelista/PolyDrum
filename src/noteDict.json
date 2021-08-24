@@ -1,0 +1,39 @@
+[
+  {
+    "A1": "/samples/kick/kick-1.wav",
+    "A#1": "/samples/808/808-1.wav",
+    "B1": "/samples/snare/snare-1.wav",
+    "C1": "/samples/clap/clap-1.wav",
+    "C#1": "/samples/open-hat/open-hat-1.wav",
+    "D1": "/samples/hi-hat/hi-hat-1.wav",
+    "D#1": "/samples/perc/perc-1.wav",
+    "E1": "/samples/vox/vox-1.wav"
+  },
+  {
+    "A2": "/samples/kick/kick-2.wav",
+    "A#2": "/samples/808/808-2.wav",
+    "B2": "/samples/snare/snare-2.wav",
+    "C2": "/samples/open-hat/open-hat-2.wav",
+    "C#2": "/samples/hi-hat/hi-hat-2.wav",
+    "D2": "/samples/perc/perc-2.wav",
+    "D#2": "/samples/vox/vox-2.wav"
+  },
+  {
+    "A3": "/samples/kick/kick-3.wav",
+    "A#3": "/samples/808/808-3.wav",
+    "B3": "/samples/snare/snare-3.wav",
+    "C3": "/samples/open-hat/open-hat-3.wav",
+    "C#3": "/samples/hi-hat/hi-hat-3.wav",
+    "D3": "/samples/perc/perc-3.wav",
+    "D#3": "/samples/vox/vox-3.wav"
+  },
+  {
+    "A4": "/samples/kick/kick-4.wav",
+    "A#4": "/samples/808/808-4.wav",
+    "B4": "/samples/snare/snare-4.wav",
+    "C4": "/samples/open-hat/open-hat-4.wav",
+    "C#4": "/samples/hi-hat/hi-hat-4.wav",
+    "D4": "/samples/perc/perc-4.wav",
+    "D#4": "/samples/vox/vox-4.wav"
+  }
+]

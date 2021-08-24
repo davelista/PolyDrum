@@ -1,7 +1,9 @@
 import React, {useMemo, useRef, useState} from "react";
 import timeSignaturesList from '../timeSignaturesList.json'
 import samplesList from '../samplesList.json'
+import noteDict from '../noteDict.json'
 import {useSelectedRhythm} from "../hooks";
+import produce from "immer";
 
 export const AppContext = React.createContext({});
 
@@ -22,6 +24,7 @@ export function useAppContext() {
         instruments: []
     }]); /*Salva le informazioni di un ritmo*/
     const [itemSelectedRhythm, setItemSelectedRhythm] = useSelectedRhythm(idRhythm, db, setDb);
+
 
         const updatePad = (temp, idRhythm) => {
 
@@ -50,22 +53,30 @@ export function useAppContext() {
         setNumStepButton(newNumStepButton);
         setTimeSignature(newTimeSignature);
 
-        setDb((db) => {
+        setDb(produce(db, draft => {
+            draft[idRhythm].timeSignature = newTimeSignature;
+            draft[idRhythm].numStepButtons = newNumStepButton;
+            updatePad(draft, idRhythm);
+        }))
+
+        /*setDb((db) => {
             let temp = [...db];
 
             temp[idRhythm].timeSignature = newTimeSignature;
             temp[idRhythm].numStepButtons = newNumStepButton;
             updatePad(temp, idRhythm)
             return temp
-        });
-
+        });*/
+            console.log("\n\nDB:\n",db)
 
     }
 
     return useMemo(
         () => ({
+
             timeSignaturesList,
             samplesList,
+            noteDict,
             play:{
               value: isPlay,
               setValue: setPlay

@@ -2,7 +2,7 @@
   {
     "id": 0,
     "name": "Kick",
-    "dir": "kicks"
+    "dir": "kick"
   },
   {
     "id": 1,
@@ -17,17 +17,17 @@
   {
     "id": 3,
     "name": "Clap",
-    "dir": "claps"
+    "dir": "clap"
   },
   {
     "id": 4,
     "name": "OpenHats",
-    "dir": "open-hats"
+    "dir": "open-hat"
   },
   {
     "id": 5,
     "name": "HiHats",
-    "dir": "hi-hats"
+    "dir": "hi-hat"
   },
   {
     "id": 6,

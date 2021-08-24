@@ -35,7 +35,7 @@ export function useAppContext() {
                     pad: [],
                     volume: 10
                 };
-                if(temp[idRhythm].instruments.length - 1 < x.id){ /* se non sono stati inseriti tutti gli strumenti */
+                if(temp[idRhythm].instruments.length === x.id){ /* se non sono stati inseriti tutti gli strumenti */
                     temp[idRhythm].instruments.push(itemInstrument) /* Aggiunge l'elemento all'array */
                 } else { /* ALTRIMENTI */
                     temp[idRhythm].instruments.map((y, i) => { /* Sostituisce il numero di stepButton all'interno di pad se l'utente cambia il ritmo */

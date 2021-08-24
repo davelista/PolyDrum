@@ -133,6 +133,7 @@ const VerticalSlider = (props) => {
                             produce(userRhythms.data, draft => {
                                 draft[idRhythm].instruments[idInstrument].volume = value;
                             }))}
+
                     />
                 </div>
             </div>

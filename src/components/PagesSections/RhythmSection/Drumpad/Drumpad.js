@@ -13,39 +13,26 @@ const Drumpad = (props) => {
     return(
         <>
             <div className={styles.container}>
-                <Song isPlaying={appData.play.value} bpm={appData.tempo.value} volume={appData.volume.value/25} isMuted={appData.mute.value}>
-                    {steps.map((x,i) =>{
-                        return (<Track
-                            volume={appData.selectedRhythm.item.instruments[i].volume/25} /*divido per 25 altrimenti gracchia troppo*/
-                            mute={appData.selectedRhythm.item.instruments[i].volume/25 === 0 ? true : false}
-                            steps={x}
-                        >
-                            <Instrument
-                                type="sampler"
-                                samples={appData.noteDict[0]}
-                            />
-                        </Track>)
-                    })}
+                {appData.selectedRhythm.item !== undefined && appData.selectedRhythm.item.instruments !== undefined && appData.selectedRhythm.item.instruments.length === 8  ?
+                    <Song isPlaying={appData.play.value} bpm={appData.tempo.value} volume={appData.volume.value / 25}
+                          isMuted={appData.mute.value}>
+                        {steps.map((x, i) => {
+                            return (<Track
+                                volume={appData.selectedRhythm.item.instruments[i].volume / 25} /*divido per 25 altrimenti gracchia troppo*/
+                                mute={appData.selectedRhythm.item.instruments[i].volume / 25 === 0 ? true : false}
+                                steps={x}
+                            >
+                                <Instrument
+                                    type="sampler"
+                                    samples={appData.noteDict[0]}
+                                />
 
-                </Song>
-                {/*<Song isPlaying={appData.play.value} bpm={appData.tempo.value*2}>
-                    <Track
-                        steps={['C3', 'C3', 'C3', null]}
-                    >
-                        <Instrument
-                            type="synth"
-                        />
-                    </Track>
-                </Song>
-                <Song isPlaying={appData.play.value} bpm={appData.tempo.value*4}>
-                    <Track
-                        steps={['E3', 'E3', 'E3', null]}
-                    >
-                        <Instrument
-                            type="synth"
-                        />
-                    </Track>
-                </Song>*/}
+                            </Track>)
+                        })}
+
+                    </Song> : null
+                }
+
                 {appData.samplesList.map((x) => {
                     return <>
                         <div className={styles.line} >

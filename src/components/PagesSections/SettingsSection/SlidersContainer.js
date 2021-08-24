@@ -12,25 +12,26 @@ const SlidersContainer = (props) => {
     appData.userRhythms.data[appData.selectedRhythm.number].instruments.length === 8 ?
         slidersContainer = (<div className={styles.slidersContainer} >
         <div className={styles.section}>
-            {appData.samplesList.filter((vs) => vs.id < 4).map((x, i) => {
+            {appData.samplesList.filter((vs) => vs.id < 4).map((x) => {
                 return <>
                     <VerticalSlider title={x.name}
-                                    defaultValue={appData.userRhythms.data[appData.selectedRhythm.number].instruments[i].volume}
+                                    defaultValue={appData.userRhythms.data[appData.selectedRhythm.number].instruments[x.id].volume}
                                     userRhythms={appData.userRhythms}
-                                    idInstrument={i}
+                                    idInstrument={x.id}
                                     idRhythm={appData.selectedRhythm.number}
                                     />
+
                 </>
             })}
         </div>
 
         <div className={styles.section}>
-            {appData.samplesList.filter((vs) => vs.id > 3).map((x, i) => {
+            {appData.samplesList.filter((vs) => vs.id > 3).map((x) => {
                 return <>
                     <VerticalSlider title={x.name}
-                                    defaultValue={appData.userRhythms.data[appData.selectedRhythm.number].instruments[i].volume}
+                                    defaultValue={appData.userRhythms.data[appData.selectedRhythm.number].instruments[x.id].volume}
                                     userRhythms={appData.userRhythms}
-                                    idInstrument={i}
+                                    idInstrument={x.id}
                                     idRhythm={appData.selectedRhythm.number}
 
                     />

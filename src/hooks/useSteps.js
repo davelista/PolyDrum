@@ -12,7 +12,7 @@ const useSteps = (item, length) => {
         }
     }, [item]);
 
-    const updateSteps = () => {
+    /*const updateSteps = () => {
         let temp = [];
         for (let j = 0; j < length; j++){
             let column = []
@@ -28,7 +28,25 @@ const useSteps = (item, length) => {
 
         console.log("\n\nTEMP DI MERDA È: ",temp)
         setSteps(temp);
+    }*/
+
+    const updateSteps = () => { /* crea steps per poter settare singolarmente tutti i volumi*/
+        let temp = [];
+        item.instruments.map((x, i) =>{
+            let column = []
+            for (let j = 0; j < length; j++){
+                if(x.pad[j]){
+                    column.push(noteDict[i]);
+                } else {
+                    column.push([]);
+                }
+            }
+            temp.push(column)
+        })
+        console.log("\n\nTEMP DI MERDA È: ",temp)
+        setSteps(temp);
     }
+
     return [steps, setSteps];
 }
 

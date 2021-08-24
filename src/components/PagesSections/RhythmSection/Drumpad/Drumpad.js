@@ -3,26 +3,30 @@ import styles from './Drumpad.module.css';
 import { Song, Track, Instrument } from 'reactronica';
 import {StepButtonsList} from "../../../index";
 import {AppContext} from "../../../../context/AppContext";
-import {useSteps, useMusic} from "../../../../hooks";
+import {useSteps} from "../../../../hooks";
 
 const Drumpad = (props) => {
     const appData = useContext(AppContext);
     const [steps, setSteps] = useSteps(appData.selectedRhythm.item, appData.stepButtons.value);
-    const [currentColumn, setCurrentColumn] = useState(null); //non c'
-    // const [music, setMusic] = useMusic(grid); // Variable for storing our note in a appropriate format for our synth
-    //
+    const [currentColumn, setCurrentColumn] = useState(null);
+
     return(
         <>
             <div className={styles.container}>
-                <Song isPlaying={appData.play.value} bpm={appData.tempo.value}>
-                    <Track
-                        steps={steps}
-                    >
-                        <Instrument
-                            type="sampler"
-                            samples={appData.noteDict[0]}
-                        />
-                    </Track>
+                <Song isPlaying={appData.play.value} bpm={appData.tempo.value} volume={appData.volume.value/25} isMuted={appData.mute.value}>
+                    {steps.map((x,i) =>{
+                        return (<Track
+                            volume={appData.selectedRhythm.item.instruments[i].volume/25} /*divido per 25 altrimenti gracchia troppo*/
+                            mute={appData.selectedRhythm.item.instruments[i].volume/25 === 0 ? true : false}
+                            steps={x}
+                        >
+                            <Instrument
+                                type="sampler"
+                                samples={appData.noteDict[0]}
+                            />
+                        </Track>)
+                    })}
+
                 </Song>
                 {/*<Song isPlaying={appData.play.value} bpm={appData.tempo.value*2}>
                     <Track

@@ -7,11 +7,11 @@ const CustomTextField = withStyles({
         width: "7rem",
         textAlign: "center",
         "& label.Mui-focused": {
-            color: "darkred",
+            color: "white",
         },
         "& .MuiInput-underline:after": {
-            borderBottomColor: "darkred",
-            color: "white"
+            borderBottomColor: "blue",
+            color: "blue"
         },
         "& .MuiOutlinedInput-root": {
             borderRadius: "0.8rem",
@@ -26,6 +26,14 @@ const CustomTextField = withStyles({
             color:"white",
             borderColor:"white"
         },
+        /* dropdown icon */
+        "& .MuiSelect-icon": {
+            color: "yellow"
+        },
+        /* color of the border */
+        "& .MuiOutlinedInput-notchedOutline":{
+            borderColor: "white"
+        }
     },
 })(TextField);
 

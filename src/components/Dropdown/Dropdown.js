@@ -8,12 +8,14 @@ const CustomTextField = withStyles({
         width: "9.5rem",
         textAlign: "center",
         "& label.Mui-focused": {
-            color: "darkred",
+            color: "white",
         },
+        /* not understood */
         "& .MuiInput-underline:after": {
-            borderBottomColor: "#E53A1E",
-            color: "white"
+            borderBottomColor: "yellow",
+            color: "yellow"
         },
+        /* color of the signature */
         "& .MuiOutlinedInput-root": {
             borderRadius: "0.8rem",
             width: "100%",
@@ -23,13 +25,16 @@ const CustomTextField = withStyles({
                 borderColor: "darkred",
             },
         },
+        /* label color */
         "& .MuiInputLabel-outlined":{
             color:"white",
             borderColor:"white"
         },
+        /* dropdown icon */
         "& .MuiSelect-icon": {
-            color: "white"
+            color: "darkred"
         },
+        /* color of the border */
         "& .MuiOutlinedInput-notchedOutline":{
             borderColor: "white"
         }

@@ -24,11 +24,12 @@
 .content{
     padding: 0.5rem;
     background: linear-gradient(#3C3B3D, black);
-    width: 6.9rem;
+    width: 8.8rem;
     z-index: 999;
     position: absolute;
-    border: 1px inset white;
+    border: 1px outset white;
     border-radius: var(--borderRadSett);
+    border-top: transparent;
 }
 
 .item{

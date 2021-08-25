@@ -45,7 +45,8 @@
 
 .rhythmButtons{
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
+    max-height: 4.5rem;
 }
 
 .playButtons {

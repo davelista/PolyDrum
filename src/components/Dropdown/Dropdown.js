@@ -16,7 +16,6 @@ const Dropdown = (props) => {
                         {appData.userRhythms.data[appData.selectedRhythm.number].timeSignature === "" ?
                             <>Time Signature <RiArrowDownSLine/></> :
                             <>{appData.userRhythms.data[appData.selectedRhythm.number].timeSignature} <RiArrowDownSLine/> </>}
-                        {console.log("OPEN È: ",open)}
                     </div>
                     {open ? (
                         <div className={styles.content}>

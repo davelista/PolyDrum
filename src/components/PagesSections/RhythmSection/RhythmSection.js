@@ -10,14 +10,10 @@ const RhythmSection = (props) => {
                     <CheckBox label={"Display"}/>
                 </div>
 
-            {/*FOURTH SECTION --> DRUMPAD */}
-            <div className={styles.drumpad}>
-                <CheckBox label={"Drumpad"}/>
-                <Drumpad />
+                <div className={styles.drumpad}>
+                    <Drumpad />
+                </div>
             </div>
-
-        </div>
-
         </>
     );
 }

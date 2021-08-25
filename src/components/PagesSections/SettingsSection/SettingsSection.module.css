@@ -1,11 +1,11 @@
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     border-right: 3px solid #515151;
-    padding: 1rem 2.5rem;
-    width: 30%;
+    padding: 1rem 3.5rem;
+    width: 33rem;
     background: linear-gradient(#3C3B3D, black);
 
 }
@@ -22,8 +22,8 @@
 
 /* slider part*/
 .slidersContainer {
-    height: 55%;
-    width: 90%;
+    height: 25rem;
+    width: 100%;
     padding: 0.5rem 1.5rem;
     display: flex;
     flex-flow: column nowrap;

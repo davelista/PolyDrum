@@ -10,7 +10,7 @@ const SlidersContainer = (props) => {
 
     appData.userRhythms.data[appData.selectedRhythm.number] !== undefined &&
     appData.userRhythms.data[appData.selectedRhythm.number].instruments.length === 8 ?
-        slidersContainer = (<div className={styles.slidersContainer} >
+        slidersContainer = (<>
         <div className={styles.section}>
             {appData.samplesList.filter((vs) => vs.id < 4).map((x) => {
                 return <>
@@ -38,13 +38,15 @@ const SlidersContainer = (props) => {
                 </>
             })}
         </div>
-    </div>) : slidersContainer = null;
+            </>
+    ) : slidersContainer = null;
 
 
     return (
         <>
-
-            {slidersContainer}
+            <div className={styles.slidersContainer} >
+                {slidersContainer}
+            </div>
         </>
     );
 }

@@ -1,36 +1,35 @@
 import React, {useContext, useEffect, useState} from 'react';
 import styles from './Drumpad.module.css';
-import { Song, Track, Instrument } from 'reactronica';
-import {StepButtonsList} from "../../../index";
+import {PlayRhythm, StepButtonsList} from "../../../index";
 import {AppContext} from "../../../../context/AppContext";
-import {useSteps} from "../../../../hooks";
+
+const playItem = (item, appData) => {
+    if(item !== undefined &&
+        item.instruments !== undefined
+        && item.instruments.length === 8){
+        console.log("QUI ITEM: ",item)
+        return (<PlayRhythm play={appData.play.value}
+                            tempo={appData.tempo.value}
+                            volume={appData.volume.value}
+                            mute={appData.mute.value}
+                            noteDict={appData.noteDict}
+                            numStepButtons={item.numStepButtons}
+                            item={item}
+        />)
+    }
+}
 
 const Drumpad = (props) => {
     const appData = useContext(AppContext);
-    const [steps, setSteps] = useSteps(appData.selectedRhythm.item, appData.stepButtons.value);
-    const [currentColumn, setCurrentColumn] = useState(null);
 
     return(
         <>
             <div className={styles.container}>
-                {appData.selectedRhythm.item !== undefined && appData.selectedRhythm.item.instruments !== undefined && appData.selectedRhythm.item.instruments.length === 8  ?
-                    <Song isPlaying={appData.play.value} bpm={appData.tempo.value} volume={appData.volume.value / 25}
-                          isMuted={appData.mute.value}>
-                        {steps.map((x, i) => {
-                            return (<Track
-                                volume={appData.selectedRhythm.item.instruments[i].volume / 25} /*divido per 25 altrimenti gracchia troppo*/
-                                mute={appData.selectedRhythm.item.instruments[i].volume / 25 === 0 ? true : false}
-                                steps={x}
-                            >
-                                <Instrument
-                                    type="sampler"
-                                    samples={appData.noteDict[0]}
-                                />
-
-                            </Track>)
-                        })}
-
-                    </Song> : null
+                {appData.selectedRhythm.number !== null ? playItem(appData.selectedRhythm.item, appData) :
+                    appData.selectedRhythm.item.length === appData.rhythmsList.item.length ?
+                    appData.selectedRhythm.item.map((x,i) => {
+                        return playItem(x, appData)
+                    }) : null
                 }
 
                 {appData.samplesList.map((x) => {

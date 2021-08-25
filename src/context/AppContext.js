@@ -33,7 +33,7 @@ export function useAppContext() {
                 let itemInstrument = {
                     name: x.name,
                     pad: [],
-                    volume: 10
+                    volume: 50
                 };
                 if(temp[idRhythm].instruments.length === x.id){ /* se non sono stati inseriti tutti gli strumenti */
                     temp[idRhythm].instruments.push(itemInstrument) /* Aggiunge l'elemento all'array */
@@ -58,17 +58,6 @@ export function useAppContext() {
             draft[idRhythm].numStepButtons = newNumStepButton;
             updatePad(draft, idRhythm);
         }))
-
-        /*setDb((db) => {
-            let temp = [...db];
-
-            temp[idRhythm].timeSignature = newTimeSignature;
-            temp[idRhythm].numStepButtons = newNumStepButton;
-            updatePad(temp, idRhythm)
-            return temp
-        });*/
-            console.log("\n\nDB:\n",db)
-
     }
 
     return useMemo(

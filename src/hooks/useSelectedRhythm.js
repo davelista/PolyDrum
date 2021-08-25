@@ -6,7 +6,7 @@ const useSelectedRhythm = (idRhythm, db, setDb) => {
     const [selectedRhythm, setSelectedRhythm] = useState({})
 
     useEffect(() => {
-        if(db[idRhythm] === undefined){
+        if(db[idRhythm] === undefined && idRhythm !== null){
             initRhythmObj();
         } else {
             setRhythmObj();
@@ -26,7 +26,12 @@ const useSelectedRhythm = (idRhythm, db, setDb) => {
     }
 
     const setRhythmObj = () => { /*seleziona l'oggetto nell'array di JSON*/
-        setSelectedRhythm(db[idRhythm])
+        if(idRhythm !== null) {
+            setSelectedRhythm(db[idRhythm])
+        } else {
+            setSelectedRhythm(db);
+
+        }
     }
     return [selectedRhythm, setSelectedRhythm];
 }

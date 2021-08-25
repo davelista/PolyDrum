@@ -12,11 +12,13 @@ const Dropdown = (props) => {
         <>
             {appData.userRhythms.data[appData.selectedRhythm.number] !== undefined && (
                 <div className={styles.dropdown}>
-                    <div className={styles.button} onClick={() => {setOpen(!open)}}>
+                    <div className={open ? styles.activeDrop : styles.button} onClick={() => {setOpen(!open)}}>
                         {appData.userRhythms.data[appData.selectedRhythm.number].timeSignature === "" ?
-                            <>Time Signature <RiArrowDownSLine/></> :
+                            <> <div className={styles.dropLabel}>Time Signature </div> <RiArrowDownSLine/></> :
                             <>{appData.userRhythms.data[appData.selectedRhythm.number].timeSignature} <RiArrowDownSLine/> </>}
+
                     </div>
+
                     {open ? (
                         <div className={styles.content}>
                             {appData.timeSignaturesList.map((x) => {
@@ -34,5 +36,4 @@ const Dropdown = (props) => {
         </>
     );
 }
-
 export default Dropdown;

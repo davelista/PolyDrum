@@ -4,10 +4,14 @@ import {makeStyles, TextField, withStyles} from "@material-ui/core";
 const CustomTextField = withStyles({
     root: {
         color: "white",
-        width: "7rem",
+        width: "10rem",
+        height: "3rem",
         textAlign: "center",
         "& label.Mui-focused": {
             color: "white",
+        },
+        "& .MuiOutlinedInput-input": {
+            padding: "1.2rem"
         },
         "& .MuiInput-underline:after": {
             border: "2px solid",

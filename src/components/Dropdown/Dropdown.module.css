@@ -1,10 +1,11 @@
 .dropdown{
-    width: 8rem;
+    width: 10rem;
+    height: 3rem;
     text-align: center;
 }
 
 .button{
-    padding: 1rem;
+    padding: 1.1rem;
     color: white;
     display: flex;
     align-items: center;
@@ -16,7 +17,7 @@
 .button:hover{
     cursor: pointer;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.6);
-    border-color: darkred;
+    border-color: black;
     border-radius: var(--borderRadSett);
 }
 
@@ -31,7 +32,7 @@
 }
 
 .item{
-    padding: 1rem;
+    padding: 1.2rem;
     transition: all 0.2s;
     color: white;
 }
@@ -39,5 +40,19 @@
 .item:hover{
     box-shadow: 1px 2px 6px 2px rgba(220, 220, 220, 0.3 );
     border: 2px inset darkred;
+    border-radius: var(--borderRadSett);
+}
+
+.dropLabel {
+    font-size: 15px;
+}
+
+.activeDrop {
+    padding: 1rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid darkred;
     border-radius: var(--borderRadSett);
 }

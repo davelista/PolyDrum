@@ -22,6 +22,10 @@
 }
 
 .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
     padding: 0.5rem;
     background: linear-gradient(#3C3B3D, black);
     width: 8.8rem;
@@ -30,12 +34,14 @@
     border: 1px outset white;
     border-radius: var(--borderRadSett);
     border-top: transparent;
+    height: 26.1rem;
 }
 
 .item{
-    padding: 1.2rem;
+    padding: 0.5rem;
     transition: all 0.2s;
     color: white;
+    width: 75%;
 }
 
 .item:hover{

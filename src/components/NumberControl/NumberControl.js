@@ -14,7 +14,7 @@ const CustomTextField = withStyles({
             color: "blue"
         },
         "& .MuiOutlinedInput-root": {
-            borderRadius: "0.8rem",
+            borderRadius: "0.5rem",
             width: "100%",
             color: "white",
             textAlign: "center",

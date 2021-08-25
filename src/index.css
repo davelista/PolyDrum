@@ -3,6 +3,8 @@
   --secondColor: #b388ff;
   --thirdColor: white;
   --fourthColor: black;
+
+  --borderRadSett: 0.5rem;
 }
 
 body {

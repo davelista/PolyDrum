@@ -1,6 +1,5 @@
 .dropdown{
     width: 9.5rem;
-    border-radius: 0.8rem;
     text-align: center;
 }
 
@@ -10,28 +9,35 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid darkred;
+    border: 1px solid white;
+    border-radius: var(--borderRadSett);
 }
 
 .button:hover{
     cursor: pointer;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.6);
+    border-color: darkred;
+    border-radius: var(--borderRadSett);
 }
 
 .content{
     padding: 1rem;
-    background: white;
-    width: 9.5rem;
+    background: linear-gradient(#3C3B3D, black);
+    width: 8.3rem;
     z-index: 999;
     position: absolute;
+    border: 1px inset white;
+    border-radius: var(--borderRadSett);
 }
 
 .item{
     padding: 1rem;
     transition: all 0.2s;
-    color: black;
+    color: white;
 }
 
 .item:hover{
-    box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.6);
+    box-shadow: 1px 2px 6px 2px rgba(220, 220, 220, 0.3 );
+    border: 2px inset darkred;
+    border-radius: var(--borderRadSett);
 }

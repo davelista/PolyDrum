@@ -10,6 +10,7 @@ const CustomTextField = withStyles({
             color: "white",
         },
         "& .MuiInput-underline:after": {
+            border: "2px solid",
             borderBottomColor: "blue",
             color: "blue"
         },
@@ -18,6 +19,7 @@ const CustomTextField = withStyles({
             width: "100%",
             color: "white",
             textAlign: "center",
+            boxShadow: "0 3px 10px 0 rgba(0, 0, 0, 0.6)",
             "&.Mui-focused fieldset": {
                 borderColor: "darkred",
             },

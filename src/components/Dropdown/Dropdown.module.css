@@ -1,5 +1,5 @@
 .dropdown{
-    width: 9.5rem;
+    width: 8rem;
     text-align: center;
 }
 
@@ -21,9 +21,9 @@
 }
 
 .content{
-    padding: 1rem;
+    padding: 0.5rem;
     background: linear-gradient(#3C3B3D, black);
-    width: 8.3rem;
+    width: 6.9rem;
     z-index: 999;
     position: absolute;
     border: 1px inset white;

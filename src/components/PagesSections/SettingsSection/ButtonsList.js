@@ -25,8 +25,14 @@ const ButtonsList = (props) => {
                         appData.rhythmsList.setItem(produce(appData.rhythmsList.item, draft => {
                             draft.splice(appData.rhythmsList.item.length-1)
                         }))
+                        if(appData.userRhythms.data[appData.rhythmsList.item.length-1] !== undefined) {
+                            appData.userRhythms.setData(produce(appData.userRhythms.data, draft => {
+                                draft.splice(appData.rhythmsList.item.length-1)
+                            }))
+                        }
+
                     }}> - </Button>
-                    {console.log(appData.rhythmsList.item)}
+                    {console.log(appData.userRhythms.data)}
                 </div>
                 <div className={styles.rhythmButtonsList} style={appData.rhythmsList.item.length > 5 ? {overflowY: "scroll"} : {overflow:"hidden"}} >
                     {appData.rhythmsList.item.map((x) => {

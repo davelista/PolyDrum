@@ -26,7 +26,7 @@ const useSteps = (item, length) => {
             }
             temp.push(column)
         })
-        console.log("\n\nTEMP DI MERDA È: ",temp)
+        /*console.log("\n\nTEMP DI MERDA È: ",temp)*/
         setSteps(temp);
     }
 

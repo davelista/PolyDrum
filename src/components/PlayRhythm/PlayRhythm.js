@@ -4,9 +4,8 @@ import {useSteps} from "../../hooks";
 
 const PlayRhythm = (props) => {
     const {play, tempo, volume, mute, item, noteDict, numStepButtons} = props;
-    console.log("ITEM È : ", item)
     const [steps, setSteps] = useSteps(item, numStepButtons);
-    console.log("GLI STEPS SONO: ", steps)
+    /*console.log("GLI STEPS SONO: ", steps)*/
     return (
         <>
             <Song isPlaying={play} bpm={tempo} volume={volume / 25}

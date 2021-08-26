@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import {FaPause, FaPlay, FaStop} from "react-icons/all";
 import {Button} from "../../index";
 import styles from "./SettingsSection.module.css";
@@ -7,7 +7,7 @@ import produce from "immer";
 
 const ButtonsList = (props) => {
     const appData = useContext(AppContext);
-    const [remove, setRemove] = useState();
+
     return (
         <>
             <div className={styles.playButtons}>
@@ -32,7 +32,6 @@ const ButtonsList = (props) => {
                         }
 
                     }}> - </Button>
-                    {console.log(appData.userRhythms.data)}
                 </div>
                 <div className={styles.rhythmButtonsList} style={appData.rhythmsList.item.length > 5 ? {overflowY: "scroll"} : {overflow:"hidden"}} >
                     {appData.rhythmsList.item.map((x) => {

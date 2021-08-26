@@ -95,7 +95,6 @@ const Dropdown = (props) => {
     return (
         <>
             {createDropdown()}
-            {console.log(state)}
         </>
     );
 }

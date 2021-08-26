@@ -15,7 +15,7 @@ export function useAppContext() {
     const [mute, setMute] = useState(false);
     const [idRhythm, setIdRhythm] = useState(0);
     const [timeSignature, setTimeSignature] = useState('');
-    const [numRhythm, setNumRhythm] = useState([0]);
+    const [numRhythm, setNumRhythm] = useState([0, 1, 2, 3, 4]);
     const [numStepButtons, setNumStepButton] = useState(null);
     /*JSON*/
     const [db, setDb] = useState([{

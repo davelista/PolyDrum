@@ -43,10 +43,25 @@
     margin-bottom: 1rem;
 }
 
-.rhythmButtons{
+.rhythmButtonsSection{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rhythmButtonsControls{
+    display: flex;
+    flex-flow: row;
+    margin-bottom: 1rem;
+}
+
+.rhythmButtonsList{
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
     max-height: 4.5rem;
+    width: 90%;
 }
 
 .playButtons {

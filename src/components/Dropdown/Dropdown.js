@@ -23,7 +23,7 @@ const Dropdown = (props) => {
                         <div className={styles.content}>
                             {appData.timeSignaturesList.map((x) => {
                                 return <div className={styles.item} onClick={() => {
-                                    appData.userRhythms.update(x.n, x.value);
+                                    appData.userRhythms.update(x.numerator, x.value, x.denominator);
                                     setOpen(false)
                                 }} key={x.value}>{x.value}</div>
 

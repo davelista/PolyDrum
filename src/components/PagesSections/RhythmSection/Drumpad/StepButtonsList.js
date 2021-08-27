@@ -8,6 +8,7 @@ const StepButtonsList = (props) => {
     const appData = useContext(AppContext)
 
     let array = [];
+
     if(appData.selectedRhythm.item.instruments !== undefined){
         for (let i = 0; i < appData.selectedRhythm.item.numStepButtons ; i++) {
             array.push(<StepButton id={i}

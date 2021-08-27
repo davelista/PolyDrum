@@ -26,3 +26,37 @@ Ex. in our case:
 --> N = LCM(N1, N2) (K is D/D1 = 1) --> LCM (11,7) = 77
 
 */
+
+import React, {useContext} from 'react';
+import styles from "./Display.module.css";
+import {AppContext} from "../../../../context/AppContext";
+import {useIndices} from "../../../../hooks";
+import FinalRhythmList from "./FinalRhythmList";
+
+const Display = (props) => {
+    const appData = useContext(AppContext)
+
+    return (
+        <>
+            <div className={styles.display} style={appData.selectedRhythm.number == null ? { height: "50rem"} : { height: "20rem"}}>
+                <div className={styles.container}>
+                    <div className={styles.columnTitles}>
+                    {appData.samplesList.map((x) => {
+                        return <>
+                            <div className={styles.title}>
+                                {x.name}
+                            </div>
+                        </>
+                    })}
+                    </div>
+                    <div className={styles.tab}>
+                       <FinalRhythmList/>
+                    </div>
+                </div>
+            </div>
+
+        </>
+    );
+}
+
+export default Display;

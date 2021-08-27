@@ -17,38 +17,53 @@ export function useAppContext() {
     const [timeSignature, setTimeSignature] = useState('');
     const [numRhythm, setNumRhythm] = useState([0]);
     const [numStepButtons, setNumStepButton] = useState(null);
+    const [currentIndex, setCurrentIndex] = useState(0);
+
     /*JSON*/
     const [db, setDb] = useState([{
         timeSignature : "",
         numStepButtons: 0,
         instruments: []
-    }]); /*Salva le informazioni di un ritmo*/
+    }]);/*Salva le informazioni di un ritmo*/
+
     const [itemSelectedRhythm, setItemSelectedRhythm] = useSelectedRhythm(idRhythm, db, setDb);
 
-
-        const updatePad = (temp, idRhythm) => {
-
-            samplesList.map((x) => {
-                let pad = [];
-                let itemInstrument = {
-                    name: x.name,
-                    pad: [],
-                    volume: 50
-                };
-                if(temp[idRhythm].instruments.length === x.id){ /* se non sono stati inseriti tutti gli strumenti */
-                    temp[idRhythm].instruments.push(itemInstrument) /* Aggiunge l'elemento all'array */
-                } else { /* ALTRIMENTI */
-                    temp[idRhythm].instruments.map((y, i) => { /* Sostituisce il numero di stepButton all'interno di pad se l'utente cambia il ritmo */
-                        if(y.pad.length !== pad.length) {
-                            y.pad = pad;
-                        }
-                    })
+    const lcm = (a, b) => {
+    // looping from 1 to number1 and number2 to find HCF
+        let hcf;
+            for (let i = 1; i <= a && i <= b; i++) {
+                // check if is factor of both integers
+                if( a % i === 0 && b % i === 0) {
+                    hcf = i;
                 }
-            })
-        }
+            }
+    // find LCM
+            let result = (a * b) / hcf;
+            return result
+    }
 
+    const updatePad = (temp, idRhythm) => {
 
-        const updateUserRhythms = (newNumStepButton, newTimeSignature) => {
+        samplesList.map((x) => {
+            let pad = [];
+            let itemInstrument = {
+                name: x.name,
+                pad: [],
+                volume: 50
+            };
+            if(temp[idRhythm].instruments.length === x.id){ /* se non sono stati inseriti tutti gli strumenti */
+                temp[idRhythm].instruments.push(itemInstrument) /* Aggiunge l'elemento all'array */
+            } else { /* ALTRIMENTI */
+                temp[idRhythm].instruments.map((y, i) => { /* Sostituisce il numero di stepButton all'interno di pad se l'utente cambia il ritmo */
+                    if(y.pad.length !== pad.length) {
+                        y.pad = pad;
+                    }
+                })
+            }
+        })
+    }
+
+    const updateUserRhythms = (newNumStepButton, newTimeSignature, newDenominator) => {
 
         setNumStepButton(newNumStepButton);
         setTimeSignature(newTimeSignature);
@@ -56,9 +71,12 @@ export function useAppContext() {
         setDb(produce(db, draft => {
             draft[idRhythm].timeSignature = newTimeSignature;
             draft[idRhythm].numStepButtons = newNumStepButton;
+            draft[idRhythm].denominator = newDenominator;
             updatePad(draft, idRhythm);
         }))
     }
+
+
 
     return useMemo(
         () => ({
@@ -66,9 +84,15 @@ export function useAppContext() {
             timeSignaturesList,
             samplesList,
             noteDict,
+
+            math:{
+                lcm: lcm,
+            },
             play:{
-              value: isPlay,
-              setValue: setPlay
+                value: isPlay,
+                setValue: setPlay,
+                index: currentIndex,
+                setIndex: setCurrentIndex
             },
             stepButtons:{
                 value: numStepButtons,
@@ -87,7 +111,8 @@ export function useAppContext() {
             userRhythms: { /*Array di JSON con tutti i ritmi dell'utente*/
                 data: db,
                 setData: setDb,
-                update: updateUserRhythms
+                update: updateUserRhythms,
+
             },
             timeSignature: { /*tempo della battuta */
                 value: timeSignature,
@@ -107,6 +132,7 @@ export function useAppContext() {
             }
         }),
         [bpm, setBpm, isPlay, volume, mute, timeSignature,
-            numStepButtons, numRhythm, idRhythm, itemSelectedRhythm,]
+            numStepButtons, numRhythm, idRhythm, itemSelectedRhythm, currentIndex,
+            setCurrentIndex]
     );
 }

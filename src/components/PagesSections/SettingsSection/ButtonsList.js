@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {FaPause, FaPlay, FaStop} from "react-icons/all";
+import {BiSelectMultiple, FaMinus, FaPause, FaPlay, FaPlus, FaStop} from "react-icons/all";
 import {Button} from "../../index";
 import styles from "./SettingsSection.module.css";
 import {AppContext} from "../../../context/AppContext";
@@ -18,8 +18,12 @@ const ButtonsList = (props) => {
             <div className={styles.rhythmButtonsSection} >
 
                 <div className={styles.rhythmButtonsControls}>
-                    <Button buttonStyle={appData.selectedRhythm.number == null ? 'btn--primary--active' : 'btn--primary'} onClick={() => appData.selectedRhythm.setNumber(null)}> ALL </Button>
-                    <Button onClick={() => appData.rhythmsList.setItem(appData.rhythmsList.item.concat(appData.rhythmsList.item.length))}> + </Button>
+                    <Button buttonStyle={appData.selectedRhythm.number == null ?
+                        'btn--primary--active' : 'btn--primary'}
+                            onClick={() => appData.selectedRhythm.setNumber(null)}>
+                        <BiSelectMultiple size={20}/>
+                    </Button>
+                    <Button onClick={() => appData.rhythmsList.setItem(appData.rhythmsList.item.concat(appData.rhythmsList.item.length))}> <FaPlus/> </Button>
 
                     <Button onClick={() => {
                         appData.rhythmsList.setItem(produce(appData.rhythmsList.item, draft => {
@@ -31,11 +35,11 @@ const ButtonsList = (props) => {
                             }))
                         }
 
-                    }}> - </Button>
+                    }}> <FaMinus/> </Button>
                 </div>
                 <div className={styles.rhythmButtonsList} style={appData.rhythmsList.item.length > 5 ? {overflowY: "scroll"} : {overflow:"hidden"}} >
                     {appData.rhythmsList.item.map((x) => {
-                        return <Button buttonStyle={appData.selectedRhythm.number === x ? 'btn--primary--active' : 'btn--primary'} onClick={() => appData.selectedRhythm.setNumber(x)}>{x}</Button>
+                        return <Button buttonStyle={appData.selectedRhythm.number === x ? 'btn--primary--active' : 'btn--primary'} onClick={() => appData.selectedRhythm.setNumber(x)}>{x+1}</Button>
                     })}
                 </div>
 

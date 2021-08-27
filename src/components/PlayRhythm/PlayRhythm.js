@@ -3,17 +3,17 @@ import {Instrument, Song, Track} from "reactronica";
 import {useSteps} from "../../hooks";
 
 const PlayRhythm = (props) => {
-    const {play, tempo, volume, mute, item, noteDict, numStepButtons, onChangeIndex} = props;
+    const {play, tempo, volume, mute, item, noteDict, numStepButtons} = props;
     const [steps, setSteps] = useSteps(item, numStepButtons);
     /*console.log("GLI STEPS SONO: ", steps)*/
     return (
         <>
             <Song isPlaying={play.value} bpm={tempo} volume={volume / 25}
-                  isMuted={mute}>
+                  isMuted={mute || volume === 0}>
                 {steps.map((x, i) => {
                     return (<Track
                         volume={item.instruments[i].volume / 25} /*divido per 25 altrimenti gracchia troppo*/
-                        mute={item.instruments[i].volume / 25 === 0}
+                        mute={item.instruments[i].volume / 25 === 0 || mute}
                         steps={x}
                        /* onStepPlay={(_, i) => {
                             play.setIndex(i);

@@ -7,7 +7,6 @@ const playItem = (item, appData) => {
     if(item !== undefined &&
         item.instruments !== undefined
         && item.instruments.length === 8){
-       /* console.log("QUI ITEM: ",item)*/
         return (<PlayRhythm play={appData.play}
                             tempo={appData.tempo.value}
                             volume={appData.volume.value}
@@ -16,6 +15,7 @@ const playItem = (item, appData) => {
                             numStepButtons={item.numStepButtons}
                             item={item}
         />)
+        console.log("MUTE", appData.mute.value)
     }
 }
 

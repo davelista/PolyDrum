@@ -13,7 +13,8 @@ import StepButtonsList from "./PagesSections/RhythmSection/Drumpad/StepButtonsLi
 import ButtonsList from "./PagesSections/SettingsSection/ButtonsList";
 import SlidersContainer from "./PagesSections/SettingsSection/SlidersContainer";
 import PlayRhythm from "./PlayRhythm/PlayRhythm"
+import Popup from "./Popup/Popup";
 
 export {StepButton, HorizontalSlider, SampleLine, Dropdown, CheckBox,
     NumberControl, Drumpad, Button, VerticalSlider,SettingsSection, RhythmSection, StepButtonsList, ButtonsList,
-    SlidersContainer, PlayRhythm}
+    SlidersContainer, PlayRhythm, Popup}

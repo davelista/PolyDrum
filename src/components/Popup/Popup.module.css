@@ -3,29 +3,32 @@
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .container{
+    position: relative;
+    width: 100%;
+    max-width: 40rem;
+    height: 45rem;
+    background: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background: transparent;
+    align-items: center;
+    border-radius: 1rem;
+
 }
 .titleContainer{
     color: black;
-    margin-top: 5%;
-    position: relative;
     display: flex;
     background-color: white;
     flex-direction: row;
-    justify-content: space-around;
-    width: 50%;
-    height: 8rem;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    justify-content: center;
+    width: 90%;
 }
 
 .title {
@@ -35,33 +38,40 @@
     margin-top: 3rem;
     font-size: 24px;
     font-weight: bold;
+    padding-bottom: 1.5rem;
 }
 
-.popup{
+.body{
     color: black;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -30%);
     justify-content: center;
-    background: linear-gradient(white, #515151);
+    /*background: linear-gradient(white, #515151);*/
     height: 20rem;
-    width: 50%;
+    width: 80%;
+
+}
+
+.closeSection{
+    margin-top: 2rem;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 90%;
+    cursor: pointer;
 }
 
 .closeButton{
-    font-size: 12pt;
-    font-weight: lighter;
-    cursor: pointer;
-    margin-top: 1.2rem;
-    margin-left: 0.7rem;
+
 }
 
-.popupDivider {
+.divider {
     display: flex;
     margin-top: 1rem;
     margin-bottom: 1rem;
     width: 30%;
+    height: 0.2rem;
+    background: black;
+    border-radius: 5rem;
 }
 
 @media screen and (max-width: 960px) {

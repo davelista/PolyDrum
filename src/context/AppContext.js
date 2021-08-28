@@ -1,7 +1,8 @@
 import React, {useMemo, useRef, useState} from "react";
-import timeSignaturesList from '../timeSignaturesList.json'
-import samplesList from '../samplesList.json'
-import noteDict from '../noteDict.json'
+import timeSignaturesList from '../timeSignaturesList.json';
+import samplesList from '../samplesList.json';
+import noteDict from '../noteDict.json';
+import popupsList from '../popupsList.json';
 import {useSelectedRhythm} from "../hooks";
 import produce from "immer";
 
@@ -81,6 +82,7 @@ export function useAppContext() {
     return useMemo(
         () => ({
 
+            popupsList,
             timeSignaturesList,
             samplesList,
             noteDict,

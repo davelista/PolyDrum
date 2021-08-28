@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./Popup.module.css"
-import {AiOutlineCloseSquare} from "react-icons/all";
+import {AiOutlineCloseSquare, GrClose} from "react-icons/all";
 
 function Popup(props) {
     const {title, body, open, onChangeOpen} = props;
@@ -9,14 +9,15 @@ function Popup(props) {
             <div>
                 <div className={styles.overlay}>
                  <div className={styles.container}>
-                    <div className={styles.titleContainer}>
+                     <div className={styles.closeSection}>
+                         <span className={styles.closeButton} onClick={() => onChangeOpen(!open)}><GrClose size={20}/></span>
+                     </div>
 
-                        <span className={styles.closeButton} onClick={() => onChangeOpen(!open)}><AiOutlineCloseSquare size={20}/></span>
+                    <div className={styles.titleContainer}>
                         <div className={styles.title}>{title}</div>
-                        <div> </div>
                     </div>
-                     <div className={styles.popupDivider}/>
-                    <div className={styles.popup}>
+                     <div className={styles.divider}/>
+                    <div className={styles.body}>
                         <p>{body}</p>
                     </div>
                 </div>

@@ -10,6 +10,7 @@ const SettingsSection = (props) => {
     const appData = useContext(AppContext);
     const [open, setOpen] = useState(false);
     const [open2, setOpen2] = useState(false);
+
     return (
         <>
             <div className={styles.container}>
@@ -33,10 +34,10 @@ const SettingsSection = (props) => {
                 </div>
 
                 {
-                    open ? <Popup title={"Inserire titolo"} body={"inserire body"} open={open} onChangeOpen={setOpen}/> : null
+                    open ? <Popup title={appData.popupsList[0].title} body={appData.popupsList[0].body} open={open} onChangeOpen={setOpen}/> : null
                 }
                 {
-                    open2 ? <Popup title={"Titolo 2"} body={"Mannaggia"} open={open2} onChangeOpen={setOpen2}/> : null
+                    open2 ? <Popup title={appData.popupsList[1].title} body={appData.popupsList[1].body} open={open2} onChangeOpen={setOpen2}/> : null
                 }
                 <SlidersContainer />
             </div>

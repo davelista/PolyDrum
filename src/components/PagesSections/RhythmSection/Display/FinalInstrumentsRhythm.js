@@ -31,12 +31,15 @@ const FinalInstrumentsRhythm = (props) => {
     const controlPad = (index, db) => {
         let array = [];
         for (let i = 0; i < db.length; i++){
-            let padIndex = index % db[i].numStepButtons;
-            for (let y = 0; y < db[i].instruments.length; y++){
-                if(db[i].instruments[y].pad[padIndex]){
-                    array[y] = true;
+            if(db[i] !== undefined) {
+                let padIndex = index % db[i].numStepButtons;
+                for (let y = 0; y < db[i].instruments.length; y++){
+                    if(db[i].instruments[y].pad[padIndex]){
+                        array[y] = true;
+                    }
                 }
             }
+
         }
         return array;
     }

@@ -3,28 +3,31 @@ import {AppContext} from "../../../../context/AppContext";
 import styles from "./Display.module.css";
 import {useIndices} from "../../../../hooks";
 
-const FinalRhythmList = (props) => {
+const FinalInstrumentsRhythm = (props) => {
     const appData = useContext(AppContext);
     const [indices, setIndices] = useIndices();
     let minute = 60000;
     let seconds = minute/appData.tempo.value - 50;
 
-    useEffect(() => {
+    useEffect(() => { /*Funzione per evidenziare l'index suonato*/
         if(appData.play.value){
             const interval = setInterval(() => {
                 if(appData.play.index < indices.length-1){
                     appData.play.setIndex(appData.play.index + 1);
-
                 }
                 else{
                     appData.play.setIndex(0);
                 }
-                console.log(appData.play.index);
             }, seconds);
             return () => clearInterval(interval);
         }
+        else {
+            appData.play.setIndex(0)
+        }
     }, [appData.play.value, appData.play.index]);
 
+    /*disegna, assieme a draqFinalRhythm, la colonna del
+     ritmo finale indicando quali strumenti vengono suonati per ogni indice*/
     const controlPad = (index, db) => {
         let array = [];
         for (let i = 0; i < db.length; i++){
@@ -36,17 +39,6 @@ const FinalRhythmList = (props) => {
             }
         }
         return array;
-    }
-
-    const updateIndex = (currentIndex, setCurrentIndex, bpm) => {
-        let minute = 60000;
-        let interval = minute/bpm;
-
-        setInterval(() => {
-            setCurrentIndex(currentIndex + 1);
-
-        }, interval)
-        console.log(currentIndex);
     }
 
     const drawFinalRhythm = (index, db, instruments) => {
@@ -65,6 +57,16 @@ const FinalRhythmList = (props) => {
 
     return (
         <>
+            <div className={styles.columnTitles}>
+                {appData.samplesList.map((x) => {
+                    return <>
+                        <div className={styles.title}>
+                            {x.name}
+                        </div>
+                    </>
+                })}
+            </div>
+            <div className={styles.tab}>
             {
                 indices.map((x, i) => {
                     return (
@@ -75,8 +77,9 @@ const FinalRhythmList = (props) => {
                     )
                 })
             }
+            </div>
         </>
     );
 }
 
-export default FinalRhythmList;
+export default FinalInstrumentsRhythm;

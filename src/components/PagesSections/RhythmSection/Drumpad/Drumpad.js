@@ -15,7 +15,6 @@ const playItem = (item, appData) => {
                             numStepButtons={item.numStepButtons}
                             item={item}
         />)
-        console.log("MUTE", appData.mute.value)
     }
 }
 
@@ -27,9 +26,9 @@ const Drumpad = (props) => {
             <div className={styles.container}>
                 {appData.selectedRhythm.number !== null ? playItem(appData.selectedRhythm.item, appData) :
                     appData.selectedRhythm.item.length === appData.rhythmsList.item.length ?
-                    appData.selectedRhythm.item.map((x,i) => {
-                        return playItem(x, appData)
-                    }) : null
+                        appData.selectedRhythm.item.map((x,i) => {
+                            return playItem(x, appData)
+                        }) : null
                 }
 
                 {appData.samplesList.map((x) => {

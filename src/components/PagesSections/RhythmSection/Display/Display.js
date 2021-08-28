@@ -30,8 +30,7 @@ Ex. in our case:
 import React, {useContext} from 'react';
 import styles from "./Display.module.css";
 import {AppContext} from "../../../../context/AppContext";
-import {useIndices} from "../../../../hooks";
-import FinalRhythmList from "./FinalRhythmList";
+import FinalInstrumentsRhythm from "./FinalInstrumentsRhythm";
 
 const Display = (props) => {
     const appData = useContext(AppContext)
@@ -40,18 +39,7 @@ const Display = (props) => {
         <>
             <div className={styles.display} style={appData.selectedRhythm.number == null ? { height: "50rem"} : { height: "20rem"}}>
                 <div className={styles.container}>
-                    <div className={styles.columnTitles}>
-                    {appData.samplesList.map((x) => {
-                        return <>
-                            <div className={styles.title}>
-                                {x.name}
-                            </div>
-                        </>
-                    })}
-                    </div>
-                    <div className={styles.tab}>
-                       <FinalRhythmList/>
-                    </div>
+                       <FinalInstrumentsRhythm/>
                 </div>
             </div>
 

@@ -8,8 +8,8 @@ import SlidersContainer from "./SlidersContainer";
 
 const SettingsSection = (props) => {
     const appData = useContext(AppContext);
-    const [open, setOpen] = useState(false)
-
+    const [open, setOpen] = useState(false);
+    const [open2, setOpen2] = useState(false);
     return (
         <>
             <div className={styles.container}>
@@ -25,15 +25,18 @@ const SettingsSection = (props) => {
                 <div className={styles.divider}></div>
 
                 <div className={styles.auxButtons}>
-                    <Button onClick={() => setOpen(!open)} buttonStyle={"btn--secondary"}><BsQuestionSquareFill/></Button>
+                    <Button onClick={() => setOpen(!open)} buttonStyle={"btn--secondary"}><BsQuestionSquareFill size={20}/></Button>
 
                     <NumberControl tempo={appData.tempo} play={appData.play}/>
                     <Dropdown/>
-                    <Button onClick={() => setOpen(!open)} buttonStyle={"btn--secondary"}><BsQuestionSquareFill/></Button>
+                    <Button onClick={() => setOpen2(!open2)} buttonStyle={"btn--secondary"}><BsQuestionSquareFill size={20}/></Button>
                 </div>
 
                 {
-                    open ? <Popup title={"Inserire titolo"} body={"inserire body"} footer={"inserire footer"} /> : null
+                    open ? <Popup title={"Inserire titolo"} body={"inserire body"} open={open} onChangeOpen={setOpen}/> : null
+                }
+                {
+                    open2 ? <Popup title={"Titolo 2"} body={"Mannaggia"} open={open2} onChangeOpen={setOpen2}/> : null
                 }
                 <SlidersContainer />
             </div>

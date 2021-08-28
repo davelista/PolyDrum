@@ -75,7 +75,7 @@
 .auxButtons {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-evenly;
-    width:  120%;
+    justify-content: space-between;
+    width:  110%;
     align-items: center;
 }

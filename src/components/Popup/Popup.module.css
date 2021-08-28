@@ -13,59 +13,56 @@
     justify-content: center;
     background: transparent;
 }
-.titleOnTop{
+.titleContainer{
     color: black;
     margin-top: 5%;
     position: relative;
     display: flex;
     background-color: white;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     width: 50%;
     height: 8rem;
-    align-items: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 2px solid black;
 }
+
+.title {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin-top: 3rem;
+    font-size: 24px;
+    font-weight: bold;
+}
+
 .popup{
-    color: white;
+    color: black;
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -30%);
     justify-content: center;
-    background: linear-gradient(#3C3B3D, black);
+    background: linear-gradient(white, #515151);
     height: 20rem;
     width: 50%;
-    border: 2px solid black;
 }
 
-.close-button{
+.closeButton{
     font-size: 12pt;
     font-weight: lighter;
     cursor: pointer;
-
+    margin-top: 1.2rem;
+    margin-left: 0.7rem;
 }
 
-.send-button{
-    background-color: #3ca000;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    /*display: inline-block;*/
-    padding: 15px;
-    font-size: 12px;
-    right: 0;
-    width: 25%;
-    margin-top: 3%;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 34px;
-    align-items: flex-end;
+.popupDivider {
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 30%;
 }
-
 
 @media screen and (max-width: 960px) {
 

@@ -1,6 +1,5 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {AppContext} from "../context/AppContext";
-import useSteps from "./useSteps";
 
 const useIndices = () => {
     const appData = useContext(AppContext);
@@ -16,8 +15,10 @@ const useIndices = () => {
         let numerator = 1;
         let denominator = 1;
         for(let i = 0; i < appData.userRhythms.data.length; i++){
-            numerator = appData.math.lcm(numerator, appData.userRhythms.data[i].numStepButtons);
-            denominator = appData.math.lcm(denominator, appData.userRhythms.data[i].denominator);
+            if(appData.userRhythms.data[i] !== undefined){
+                numerator = appData.math.lcm(numerator, appData.userRhythms.data[i].numStepButtons);
+                denominator = appData.math.lcm(denominator, appData.userRhythms.data[i].denominator);
+            }
         }
         return numerator;
     }

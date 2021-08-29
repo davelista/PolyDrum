@@ -37,7 +37,7 @@ const Display = (props) => {
 
     return (
         <>
-            <div className={styles.display} style={appData.selectedRhythm.number == null ? { height: "50rem"} : { height: "20rem"}}>
+            <div className={styles.display} style={appData.selectedRhythm.number == null ? { height: "40rem"} : { height: "20rem"}}>
                 <div className={styles.container}>
                        <FinalInstrumentsRhythm/>
                 </div>

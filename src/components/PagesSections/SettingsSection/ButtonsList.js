@@ -12,7 +12,6 @@ const ButtonsList = (props) => {
         <>
             <div className={styles.playButtons}>
                 <Button onClick={() => appData.play.setValue(!appData.play.value)} >{appData.play.value ?<FaPause/> : <FaPlay/>} </Button>
-                {/* <Button><FaStop/></Button> */}
             </div>
 
             <div className={styles.rhythmButtonsSection} >
@@ -21,7 +20,8 @@ const ButtonsList = (props) => {
                     <Button buttonStyle={appData.selectedRhythm.number == null ?
                         'btn--primary--active' : 'btn--primary'}
                             onClick={() => appData.selectedRhythm.setNumber(null)}>
-                        <BiSelectMultiple size={20}/>
+
+                        All <BiSelectMultiple size={20}/>
                     </Button>
                     <Button onClick={() => appData.rhythmsList.setItem(appData.rhythmsList.item.concat(appData.rhythmsList.item.length))}> <FaPlus/> </Button>
 

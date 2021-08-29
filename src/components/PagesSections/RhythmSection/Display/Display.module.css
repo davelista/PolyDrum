@@ -2,7 +2,7 @@
     height: 20rem;
     display: flex;
     flex-direction: row;
-    width: 70rem;
+    width: 60rem;
     background-color: #202020;
     border: 2px solid #515151;
     border-radius: 5px;
@@ -12,6 +12,7 @@
 .container{
     display: flex;
     flex-direction: row;
+    align-items: center;
     margin: 1rem;
     width: 100%;
 
@@ -28,14 +29,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 4rem;
+    margin-top: 3rem;
+    margin-right: 1rem;
 }
 
 .tab{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .columnSteps{
@@ -43,7 +45,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 3rem;
+    width: 2.2rem;
 }
 
 .box{
@@ -54,19 +56,20 @@
 }
 
 .toggle{
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.4rem;
+    height: 1.4rem;
     border-radius: 50%;
-    background: white;
-    border: 1px solid red;
+    color: black;
+    border: 2px solid var(--secondColor);
+
 }
 
 .toggleActive{
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.4rem;
+    height: 1.4rem;
     border-radius: 50%;
-    background: red;
-    border: 1px solid white;
+    background: white;
+    border: 2px solid var(--secondColor);
 }
 
 

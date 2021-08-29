@@ -2,7 +2,6 @@
     display: flex;
     width: 77rem;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     background: transparent;
     padding: 1rem 3.5rem;
@@ -10,8 +9,7 @@
 }
 /* drumpad section */
 .drumpad {
-
-    height: 25rem;
+    height: 25.8rem;
     width: 60rem;
     display: flex;
     flex-direction: column;

@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     border-right: 3px solid #515151;
-    padding: 1rem 3.5rem;
+    padding: 1rem 6.5rem;
     width: 33rem;
     background: linear-gradient(#3C3B3D, black);
 
@@ -16,7 +16,7 @@
     border-top: 3px solid #515151;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    width: 112%;
+    width: 120%;
 
 }
 

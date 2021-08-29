@@ -49,9 +49,9 @@ const FinalInstrumentsRhythm = (props) => {
         let draw = []
         for (let i = 0; i < instruments.length; i++){
             if(pads[i]){
-                draw.push(<div className={styles.box}><div className={styles.toggleActive}> </div></div>)
+                draw.push(<div className={appData.selectedRhythm.number != null ? styles.box : styles.allDisplayBox}><div className={styles.toggleActive}> </div></div>)
             } else {
-                draw.push(<div className={styles.box}><div className={styles.toggle}> </div></div>)
+                draw.push(<div className={appData.selectedRhythm.number != null ? styles.box : styles.allDisplayBox}><div className={styles.toggle}> </div></div>)
             }
         }
         return draw;
@@ -63,7 +63,7 @@ const FinalInstrumentsRhythm = (props) => {
             <div className={styles.columnTitles}>
                 {appData.samplesList.map((x) => {
                     return <>
-                        <div className={styles.title}>
+                        <div className={styles.title} style={appData.selectedRhythm.number == null ? {height: "3rem"} : null}>
                             {x.name}
                         </div>
                     </>
@@ -74,7 +74,7 @@ const FinalInstrumentsRhythm = (props) => {
                 indices.map((x, i) => {
                     return (
                         <div className={styles.columnSteps} >
-                            <div className={styles.box} style={appData.play.index === i ? {color: "red"} : null}>{x}</div>
+                            <div className={appData.selectedRhythm.number != null ? styles.box : styles.allDisplayBox} style={appData.play.index === i ? {background: "#b388ff", color: "white"} : null}>{x}</div>
                             {drawFinalRhythm(i, appData.userRhythms.data, appData.samplesList)}
                         </div>
                     )

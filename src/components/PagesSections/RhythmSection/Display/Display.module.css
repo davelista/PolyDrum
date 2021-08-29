@@ -25,6 +25,7 @@
     height: 2rem;
 }
 
+
 .columnTitles{
     display: flex;
     flex-direction: column;
@@ -51,15 +52,23 @@
 .box{
     display: flex;
     justify-content: center;
-    width: 3rem;
+    align-items: center;
+    width: 2rem;
     height: 2rem;
+}
+
+.allDisplayBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
 }
 
 .toggle{
     width: 1.4rem;
     height: 1.4rem;
     border-radius: 50%;
-    color: black;
     border: 2px solid var(--secondColor);
 
 }

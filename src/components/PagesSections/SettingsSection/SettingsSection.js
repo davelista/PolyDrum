@@ -39,7 +39,7 @@ const InstructionPopup = () => {
             <br/>
             On the right the drum is divided:
             <ul>
-                <li>On top: <b>display</b></li>
+                <li>On top: <b>display to see the final rhythm</b></li>
                 <li>On bottom: <b>pad to characterize your rhythms</b></li>
             </ul>
         </div>

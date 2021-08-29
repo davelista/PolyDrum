@@ -1,10 +1,50 @@
 import React, {useContext, useState} from 'react';
 import styles from "./SettingsSection.module.css";
 import {Dropdown, HorizontalSlider, NumberControl, Button, ButtonsList, Popup} from "../../index";
-import {HiVolumeUp, HiVolumeOff, BsQuestionSquareFill} from "react-icons/all";
+import {
+    HiVolumeUp,
+    HiVolumeOff,
+    BsQuestionSquareFill,
+    FaPause,
+    FaPlay,
+    BiSelectMultiple,
+    FaPlus, FaMinus, BiHash
+} from "react-icons/all";
 import {AppContext} from "../../../context/AppContext";
 import SlidersContainer from "./SlidersContainer";
 
+const InstructionPopup = () => {
+    return (<>
+        <div>
+            <div style={{display: "flex", height: "3rem", alignItems:"center"}}>
+                <Button ><FaPlay/></Button>
+                <div style={{marginLeft: "1rem"}}>Play/Pause button</div>
+            </div>
+            <div style={{display: "flex", height: "3rem", alignItems:"center"}}>
+                <Button> All <BiSelectMultiple size={20}/></Button>
+                <div style={{marginLeft: "1rem"}}>button to select all rhythms</div>
+            </div>
+            <div style={{display: "flex", height: "3rem", alignItems:"center"}}>
+                <Button><FaPlus/></Button>
+                <div style={{marginLeft: "1rem"}}>button to add a rhythm</div>
+            </div>
+            <div style={{display: "flex", height: "3rem", alignItems:"center"}}>
+                <Button><FaMinus/></Button>
+                <div style={{marginLeft: "1rem"}}>button to delete a rhythm</div>
+            </div>
+            <div style={{display: "flex", height: "3rem", alignItems:"center"}}>
+                <Button><BiHash/></Button>
+                <div style={{marginLeft: "1rem"}}>button to select a specific rhythm</div>
+            </div>
+            <br/>
+            On the right the drum is divided:
+            <ul>
+                <li>On top: <b>display</b></li>
+                <li>On bottom: <b>pad to characterize your rhythms</b></li>
+            </ul>
+        </div>
+    </>);
+}
 
 const SettingsSection = (props) => {
     const appData = useContext(AppContext);
@@ -44,7 +84,7 @@ const SettingsSection = (props) => {
 
                 </div>
                 {
-                    open ? <Popup title={appData.popupsList[0].title} body={appData.popupsList[0].body} open={open} onChangeOpen={setOpen}/> : null
+                    open ? <Popup title={appData.popupsList[0].title} body={InstructionPopup()} open={open} onChangeOpen={setOpen}/> : null
                 }
 
                 {

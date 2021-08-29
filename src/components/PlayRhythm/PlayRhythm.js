@@ -10,7 +10,7 @@ const PlayRhythm = (props) => {
     return (
 
         <>
-            <Song isPlaying={play.value && buffer} bpm={bpm} volume={volume / 25}
+            <Song isPlaying={play.value } bpm={bpm} volume={volume / 25}
                   isMuted={mute || volume === 0}>
                 {steps.map((x, i) => {
                     return (<Track
@@ -22,9 +22,9 @@ const PlayRhythm = (props) => {
                         <Instrument
                             type="sampler"
                             samples={noteDict[0]}
-                            onLoad={(buffers) => {
+                            /*onLoad={(buffers) => {
                                 setBuffer(true)
-                            }}
+                            }}*/
                         />
 
                     </Track>)

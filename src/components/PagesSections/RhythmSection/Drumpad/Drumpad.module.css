@@ -2,7 +2,11 @@
     display: flex;
     flex-direction: column;
     width: 90%;
+    margin: 0.5rem 1.5rem;
     padding: 0.5rem 1.5rem;
+    background: url("../../../../assets/logo.png") bottom right no-repeat;
+    background-size: contain ;
+
 }
 
 .line{

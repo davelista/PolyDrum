@@ -9,7 +9,7 @@ const useIndices = () => {
         if(appData.userRhythms.data !== undefined){
             updateIndices()
         }
-    }, [appData.userRhythms.data])
+    }, [appData.timeSignature.value])
 
     const findNumIndices = () => {
         let numerator = 1;

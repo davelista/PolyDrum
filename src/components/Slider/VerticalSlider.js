@@ -80,25 +80,7 @@ vertical: {
 function valuetext(value) {
     return `${value}`;
 }
-/*
-const marks = [
-    {
-        value: 0,
-    },
-    {
-        value: 25,
-    },
-    {
-        value: 50,
-    },
-    {
-        value: 75,
-    },
-    {
-        value: 100,
-    },
-];
-*/
+
 const VerticalSlider = (props) => {
     const {title, defaultValue, userRhythms, idInstrument, idRhythm} = props;
     const classes = useStyles();
@@ -110,19 +92,7 @@ const VerticalSlider = (props) => {
                         {title}
                     </Typography>
                 </div>
-                {/* ICONA <Grid item>
-                    <VolumeUp/>
-                </Grid>*/}
-
                 <div style={{height:"6rem"}}>
-                    {/*<Slider
-                        orientation="vertical"
-                        getAriaValueText={valuetext}
-                        defaultValue={defaultValue}
-                        aria-labelledby="vertical-slider"
-                        marks={marks}
-                        onChange={(e, value) => onChangeValue(value)}
-                    />*/}
                     <CustomSlider
                         orientation="vertical"
                         getAriaValueText={valuetext}

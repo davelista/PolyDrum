@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import styles from "./SettingsSection.module.css";
 import {VerticalSlider} from "../../index";
 import {AppContext} from "../../../context/AppContext";
+import logo from "../../../assets/logo.png"
 
 const SlidersContainer = (props) => {
     const appData = useContext(AppContext)
@@ -12,7 +13,6 @@ const SlidersContainer = (props) => {
     appData.userRhythms.data[appData.selectedRhythm.number].instruments.length === 8 ?
         slidersContainer = (<>
 
-                {/*<div className={styles.logo}></div>*/}
 
                     <div className={styles.section}>
                         {appData.samplesList.filter((vs) => vs.id < 4).map((x) => {
@@ -48,7 +48,7 @@ const SlidersContainer = (props) => {
 
     return (
         <>
-            <div className={styles.slidersContainer} >
+            <div className={styles.slidersContainer} style={appData.selectedRhythm.number === null ? {backgroundImage: `url(${logo})`, backgroundSize: "contain", backgroundPosition: "center", backgroundRepeat:"no-repeat"} : null} >
                 {slidersContainer}
             </div>
         </>

@@ -30,17 +30,17 @@ export function useAppContext() {
     const [itemSelectedRhythm, setItemSelectedRhythm] = useSelectedRhythm(idRhythm, db, setDb);
 
     const lcm = (a, b) => {
-    // looping from 1 to number1 and number2 to find HCF
+        // looping from 1 to number1 and number2 to find HCF
         let hcf;
-            for (let i = 1; i <= a && i <= b; i++) {
-                // check if is factor of both integers
-                if( a % i === 0 && b % i === 0) {
-                    hcf = i;
-                }
+        for (let i = 1; i <= a && i <= b; i++) {
+            // check if is factor of both integers
+            if( a % i === 0 && b % i === 0) {
+                hcf = i;
             }
-    // find LCM
-            let result = (a * b) / hcf;
-            return result
+        }
+        // find LCM
+        let result = (a * b) / hcf;
+        return result
     }
 
     const updatePad = (temp, idRhythm) => {
@@ -134,7 +134,6 @@ export function useAppContext() {
             }
         }),
         [bpm, setBpm, isPlay, volume, mute, timeSignature,
-            numStepButtons, numRhythm, idRhythm, itemSelectedRhythm, currentIndex,
-            setCurrentIndex]
+            numStepButtons, numRhythm, idRhythm, itemSelectedRhythm, currentIndex]
     );
 }

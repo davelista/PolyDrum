@@ -29,7 +29,6 @@
     flex-flow: column nowrap;
     justify-content: space-around;
     align-items: center;
-    background: transparent;
     border: 2px solid white;
     border-radius: 5px;
     margin-top: 1rem;
@@ -78,4 +77,9 @@
     justify-content: space-between;
     width:  110%;
     align-items: center;
+}
+
+.logo {
+    background-image: url("Logo.PNG");
+    background-position: center;
 }

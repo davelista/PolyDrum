@@ -1,6 +1,6 @@
 import React, {useContext, useState} from 'react';
 import styles from "./SettingsSection.module.css";
-import {Dropdown, HorizontalSlider, NumberControl, Button, ButtonsList, Popup, InstructionPopup} from "../../index";
+import {Dropdown, HorizontalSlider, NumberControl, Button, ButtonsList, Popup, InstructionPopup, DetailsPopup} from "../../index";
 import {
     HiVolumeUp,
     HiVolumeOff,
@@ -57,7 +57,7 @@ const SettingsSection = (props) => {
                 }
 
                 {
-                    open2 ? <Popup title={appData.popupsList[1].title} body={appData.popupsList[1].body} open={open2} onChangeOpen={setOpen2}/> : null
+                    open2 ? <Popup title={appData.popupsList[1].title} body={<DetailsPopup/>} open={open2} onChangeOpen={setOpen2}/> : null
                 }
                 <SlidersContainer />
             </div>

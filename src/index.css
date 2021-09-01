@@ -24,3 +24,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*scrollBar*/
+/* width */
+::-webkit-scrollbar {
+  width: 30px;
+  height: 1rem;
+  cursor: pointer;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  /* background: var(--secondColor); */
+  border-radius: 10px;
+  border: 1px solid white;
+  background: linear-gradient(to right, transparent, var(--secondColor), transparent);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: white;
+  border: 3px solid var(--secondColor);
+
+}
+::-webkit-scrollbar:hover {
+  cursor: pointer;
+}

@@ -73,8 +73,8 @@ const FinalInstrumentsRhythm = (props) => {
             {
                 indices.map((x, i) => {
                     return (
-                        <div className={styles.columnSteps} >
-                            <div className={appData.selectedRhythm.number != null ? styles.box : styles.allDisplayBox} style={appData.play.index === i ? {background: "#b388ff", color: "white"} : null}>{x}</div>
+                        <div className={styles.columnSteps} style={appData.play.index === i ? {background: "transparent", border: "2px solid #b388ff", color: "white"} : null} >
+                            <div className={appData.selectedRhythm.number != null ? styles.box : styles.allDisplayBox}>{x}</div>
                             {drawFinalRhythm(i, appData.userRhythms.data, appData.samplesList)}
                         </div>
                     )

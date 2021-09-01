@@ -17,7 +17,8 @@ import Popup from "./Popup/Popup";
 import Display from "./PagesSections/RhythmSection/Display/Display";
 import InstructionPopup from "./Popup/InstructionPopup";
 import DetailsPopup from "./Popup/DetailsPopup";
+import CustomInstrument from "./CustomInstrument/CustomInstrument";
 
 export {StepButton, HorizontalSlider, SampleLine, Dropdown, CheckBox,
     NumberControl, Drumpad, Button, VerticalSlider,SettingsSection, RhythmSection, StepButtonsList, ButtonsList,
-    SlidersContainer, PlayRhythm, Display, Popup, InstructionPopup, DetailsPopup}
+    SlidersContainer, PlayRhythm, Display, Popup, InstructionPopup, DetailsPopup, CustomInstrument}

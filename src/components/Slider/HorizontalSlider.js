@@ -19,7 +19,10 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center"
     },
     icon: {
-        marginRight: "1rem"
+        marginRight: "1rem",
+        "&:hover":{
+            cursor: "pointer",
+        }
     }
 }));
 

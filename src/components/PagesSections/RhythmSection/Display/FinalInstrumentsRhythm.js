@@ -7,7 +7,13 @@ const FinalInstrumentsRhythm = (props) => {
     const appData = useContext(AppContext);
     const [indices, setIndices] = useIndices();
     let minute = 60000;
-    let seconds = minute/appData.tempo.value - 50;
+    let seconds = minute/appData.tempo.value - appData.tempo.value/2.5;
+    if(seconds > 120 && seconds <= 150){
+        seconds = minute/appData.tempo.value - appData.tempo.value/2.7;
+    }
+    if(seconds > 150){
+        seconds = minute/appData.tempo.value - appData.tempo.value/3;
+    }
 
     useEffect(() => { /*Funzione per evidenziare l'index suonato*/
         if(appData.play.value){

@@ -10,7 +10,7 @@ export const AppContext = React.createContext({});
 
 export function useAppContext() {
     /*Settings*/
-    const [bpm, setBpm] = useState(80);
+    const [bpm, setBpm] = useState(90);
     const [isPlay, setPlay] = useState(false);
     const [volume, setVolume] = useState(50);
     const [mute, setMute] = useState(false);
@@ -19,6 +19,7 @@ export function useAppContext() {
     const [numRhythm, setNumRhythm] = useState([0]);
     const [numStepButtons, setNumStepButton] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [load, setLoad] = useState(false);
 
     /*JSON*/
     const [db, setDb] = useState([{
@@ -94,7 +95,9 @@ export function useAppContext() {
                 value: isPlay,
                 setValue: setPlay,
                 index: currentIndex,
-                setIndex: setCurrentIndex
+                setIndex: setCurrentIndex,
+                load: load,
+                setLoad: setLoad
             },
             stepButtons:{
                 value: numStepButtons,
@@ -134,6 +137,7 @@ export function useAppContext() {
             }
         }),
         [bpm, setBpm, isPlay, volume, mute, timeSignature,
-            numStepButtons, numRhythm, idRhythm, itemSelectedRhythm, currentIndex]
+            numStepButtons, numRhythm, idRhythm, itemSelectedRhythm, currentIndex,
+            load]
     );
 }

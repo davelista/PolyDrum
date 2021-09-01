@@ -13,7 +13,12 @@ const ButtonsList = (props) => {
         <>
 
             <div className={styles.playButtons}>
-                <Button onClick={() => appData.play.setValue(!appData.play.value)} >{appData.play.value ?<FaPause/> : <FaPlay/>} </Button>
+                <Button onClick={() => {
+                    appData.play.setValue(!appData.play.value);
+                    /*if(appData.play.load){
+                        appData.play.setLoad(false);
+                    }*/
+                }} >{appData.play.value ?<FaPause/> : <FaPlay/>} </Button>
             </div>
 
             <div className={styles.rhythmButtonsSection} >

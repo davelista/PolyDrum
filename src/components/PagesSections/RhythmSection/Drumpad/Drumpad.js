@@ -14,6 +14,7 @@ const playItem = (item, appData) => {
                             noteDict={appData.noteDict}
                             numStepButtons={item.numStepButtons}
                             item={item}
+
         />)
     }
 }

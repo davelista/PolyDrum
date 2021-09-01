@@ -5,10 +5,6 @@ import {
     HiVolumeUp,
     HiVolumeOff,
     BsQuestionSquareFill,
-    FaPause,
-    FaPlay,
-    BiSelectMultiple,
-    FaPlus, FaMinus, BiHash
 } from "react-icons/all";
 import {AppContext} from "../../../context/AppContext";
 import SlidersContainer from "./SlidersContainer";
@@ -28,7 +24,8 @@ const SettingsSection = (props) => {
                     display: "flex",
                     flexDirection: "row",
                     alignItems: "flex-start",
-                    justifyContent: "flex-start"
+                    justifyContent: "flex-start",
+                    marginLeft: "-1.4rem"
                 }}>
                     <Button onClick={() => setOpen(!open)} buttonStyle={"btn--secondary"} style={{marginRight: "0.5rem"}}><BsQuestionSquareFill size={20}/></Button>
                     <HorizontalSlider title={"Volume"} defaultValue={50}

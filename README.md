@@ -1,7 +1,7 @@
 # PolyDrum
 
 <div align="center" style="background-color:rgba(0, 0, 0, 0.0470588)">
-  <img src="src/assets/logo.png">
+  <img src="logo-black.png">
 </div>
 
 

@@ -1,8 +1,8 @@
 # PolyDrum
 
-<p align="center" style="background-color:rgba(0, 0, 0, 0.0470588)">
+<div align="center" style="background-color:rgba(0, 0, 0, 0.0470588)">
   <img src="src/assets/logo.png">
-</p>
+</div>
 
 
 PolyDrum is a Polymetric Drum Machine.

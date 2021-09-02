@@ -1,6 +1,6 @@
 # PolyDrum
 
-<div align="center" style="background-color:rgba(0, 0, 0, 0.0470588)">
+<div align="center" style="height:335px; width:300px;">
   <img src="logo-black.png">
 </div>
 

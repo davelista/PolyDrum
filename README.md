@@ -1,10 +1,3 @@
-# PolyDrum
-
-<div align="center" style="height:100px; width:200px;">
-  <img src="src/assets/logo-black.png">
-</div>
-
-
 PolyDrum is a Polymetric Drum Machine.
 
 # Getting Started

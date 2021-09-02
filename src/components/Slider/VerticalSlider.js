@@ -97,6 +97,7 @@ const VerticalSlider = (props) => {
                         orientation="vertical"
                         getAriaValueText={valuetext}
                         defaultValue={defaultValue}
+                        value={userRhythms.data[idRhythm].instruments[idInstrument].volume}
                         aria-labelledby="vertical-slider"
                         /*marks={marks}*/
                         onChange={(e, value) => userRhythms.setData(

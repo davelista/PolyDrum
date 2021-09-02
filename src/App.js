@@ -15,8 +15,8 @@ function App() {
         {console.log("ho cambiato il VOLUME in: ", appData.volume.value, "\n-------------\n")}
 
         {console.log("Il ritmo selezionato è :", appData.selectedRhythm.number)}
-        {console.log("il JSON del ritmo è: ", appData.selectedRhythm.item)}
-        {console.log("I RITMI DELL'UTENTE SONO: ", appData.userRhythms.data)}*/}
+        {console.log("il JSON del ritmo è: ", appData.selectedRhythm.item)}*/}
+        {console.log("I RITMI DELL'UTENTE SONO: ", appData.userRhythms.data)}
     </>
   );
 }

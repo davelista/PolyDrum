@@ -1,6 +1,6 @@
 # PolyDrum
 
-<p align="center">
+<p align="center" style="background: 'black';>
   <img src="src/assets/logo.png">
 </p>
 

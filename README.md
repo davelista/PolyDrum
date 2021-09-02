@@ -1,15 +1,19 @@
-# Usefull links
-* https://reactronica.com/
-* https://drumbit.app/
-* https://www.youtube.com/watch?v=Dxxkma4F-oA
+# PolyDrum
+
+<p align="center">
+  <img src="src/assets/logo.png">
+</p>
+
+
+PolyDrum is a Polymetric Drum Machine.
 
 # Getting Started
 
 Clone the repo with
-> git clone https://github.com/davelista/cmrm.git
+> git clone https://github.com/davelista/PolyDrum.git
 
 After clone, in the project directory, install all packages with:
->npm install
+> npm install
 
 ***
 
@@ -51,36 +55,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ***
-
-## Structure
-The app is divided into:
-
-###components
-it contains all part of the application. Every component contains a js part and css part.
-To modify the style of:
-* **Button**: Button.css
-* **CheckBox**: CheckBox.js in `const ColorCheckBox = () => {...}`
-* **Dropdown**: Dropdown.js in `const useStyles = makeStyles((theme) => ({...}))`
-* **NumberControl**: NumberControl.js in `const useStyles = makeStyles((theme) => ({...}))`
-* **SampleLine**: SampleLine.module.css
-* **CheckBox**: CheckBox.js in `const ColorCheckBox = () => {...}`
-* **StepButton**: StepButton.module.css
-
-###hooks
-it contains all functions of the application
-
-***
-
-###Style classes
-
-To link a style class in js with:
-* .css &#8594; `<div className={'name-class'}> ... </div>`
-* .module.css &#8594; `<div className={styles.nameClass}> ... </div>`
-* without css file &#8594; `<div className={classes.nameClass}> ... </div>`
-
-To add a style class:
-
-* .css &#8594; `.name-class{ ... }`
-* .module.css &#8594; `.nameClass{ ... }`
-* .js &#8594; under `makeStyle` or `useStyle` add `nameClass: { ... },`. Put a comma if you want add another
-class after the other one

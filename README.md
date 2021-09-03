@@ -8,6 +8,8 @@ PolyDrum is characterized by an user-friendly GUI, to semplify the creative proc
 
 You can see the final result at the link: http://polydrum.davidelista.com.
 
+Find out more here: https://docs.google.com/presentation/d/1bH37KyKsFvFZ2wo8crd3C_4BsbbjnIMHdvlArrXP7c8/edit?usp=sharing
+
 ***
 
 # To dowload: Getting Started

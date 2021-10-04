@@ -10,3 +10,10 @@
     background: linear-gradient(#3C3B3D, black);
     border-radius: 5px;
 }
+
+@media (max-width: 1366px) {
+    .container{
+        height: 86vh;
+        width: 90vw;
+    }
+}

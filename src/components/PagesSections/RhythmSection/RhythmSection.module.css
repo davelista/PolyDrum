@@ -19,3 +19,14 @@
     border-radius: 5px;
 }
 
+@media (max-width: 1366px) {
+    .container{
+        width: 90%;
+        padding: 2% 2%;
+    }
+    .drumpad{
+        height: auto;
+        width: 95%;
+        padding: 2% 0 2% 4%;
+    }
+}

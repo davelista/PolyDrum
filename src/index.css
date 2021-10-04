@@ -29,7 +29,7 @@ code {
 /*scrollBar*/
 /* width */
 ::-webkit-scrollbar {
-  width: 30px;
+  width: 15px;
   height: 1rem;
   cursor: pointer;
 }
@@ -56,4 +56,12 @@ code {
 }
 ::-webkit-scrollbar:hover {
   cursor: pointer;
+}
+
+@media (max-width: 1366px) {
+  body {
+    height: 100%;
+    width: 100%;
+    padding: 2% 0;
+  }
 }

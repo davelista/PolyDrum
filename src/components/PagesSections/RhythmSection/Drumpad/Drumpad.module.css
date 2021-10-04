@@ -5,8 +5,7 @@
     margin: 0.5rem 1.5rem;
     padding: 0.5rem 1.5rem;
     background: url("../../../../assets/logo.png") bottom right no-repeat;
-    background-size: contain ;
-
+    background-size: contain;
 }
 
 .line{
@@ -28,3 +27,18 @@
     height: 2.5rem;
 }
 
+@media (max-width: 1366px) {
+    .container{
+        width:  100%;
+        height: auto;
+        background: url("../../../../assets/logo.png") center right no-repeat;
+        background-size: 150px 168px;
+        padding: 0;
+        margin: 0;
+    }
+    .line{
+        height: auto;
+        margin: 0.2% 0;
+    }
+
+}

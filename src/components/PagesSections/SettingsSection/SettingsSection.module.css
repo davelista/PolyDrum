@@ -40,6 +40,7 @@
     justify-content: space-between;
     width: 100%;
     margin-bottom: 1rem;
+
 }
 
 .rhythmButtonsSection{
@@ -47,12 +48,14 @@
     flex-flow: column;
     align-items: center;
     justify-content: center;
+
 }
 
 .rhythmButtonsControls{
     display: flex;
     flex-flow: row;
     margin-bottom: 1rem;
+
 }
 
 .rhythmButtonsList{
@@ -61,6 +64,7 @@
     justify-content: center;
     max-height: 4.5rem;
     width: 26rem;
+
 }
 
 .playButtons {
@@ -77,4 +81,20 @@
     justify-content: space-evenly;
     width:  110%;
     align-items: center;
+}
+
+@media (max-width: 1366px) {
+    .container{
+        width: 30%;
+        padding: 2% 5%;
+    }
+    .slidersContainer{
+        min-height: 40%;
+        height: auto;
+        padding: 1rem;
+        margin-top: 0;
+    }
+    .section{
+        margin-bottom: 0;
+    }
 }

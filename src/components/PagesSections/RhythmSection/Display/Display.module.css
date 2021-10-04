@@ -81,4 +81,14 @@
     border: 2px solid var(--secondColor);
 }
 
+@media (max-width: 1366px) {
+    .display{
+        width: 95%;
+        max-width: 42rem;
+        padding: 2% 2%;
+        margin: 1rem 0;
+
+    }
+
+}
 

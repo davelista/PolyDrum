@@ -5,6 +5,8 @@
   --fourthColor: black;
   --fifthColor: #3C3B3D;
   --sixthColor: #515151;
+  --seventhColor: #202020;
+  --eighthColor: #efefef;
   --borderRadSett: 0.5rem;
 }
 
@@ -50,8 +52,8 @@ code {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: white;
-  border: 3px solid var(--secondColor);
+  background: linear-gradient(to right, transparent, var(--secondColor), transparent);
+  border: 3px solid white;
 
 }
 ::-webkit-scrollbar:hover {

@@ -92,9 +92,21 @@
         min-height: 40%;
         height: auto;
         padding: 1rem;
-        margin-top: 0;
+        margin-top: 2rem;
     }
     .section{
         margin-bottom: 0;
+    }
+    .playButtons{
+        margin-bottom: 0.5rem;
+    }
+    .divider{
+        margin-top: 2rem;
+    }
+    .rhythmButtonsList{
+        max-height: 1.9rem;
+    }
+    .auxButtons{
+        max-height: 5rem;
     }
 }

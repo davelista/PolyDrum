@@ -1,13 +1,13 @@
 .container {
     display: flex;
     flex-direction: row;
-    background: #efefef;
+    background: var(--eighthColor);
     height: 50rem;
     width: 110rem;
     min-height: 108px;
     min-width: 192px;
-    border: 5px groove #515151;
-    background: linear-gradient(#3C3B3D, black);
+    border: 5px groove var(--sixthColor);
+    background: linear-gradient(var(--fifthColor), black);
     border-radius: 5px;
 }
 

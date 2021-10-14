@@ -25,7 +25,8 @@ const SettingsSection = (props) => {
                     flexDirection: "row",
                     alignItems: "flex-start",
                     justifyContent: "flex-start",
-                    marginLeft: "-1.4rem"
+                    marginLeft: "-1.4rem",
+                    marginTop: "1rem"
                 }}>
                     <Button onClick={() => setOpen(!open)} buttonStyle={"btn--secondary"} style={{marginRight: "0.5rem"}}><BsQuestionSquareFill size={20}/></Button>
                     <HorizontalSlider title={"Volume"} defaultValue={50}

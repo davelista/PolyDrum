@@ -1,16 +1,17 @@
 .container {
     display: flex;
-    width: 77rem;
+    width: 90%;
     flex-direction: column;
     align-items: center;
     background: transparent;
-    padding: 1rem 3.5rem;
+    padding: 1% 1%;
+    margin-top: 1%;
 
 }
 /* drumpad section */
 .drumpad {
-    height: 25.8rem;
-    width: 60rem;
+    height: 50%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: row;
     background: var(--eighthColor);
-    height: 50rem;
-    width: 110rem;
+    height: 96%;
+    width: 104%;
     min-height: 108px;
     min-width: 192px;
     border: 5px groove var(--sixthColor);

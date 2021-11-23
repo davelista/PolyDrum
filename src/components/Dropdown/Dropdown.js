@@ -14,7 +14,7 @@ const Dropdown = (props) => {
                 <div className={styles.dropdown}>
                     <div className={open ? styles.activeDrop : styles.button} onClick={() => {setOpen(!open)}}>
                         {appData.userRhythms.data[appData.selectedRhythm.number].timeSignature === "" ?
-                            <> <div className={styles.dropLabel}>Time Signature </div> <RiArrowDownSLine/></> :
+                            <> <div className={styles.dropLabel}>Time</div> <RiArrowDownSLine/></> :
                             <>{appData.userRhythms.data[appData.selectedRhythm.number].timeSignature} <RiArrowDownSLine/> </>}
 
                     </div>

@@ -112,3 +112,12 @@
         max-height: 5rem;
     }
 }
+
+@media (max-width: 1024px) {
+    .slidersContainer{
+        min-height: 42.5%;
+    }
+    .divider{
+        margin: 1.5rem 0 1.5rem 0;
+    }
+}

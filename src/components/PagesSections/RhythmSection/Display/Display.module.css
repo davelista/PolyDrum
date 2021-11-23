@@ -1,5 +1,4 @@
 .display{
-    height: 48%;
     display: flex;
     flex-direction: row;
     width: 82%;
@@ -9,8 +8,6 @@
     background-color: #202020;
     max-width: 50rem;
     padding: 2% 2%;
-    margin: 1% 0;
-    margin-bottom: 3%;
 }
 
 .container{
@@ -86,18 +83,37 @@
 }
 
 @media (max-width: 1366px) {
-    .display{
+    .display {
         width: 95%;
         max-width: 42rem;
         padding: 2% 2%;
         margin: 1rem 0;
     }
-    .columnTitles{
+
+    .columnTitles {
         height: auto;
         margin-top: 2rem;
     }
-    .tab{
+
+    .tab {
         margin-top: 0;
     }
+}
+    @media (max-width: 1024px) {
+        .display{
+            width: 95%;
+            max-width: 42rem;
+            padding: 2% 2%;
+            margin-bottom: 1rem;
+        }
+        .columnTitles{
+            height: auto;
+            margin-top: 2rem;
+        }
+        .tab{
+            margin-top: 0;
+        }
+        .box{
+        }
 }
 

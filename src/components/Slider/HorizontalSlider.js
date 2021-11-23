@@ -8,7 +8,8 @@ import VolumeUp from '@material-ui/icons/VolumeUp';
 const useStyles = makeStyles((theme) => ({
     root: {
         width: 300 + theme.spacing(3) * 2,
-        textAlign: "center"
+        textAlign: "center",
+        marginLeft: '2rem',
     },
     margin: {
         height: theme.spacing(3),
@@ -31,7 +32,8 @@ const RoundSlider = withStyles({
         color: 'darkred',
         height: 8,
         display: 'flex',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        marginRight: '1rem',
     },
     thumb: {
         height: 24,
@@ -79,8 +81,8 @@ const HorizontalSlider = (props) => {
     return (
         <>
             <div className={classes.root}>
-                <Typography gutterBottom>{title}
-                </Typography>
+                {/*<Typography gutterBottom>{title}
+                </Typography> */}
                 <div className={classes.line}>
                     <div className={classes.icon}>
                         <Grid item>
@@ -105,3 +107,4 @@ const HorizontalSlider = (props) => {
 
 export default HorizontalSlider;
 
+{/*SettingsSection - row 32!*/}

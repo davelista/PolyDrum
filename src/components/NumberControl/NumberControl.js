@@ -4,7 +4,7 @@ import {makeStyles, TextField, withStyles} from "@material-ui/core";
 const CustomTextField = withStyles({
     root: {
         color: "white",
-        width: "10rem",
+        width: "7rem",
         height: "3rem",
         textAlign: "center",
         "& label.Mui-focused": {

@@ -1,5 +1,5 @@
 .dropdown{
-    width: 10rem;
+    width: 7rem;
     height: 3rem;
     text-align: center;
 }
@@ -75,5 +75,7 @@
     .activeDrop{
         padding: 1.1rem;
     }
-
+    .dropLabel{
+        font-size: 18px;
+    }
 }

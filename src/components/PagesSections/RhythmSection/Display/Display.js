@@ -10,7 +10,7 @@ const Display = (props) => {
 
     return (
         <>
-            <div className={styles.display} style={appData.selectedRhythm.number == null ? {height: "60%"} : (!isPc ? { height: "40%"} : {height: "auto"}) }>
+            <div className={styles.display} style={appData.selectedRhythm.number == null ? {height: "75%"} : (!isPc ? { height: "40%"} : {height: "auto"}) }>
                 <div className={styles.container}>
                        <FinalInstrumentsRhythm/>
                 </div>

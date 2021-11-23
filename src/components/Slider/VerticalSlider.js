@@ -16,7 +16,7 @@ const useStyles = makeStyles({ /*come avere un file VerticalSlider.module.css*/
         border: 2
     },
     title: {
-        marginBottom: "0.5rem",
+        marginTop: "0.5rem",
         textAlign: "center"
     }
 });

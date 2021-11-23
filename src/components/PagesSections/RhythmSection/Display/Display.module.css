@@ -101,19 +101,25 @@
 }
     @media (max-width: 1024px) {
         .display{
-            width: 95%;
-            max-width: 42rem;
+            width: 100%;
+            max-width: 30rem;
             padding: 2% 2%;
             margin-bottom: 1rem;
         }
         .columnTitles{
             height: auto;
-            margin-top: 2rem;
+            margin-top: 1.8rem;
+            margin-right: 1rem;
         }
         .tab{
             margin-top: 0;
         }
         .box{
+            height: 1.8rem;
+            width: 1.8rem;
+        }
+        .title{
+            height: 1.8rem;
         }
 }
 

@@ -1,12 +1,12 @@
 .display{
     display: flex;
     flex-direction: row;
-    width: 82%;
+    width: 100%;
     border: 3px solid #515151;
     border-radius: 5px;
     overflow-x: auto;
     background-color: #202020;
-    max-width: 50rem;
+    max-width: 58rem;
     padding: 2% 2%;
 }
 

@@ -28,7 +28,7 @@
     justify-content: space-evenly;
     padding: 0.5rem;
     background: linear-gradient(#3C3B3D, black);
-    width: 8.8rem;
+    width: 4.8%;
     z-index: 999;
     position: absolute;
     border: 1px outset white;
@@ -51,7 +51,7 @@
 }
 
 .dropLabel {
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .activeDrop {

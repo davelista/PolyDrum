@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
         width: 300 + theme.spacing(3) * 2,
         textAlign: "center",
         marginLeft: '2rem',
+        marginTop: "0.3rem"
     },
     margin: {
         height: theme.spacing(3),

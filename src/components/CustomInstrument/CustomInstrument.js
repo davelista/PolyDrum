@@ -3,7 +3,6 @@ import {Instrument} from "reactronica";
 
 const CustomInstrument = React.memo(props => {
         const {samples} = props;
-        console.log("PIPPO")
 
         return (
             <>

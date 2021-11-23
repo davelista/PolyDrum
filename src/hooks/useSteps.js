@@ -1,8 +1,6 @@
-import React, {useContext, useEffect, useState} from 'react';
-import {AppContext} from "../context/AppContext";
+import {useEffect, useState} from 'react';
 
 const useSteps = (item, length) => {
-    const appData = useContext(AppContext);
     const [steps, setSteps] = useState([])
 
     const noteDict = ["A1", "A#1", "B1", "C1", "C#1", "D1", "D#1", "E1"]

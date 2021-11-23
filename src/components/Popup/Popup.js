@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./Popup.module.css"
-import {AiOutlineCloseSquare, GrClose} from "react-icons/all";
+import {GrClose} from "react-icons/all";
 
 function Popup(props) {
     const {title, body, open, onChangeOpen} = props;

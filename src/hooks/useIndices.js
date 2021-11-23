@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
+import {useContext, useEffect, useState} from 'react';
 import {AppContext} from "../context/AppContext";
 
 const useIndices = () => {
@@ -9,13 +9,13 @@ const useIndices = () => {
         if(appData.userRhythms.data !== undefined){
             updateIndices()
         }
-    }, [appData.timeSignature.value])
+    }, [appData.timeSignature.value, appData.userRhythms.data])
 
     const findNumIndices = () => {
         let numerator = 1;
         let denominator = 1;
         for(let i = 0; i < appData.userRhythms.data.length; i++){
-            if(appData.userRhythms.data[i] !== undefined){
+            if(appData.userRhythms.data[i].timeSignature !== "" && appData.userRhythms.data[i].timeSignature !== undefined){
                 numerator = appData.math.lcm(numerator, appData.userRhythms.data[i].numStepButtons);
                 denominator = appData.math.lcm(denominator, appData.userRhythms.data[i].denominator);
             }

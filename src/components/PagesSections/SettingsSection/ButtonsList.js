@@ -37,7 +37,7 @@ const ButtonsList = (props) => {
                         appData.rhythmsList.setItem(produce(appData.rhythmsList.item, draft => {
                             draft.splice(appData.rhythmsList.item.length-1)
                         }))
-                        if(appData.userRhythms.data[appData.rhythmsList.item.length-1] !== undefined) {
+                        if(appData.userRhythms.data[appData.rhythmsList.item.length-1] !== undefined) { /*nel momento in cui si elimina un ritmo cancella tutti i dati*/
                             appData.userRhythms.setData(produce(appData.userRhythms.data, draft => {
                                 draft.splice(appData.rhythmsList.item.length-1)
                             }))

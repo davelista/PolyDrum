@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext} from 'react';
 import styles from './Drumpad.module.css';
 import {PlayRhythm, StepButtonsList} from "../../../index";
 import {AppContext} from "../../../../context/AppContext";

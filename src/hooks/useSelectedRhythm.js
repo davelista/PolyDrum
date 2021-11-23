@@ -1,8 +1,6 @@
-import React, {useContext, useEffect, useState} from 'react';
-import {AppContext} from "../context/AppContext";
+import {useEffect, useState} from 'react';
 
 const useSelectedRhythm = (idRhythm, db, setDb) => {
-    const appData = useContext(AppContext);
     const [selectedRhythm, setSelectedRhythm] = useState({})
 
     useEffect(() => {

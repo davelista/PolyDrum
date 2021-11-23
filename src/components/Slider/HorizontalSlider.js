@@ -1,8 +1,6 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import {makeStyles, Slider, Typography, withStyles} from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
-import {VolumeDown} from "@material-ui/icons";
-import VolumeUp from '@material-ui/icons/VolumeUp';
 
 
 const useStyles = makeStyles((theme) => ({

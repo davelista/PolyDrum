@@ -1,4 +1,4 @@
-import React, {useMemo, useRef, useState} from "react";
+import React, {useMemo, useState} from "react";
 import timeSignaturesList from '../timeSignaturesList.json';
 import samplesList from '../samplesList.json';
 import noteDict from '../noteDict.json';
@@ -40,8 +40,7 @@ export function useAppContext() {
             }
         }
         // find LCM
-        let result = (a * b) / hcf;
-        return result
+        return (a * b) / hcf
     }
 
     const updatePad = (temp, idRhythm) => {

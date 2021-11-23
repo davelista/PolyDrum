@@ -30,9 +30,10 @@ const FinalInstrumentsRhythm = (props) => {
         else {
             appData.play.setIndex(0)
         }
-    }, [appData.play.value, appData.play.index]);
 
-    /*disegna, assieme a draqFinalRhythm, la colonna del
+    }, [appData.play]);
+
+    /*disegna, assieme a drawFinalRhythm, la colonna del
      ritmo finale indicando quali strumenti vengono suonati per ogni indice*/
     const controlPad = (index, db) => {
         let array = [];

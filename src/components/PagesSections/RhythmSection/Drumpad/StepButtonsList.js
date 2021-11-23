@@ -1,7 +1,6 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext} from 'react';
 import {StepButton} from "../../../index";
 import {AppContext} from "../../../../context/AppContext";
-import produce from "immer";
 
 const StepButtonsList = (props) => {
     const {idInstrument, instrument, idRhythm} = props;

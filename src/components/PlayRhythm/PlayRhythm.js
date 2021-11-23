@@ -1,7 +1,6 @@
-import React, {useState} from 'react';
-import {Instrument, Song, Track} from "reactronica";
+import React from 'react';
+import {Song, Track} from "reactronica";
 import {useSteps} from "../../hooks";
-import {CgUsb} from "react-icons/all";
 import {CustomInstrument} from "../index";
 
 const PlayRhythm = (props) => {

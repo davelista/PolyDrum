@@ -9,8 +9,10 @@ const useStyles = makeStyles((theme) => ({
     root: {
         width: 300 + theme.spacing(3) * 2,
         textAlign: "center",
-        marginLeft: '2rem',
-        marginTop: "0.3rem"
+        marginLeft: "0rem",
+        marginTop: "1.2rem",
+        marginBottom:"0.5rem",
+        marginRight: "0rem",
     },
     margin: {
         height: theme.spacing(3),

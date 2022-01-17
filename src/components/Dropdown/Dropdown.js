@@ -7,6 +7,7 @@ import {MenuItem} from "@material-ui/core";
 const Dropdown = (props) => {
     const appData = useContext(AppContext);
     const [open, setOpen] = useState(false);
+    const {name} = props;
 
     return (
         <>
@@ -14,7 +15,7 @@ const Dropdown = (props) => {
                 <div className={styles.dropdown}>
                     <div className={open ? styles.activeDrop : styles.button} onClick={() => {setOpen(!open)}}>
                         {appData.userRhythms.data[appData.selectedRhythm.number].timeSignature === "" ?
-                            <> <div className={styles.dropLabel}>Time</div> <RiArrowDownSLine/></> :
+                            <> <div className={styles.dropLabel}>{name}</div> <RiArrowDownSLine/></> :
                             <>{appData.userRhythms.data[appData.selectedRhythm.number].timeSignature} <RiArrowDownSLine/> </>}
 
                     </div>

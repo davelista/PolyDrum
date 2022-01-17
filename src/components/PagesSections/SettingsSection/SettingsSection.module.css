@@ -6,16 +6,17 @@
     border-right: 3px solid #515151;
     background: linear-gradient(#3C3B3D, black);
     width: 30%;
-    padding: 2% 5% 1% 5%;
+    padding: 1.5% 5% 1% 5%;
 }
 
 /* Solid border */
 .divider {
     display: flex;
     border-top: 3px solid #515151;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     width: 120%;
+    max-width: 28rem;
 
 }
 
@@ -47,6 +48,8 @@
     flex-flow: column;
     align-items: center;
     justify-content: center;
+    max-height: 4.5rem;
+    min-height: 4.5rem;
 
 }
 
@@ -81,8 +84,10 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
-    width:  110%;
+    width: 110%;
     align-items: center;
+    margin-top: 0rem;
+    margin-bottom: 0.5rem;
 }
 
 @media (max-width: 1366px) {

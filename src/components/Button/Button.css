@@ -75,8 +75,9 @@
 
 .btn--secondary {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     background: transparent;
     color: white;
@@ -88,6 +89,7 @@
     font-size: 14px;
     border-radius: 5px;
     margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .btn--secondary:hover{

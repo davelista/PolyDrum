@@ -23,7 +23,7 @@ const CustomTextField = withStyles({
             width: "100%",
             color: "white",
             textAlign: "center",
-            boxShadow: "0 3px 10px 0 rgba(0, 0, 0, 0.6)",
+            boxShadow: "1px 2px 2px 1px rgba(0, 0, 0, 0.6)",
             "&.Mui-focused fieldset": {
                 borderColor: "darkred",
             },

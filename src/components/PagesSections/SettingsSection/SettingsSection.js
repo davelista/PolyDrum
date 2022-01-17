@@ -20,15 +20,26 @@ const SettingsSection = (props) => {
         <>
             <div className={styles.container}>
                 <div style={{
-                    width: "100%",
+                    width: "120%",
                     display: "flex",
                     flexDirection: "row",
-                    alignItems: "flex-start",
-                    justifyContent: "flex-start",
-                    marginLeft: "-1.4rem"
+                    alignItems: "center",
+                    justifyContent: "center",
+                    // marginLeft: "-1.4rem",
+                    flexWrap: "wrap"
+
                 }}>
 
                     {/*HERE!*/}
+                    <div className={styles.auxButtons}>
+                        {/*<Button onClick={() => setOpen(!open)} buttonStyle={"btn--secondary"}><BsQuestionSquareFill size={20}/></Button>*/}
+
+                        <NumberControl tempo={appData.tempo} play={appData.play}/>
+                        <Button onClick={() => setOpen2(!open2)} buttonStyle={"btn--secondary"}><BsQuestionSquareFill size={20}/></Button>
+                        <Dropdown name={"TIME"}/>
+
+                    </div>
+
                     <HorizontalSlider title={"Volume"} defaultValue={50}
                                       icon={!appData.mute.value ? <HiVolumeUp size={24} /> : <HiVolumeOff size={24} />}
                                       volumeValue={appData.volume.value}
@@ -49,7 +60,7 @@ const SettingsSection = (props) => {
 
                     <NumberControl tempo={appData.tempo} play={appData.play}/>
                     <Button onClick={() => setOpen2(!open2)} buttonStyle={"btn--secondary"}><BsQuestionSquareFill size={20}/></Button>
-                    <Dropdown/>
+                    <Dropdown name={"Effect"}/>
 
                 </div>
                 {

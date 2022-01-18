@@ -8,6 +8,7 @@ import {
 } from "react-icons/all";
 import {AppContext} from "../../../context/AppContext";
 import SlidersContainer from "./SlidersContainer";
+import EffectPopup from "../../Popup/EffectPopup";
 
 
 
@@ -15,6 +16,7 @@ const SettingsSection = (props) => {
     const appData = useContext(AppContext);
     const [open, setOpen] = useState(false);
     const [open2, setOpen2] = useState(false);
+    const [open3, setOpen3] = useState(false);
 
     return (
         <>
@@ -34,9 +36,9 @@ const SettingsSection = (props) => {
                     <div className={styles.auxButtons}>
                         {/*<Button onClick={() => setOpen(!open)} buttonStyle={"btn--secondary"}><BsQuestionSquareFill size={20}/></Button>*/}
 
-                        <NumberControl tempo={appData.tempo} play={appData.play}/>
+                        <NumberControl tempo={appData.tempo} play={appData.play} label={"BPM"}/>
+                        <Dropdown name={"CHOOSE TIME"}/>
                         <Button onClick={() => setOpen2(!open2)} buttonStyle={"btn--secondary"}><BsQuestionSquareFill size={20}/></Button>
-                        <Dropdown name={"TIME"}/>
 
                     </div>
 
@@ -47,7 +49,7 @@ const SettingsSection = (props) => {
                                       mute={appData.mute.value}
                                       onChangeMute={appData.mute.setValue}/>
 
-                    <Button onClick={() => setOpen(!open)} buttonStyle={"btn--secondary"} style={{marginRight: "0.5rem"}}><BsQuestionSquareFill size={20}/></Button>
+                    <Button onClick={() => setOpen(!open)} buttonStyle={"btn--secondary"} style={{marginRight: "-0.2rem"}}><BsQuestionSquareFill size={20}/></Button>
 
                 </div>
 
@@ -58,9 +60,10 @@ const SettingsSection = (props) => {
                 <div className={styles.auxButtons}>
                     {/*<Button onClick={() => setOpen(!open)} buttonStyle={"btn--secondary"}><BsQuestionSquareFill size={20}/></Button>*/}
 
-                    <NumberControl tempo={appData.tempo} play={appData.play}/>
-                    <Button onClick={() => setOpen2(!open2)} buttonStyle={"btn--secondary"}><BsQuestionSquareFill size={20}/></Button>
-                    <Dropdown name={"Effect"}/>
+                    <NumberControl tempo={appData.tempo} play={appData.play} label={"Wet %"}/>
+                    <Dropdown name={"Effects"}/>
+                    <Button onClick={() => setOpen3(!open3)} buttonStyle={"btn--secondary"}><BsQuestionSquareFill size={20}/></Button>
+
 
                 </div>
                 {
@@ -69,6 +72,9 @@ const SettingsSection = (props) => {
 
                 {
                     open2 ? <Popup title={appData.popupsList[1].title} body={<DetailsPopup/>} open={open2} onChangeOpen={setOpen2}/> : null
+                }
+                {
+                    open3 ? <Popup title={appData.popupsList[2].title} body={<EffectPopup/>} open={open3} onChangeOpen={setOpen3}/> : null
                 }
                 <SlidersContainer />
             </div>

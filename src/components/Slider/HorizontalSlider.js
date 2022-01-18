@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "1.2rem",
         marginBottom:"0.5rem",
         marginRight: "0rem",
+        paddingRight: "-0.4rem"
     },
     margin: {
         height: theme.spacing(3),

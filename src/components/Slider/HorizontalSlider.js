@@ -1,6 +1,7 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {makeStyles, Slider, Typography, withStyles} from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
+import styles from "./Sliders.module.css";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -74,9 +75,29 @@ const HorizontalSlider = (props) => {
         changeVolume(mute, onChangeValue, defaultValue)
     }, [mute]);
 
+    const handleOnChange = (e) =>{
+        onChangeValue(e.target.value)
+    }
     return (
         <>
-            <div className={classes.root}>
+
+                <div className={styles.container}>
+                    <div className={classes.icon}>
+                        <Grid item>
+                            <div onClick={() => {
+                                onChangeMute(!mute);
+                            }}>{icon}</div>
+                        </Grid>
+                    </div>
+                    <input  type="range" min={0} max={100} value={volumeValue}
+                            className={styles.slider}
+                            onChange={handleOnChange}
+                    />
+                    <div className={styles.value}>
+                        {volumeValue}
+                    </div>
+                </div>
+            {/*<div className={classes.root}>
                 <Typography gutterBottom>{title}
                 </Typography>
                 <div className={classes.line}>
@@ -87,16 +108,16 @@ const HorizontalSlider = (props) => {
                             }}>{icon}</div>
                         </Grid>
                     </div>
-                    
+
                     <RoundSlider valueLabelDisplay="auto" aria-label="pretto slider"
                         // defaultValue={defaultValue}
                                  min={0} max={100} step={1}
                                  value={volumeValue}
-                                 onChange={(e, value) => onChangeValue(value)} />
+                                 onChange={(e, value) => onChangeValue(value)}/>
                 </div>
 
 
-            </div>
+            </div>*/}
         </>
     );
 }

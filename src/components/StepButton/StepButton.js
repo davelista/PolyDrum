@@ -31,11 +31,11 @@ const StepButton = (props) => {
 
 
             </div>
-            <Song>
+            {/*<Song>
                 <Track>
                     <Instrument
                         type="sampler"
-                        notes={ notes }
+                        notes={notes}
                         samples={appData.noteDict[0]}
                         onLoad={(buffers) => {
                             // Runs when all samples are loaded
@@ -43,7 +43,7 @@ const StepButton = (props) => {
                     />
                 </Track>
             </Song>
-
+            */}
         </>
     );
 }

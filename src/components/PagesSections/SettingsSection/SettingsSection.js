@@ -24,10 +24,12 @@ const SettingsSection = (props) => {
                     display: "flex",
                     flexDirection: "row",
                     alignItems: "flex-start",
-                    justifyContent: "flex-start",
+                    justifyContent: "center",
                     marginLeft: "-1.4rem"
                 }}>
-                    <Button onClick={() => setOpen(!open)} buttonStyle={"btn--secondary"} style={{marginRight: "0.5rem"}}><BsQuestionSquareFill size={20}/></Button>
+                    <Button onClick={() => setOpen(!open)} buttonStyle={"btn--secondary"} style={{marginRight: "0.5rem"}}>
+                        <BsQuestionSquareFill size={20}/></Button>
+
                     <HorizontalSlider title={"Volume"} defaultValue={50}
                                       icon={!appData.mute.value ? <HiVolumeUp size={24} /> : <HiVolumeOff size={24} />}
                                       volumeValue={appData.volume.value}

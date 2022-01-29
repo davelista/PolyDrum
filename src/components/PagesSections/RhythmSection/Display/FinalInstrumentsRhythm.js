@@ -6,7 +6,7 @@ import {useIndices} from "../../../../hooks";
 const FinalInstrumentsRhythm = (props) => {
     const appData = useContext(AppContext);
     const [indices, setIndices] = useIndices();
-    let minute = 60000;
+    let minute = 55000; //minute in milliseconds
     let seconds = minute/appData.tempo.value - appData.tempo.value/2.5;
     if(seconds > 120 && seconds <= 150){
         seconds = minute/appData.tempo.value - appData.tempo.value/2.7;

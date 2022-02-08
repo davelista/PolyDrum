@@ -82,7 +82,7 @@ const HorizontalSlider = (props) => {
         <>
 
                 <div className={styles.container}>
-                    <div className={classes.icon}>
+                    <div className={classes.icon}> {/* icon of volume */}
                         <Grid item>
                             <div onClick={() => {
                                 onChangeMute(!mute);
@@ -97,27 +97,6 @@ const HorizontalSlider = (props) => {
                         {volumeValue}
                     </div>
                 </div>
-            {/*<div className={classes.root}>
-                <Typography gutterBottom>{title}
-                </Typography>
-                <div className={classes.line}>
-                    <div className={classes.icon}>
-                        <Grid item>
-                            <div onClick={() => {
-                                onChangeMute(!mute);
-                            }}>{icon}</div>
-                        </Grid>
-                    </div>
-
-                    <RoundSlider valueLabelDisplay="auto" aria-label="pretto slider"
-                        // defaultValue={defaultValue}
-                                 min={0} max={100} step={1}
-                                 value={volumeValue}
-                                 onChange={(e, value) => onChangeValue(value)}/>
-                </div>
-
-
-            </div>*/}
         </>
     );
 }

@@ -1,34 +1,28 @@
 import React from 'react';
 import {Button} from "../index";
-import {BiHash, BiSelectMultiple, FaMinus, FaPlay, FaPlus} from "react-icons/all";
+import {BiHash, BiSelectMultiple, BsFillArrowRightSquareFill, FaMinus, FaPlay, FaPlus} from "react-icons/all";
 
 const EffectPopup = () => {
 return <>
     <div>
-        Time signature is defined in the following way:
+        Here is the list of available effect:
         <ul>
-            <li><b>m/n</b> --> m beats, each an n-th of the whole note (first)</li>
-            <li><b>i/j</b> --> i beats, each an j-th of the whole note (second)</li>
+            <li><b>m/n</b>: m beats, each an n-th of the whole note (first)</li>
+            <li><b>i/j</b>: i beats, each an j-th of the whole note (second)</li>
         </ul>
 
         <ul>
             <li>The first rhythm fits a measure of m beats, each lasting 1/n of a whole note</li>
             <li>The second rhythm fits a measure of i beats, each lasting 1/j of a whole note</li>
         </ul>
-        A complex rhythm is indicated as <b>m/n : i/j</b><br/>
-        To find a single signature that accommodates both sub-signatures of a polymetric structure:
+
+        How to use these effects?
         <ul>
-            <li>N<sub>i</sub> / D<sub>i</sub> --> i rhythm</li>
-            <li>N<sub>1</sub> / D<sub>1</sub> : N<sub>2</sub> / D<sub>2</sub> --> N / D</li><br/>
-            Where, in the general case:
-            <ul>
-                <li>D = lcm (D<sub>1</sub>, D<sub>2</sub>)</li>
-                <li>N = lcm (N<sub>1</sub>K<sub>1</sub>, N<sub>2</sub>K<sub>2</sub>)</li>
-                <li> K<sub>i</sub> = D / D<sub>i</sub></li>
-            </ul>
+            <li> On each different rhythm is possible to apply one effect. </li>
         </ul>
-        <b>In this implementation n = j, meaning that the PolyDrum is polymetric.
-            D is a fixed value equal to 4.</b>
+        <ul>
+            <li>The effect is applied to all instruments at the same time!</li>
+        </ul>
     </div>
 </>
 }

@@ -5,6 +5,9 @@ import {
     HiVolumeUp,
     HiVolumeOff,
     BsQuestionSquareFill,
+    // BsFillArrowRightSquareFill,
+    BsInfoSquare,
+    GiMetronome
 } from "react-icons/all";
 import {AppContext} from "../../../context/AppContext";
 import SlidersContainer from "./SlidersContainer";
@@ -36,9 +39,11 @@ const SettingsSection = (props) => {
                     <div className={styles.auxButtons}>
                         {/*<Button onClick={() => setOpen(!open)} buttonStyle={"btn--secondary"}><BsQuestionSquareFill size={20}/></Button>*/}
 
-                        <NumberControl tempo={appData.tempo} play={appData.play} label={"BPM"}/>
+                        <Button onClick={() => setOpen(!open)} buttonStyle={"btn--secondary"} style={{marginRight: "0.2rem"}}><BsInfoSquare size={30}/></Button>
                         <Dropdown name={"CHOOSE TIME"}/>
+                        <NumberControl tempo={appData.tempo} play={appData.play} label={"BPM"}/>
                         <Button onClick={() => setOpen2(!open2)} buttonStyle={"btn--secondary"}><BsQuestionSquareFill size={20}/></Button>
+
 
                     </div>
 
@@ -49,7 +54,6 @@ const SettingsSection = (props) => {
                                       mute={appData.mute.value}
                                       onChangeMute={appData.mute.setValue}/>
 
-                    <Button onClick={() => setOpen(!open)} buttonStyle={"btn--secondary"} style={{marginRight: "-0.2rem"}}><BsQuestionSquareFill size={20}/></Button>
 
                 </div>
 

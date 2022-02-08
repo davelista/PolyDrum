@@ -1,10 +1,5 @@
 [
   {
-    "value": "2/4",
-    "numerator": 2,
-    "denominator": 4
-  },
-  {
     "value": "3/4",
     "numerator": 3,
     "denominator": 4
@@ -27,6 +22,11 @@
   {
     "value": "7/4",
     "numerator": 7,
+    "denominator": 4
+  },
+  {
+    "value": "8/4",
+    "numerator": 8,
     "denominator": 4
   },
   {

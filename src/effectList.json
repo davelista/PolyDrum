@@ -1,0 +1,31 @@
+[
+  {
+    "value": "filter"
+  },
+  {
+    "value": "panning"
+  },
+  {
+    "value": "autoWah"
+  },
+  {
+    "value": "bitCrusher"
+  },
+  {
+    "value": "distortion"
+  },
+  {
+    "value": "feedback"
+  },
+  {
+    "value": "reverb"
+  },
+  {
+  "value": "panVol"
+  },
+  {
+    "value": "tremolo"
+  }
+]
+
+

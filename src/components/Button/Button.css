@@ -75,8 +75,9 @@
 
 .btn--secondary {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     background: transparent;
     color: white;
@@ -87,6 +88,8 @@
     font-family: "Poppins", sans-serif;
     font-size: 14px;
     border-radius: 5px;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .btn--secondary:hover{
@@ -100,4 +103,10 @@
 .btn--secondary--active {
     border-color: darkred;
     box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.42);
+}
+
+@media (max-width: 1366px) {
+    .btn--secondary{
+        margin-top: 0.8rem;
+    }
 }

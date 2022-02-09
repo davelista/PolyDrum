@@ -1,4 +1,6 @@
 import React from 'react';
+import {GiMetronome} from "react-icons/all";
+
 
 const DetailsPopup = () => {
     return <>

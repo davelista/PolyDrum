@@ -1,22 +1,26 @@
 .dropdown{
-    width: 10rem;
+    width: 12rem;
     height: 3rem;
     text-align: center;
+    padding-right: 0rem;
+
 }
 
 .button{
     padding: 1.1rem;
-    color: white;
+    color: var(--thirdColor);
     display: flex;
     align-items: center;
     justify-content: space-between;
     border: 1px solid white;
     border-radius: var(--borderRadSett);
+    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.6);
+
 }
 
 .button:hover{
     cursor: pointer;
-    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.6);
+    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.6);
     border-color: black;
     border-radius: var(--borderRadSett);
 }
@@ -28,13 +32,14 @@
     justify-content: space-evenly;
     padding: 0.5rem;
     background: linear-gradient(#3C3B3D, black);
-    width: 8.8rem;
+    width: 10.8rem;
+    max-width: 11rem;
     z-index: 999;
     position: absolute;
     border: 1px outset white;
     border-radius: var(--borderRadSett);
     border-top: transparent;
-    height: 26.1rem;
+    height: 22rem;
 }
 
 .item{
@@ -42,16 +47,17 @@
     transition: all 0.2s;
     color: white;
     width: 75%;
+
 }
 
 .item:hover{
-    box-shadow: 1px 2px 6px 2px rgba(220, 220, 220, 0.3 );
+    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.6 );
     border: 2px inset darkred;
     border-radius: var(--borderRadSett);
 }
 
 .dropLabel {
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .activeDrop {
@@ -62,4 +68,37 @@
     justify-content: space-between;
     border: 2px solid darkred;
     border-radius: var(--borderRadSett);
+}
+
+@media (max-height: 1366px) {
+    .button{
+        padding: 1.1rem;
+    }
+    .button:hover {
+        padding: 1.2rem;
+        border: 1px solid black;
+    }
+    .activeDrop{
+        padding: 1.1rem;
+    }
+    .dropLabel{
+        font-size: 18px;
+    }
+}
+
+@media (max-height: 1024px) {
+    .button{
+        padding: 1.1rem;
+        font-size: 18px;
+    }
+    .button:hover {
+        padding: 1.2rem;
+        border: 1px solid black;
+    }
+    .activeDrop{
+        padding: 1.1rem;
+    }
+    .dropLabel{
+        font-size: 18px;
+    }
 }

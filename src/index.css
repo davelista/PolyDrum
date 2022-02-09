@@ -5,11 +5,13 @@
   --fourthColor: black;
   --fifthColor: #3C3B3D;
   --sixthColor: #515151;
+  --seventhColor: #202020;
+  --eighthColor: #efefef;
   --borderRadSett: 0.5rem;
 }
 
 body {
-  height: 100vh;
+  height: 98vh;
   color: white;
   display: flex;
   flex-direction: column;
@@ -29,7 +31,7 @@ code {
 /*scrollBar*/
 /* width */
 ::-webkit-scrollbar {
-  width: 30px;
+  width: 15px;
   height: 1rem;
   cursor: pointer;
 }
@@ -50,10 +52,18 @@ code {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: white;
-  border: 3px solid var(--secondColor);
+  background: linear-gradient(to right, transparent, var(--secondColor), transparent);
+  border: 3px solid white;
 
 }
 ::-webkit-scrollbar:hover {
   cursor: pointer;
+}
+
+@media (max-width: 1366px) {
+  body {
+    height: 100%;
+    width: 100%;
+    padding: 2% 0;
+  }
 }

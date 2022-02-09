@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button} from "../index";
-import {BiHash, BiSelectMultiple, FaMinus, FaPlay, FaPlus} from "react-icons/all";
+import {BiHash, BiSelectMultiple,BsFillArrowRightSquareFill, BsInfoSquare,  FaMinus, FaPlay, FaPlus} from "react-icons/all";
 
 const InstructionPopup = (props) => {
     return (<>
@@ -31,6 +31,13 @@ const InstructionPopup = (props) => {
                 <li>On top: <b>display, to see the final rhythm</b></li>
                 <li>On bottom: <b>pad, to custom your rhythms</b></li>
             </ul>
+            Now it's time to play! <br/>
+            Choose between the following modalities:
+            <ul>
+                <li>CUSTOM MODE:<b> choose the time, then use the pad!</b></li>
+                <li>QUICK MODE:<b> just press PLAY to generate a random pattern!</b></li>
+            </ul>
+
         </div>
     </>);
 }

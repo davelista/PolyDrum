@@ -1,5 +1,5 @@
 import React, {useContext, useState} from 'react';
-import {BiSelectMultiple, BsQuestionSquareFill, FaMinus, FaPause, FaPlay, FaPlus, FaStop} from "react-icons/all";
+import {BiSelectMultiple, GiMetronome, BsFillArrowRightSquareFill, BsInfoSquare, BsQuestionSquareFill, FaMinus, FaPause, FaPlay, FaPlus, FaStop} from "react-icons/all";
 import {Button, Popup} from "../../index";
 import styles from "./SettingsSection.module.css";
 import {AppContext} from "../../../context/AppContext";

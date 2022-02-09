@@ -1,12 +1,21 @@
 .container {
     display: flex;
     flex-direction: row;
-    background: #efefef;
-    height: 50rem;
-    width: 110rem;
-    min-height: 108px;
-    min-width: 192px;
-    border: 5px groove #515151;
-    background: linear-gradient(#3C3B3D, black);
+    background: var(--eighthColor);
+    height: 90vh;
+    width: 90vw;
+    border: 5px groove var(--sixthColor);
+    background: linear-gradient(var(--fifthColor), black);
     border-radius: 5px;
+}
+
+@media (max-width: 1920px){
+
+}
+
+@media (max-width: 1366px) {
+    .container{
+        height: 86vh;
+        width: 90vw;
+    }
 }

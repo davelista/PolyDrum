@@ -1,6 +1,6 @@
 .container{
-    width: 2rem;
-    height: 2rem;
+    width: 1.7rem;
+    height: 1.7rem;
     background-color: #202020;
     border: 2px solid #B388FF;
     border-radius: 7px;
@@ -14,11 +14,31 @@
 }
 
 .active{
-    width: 2rem;
-    height: 2rem;
+    width: 1.7rem;
+    height: 1.7rem;
     background-color: white;
     border: 2px solid var(--secondColor);
     border-radius: 7px;
     margin: 0.2rem;
 }
 
+@media (max-width: 1366px) {
+    .container{
+        width: 1.7rem;
+        height: 1.7rem;
+    }
+    .active{
+        width: 1.7rem;
+        height: 1.7rem;
+    }
+}
+@media (max-width: 1024px) {
+    .container{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .active{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}

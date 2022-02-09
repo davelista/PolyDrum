@@ -4,14 +4,14 @@ import {makeStyles, TextField, withStyles} from "@material-ui/core";
 const CustomTextField = withStyles({
     root: {
         color: "white",
-        width: "10rem",
+        width: "5.5rem",
         height: "3rem",
         textAlign: "center",
         "& label.Mui-focused": {
             color: "white",
         },
         "& .MuiOutlinedInput-input": {
-            padding: "1.2rem"
+            padding: "1.2rem",
         },
         "& .MuiInput-underline:after": {
             border: "2px solid",
@@ -23,7 +23,7 @@ const CustomTextField = withStyles({
             width: "100%",
             color: "white",
             textAlign: "center",
-            boxShadow: "0 3px 10px 0 rgba(0, 0, 0, 0.6)",
+            boxShadow: "1px 2px 2px 1px rgba(0, 0, 0, 0.6)",
             "&.Mui-focused fieldset": {
                 borderColor: "darkred",
             },
@@ -44,14 +44,14 @@ const CustomTextField = withStyles({
 })(TextField);
 
 const NumberControl = (props) => {
-    const {tempo} = props
+    const {tempo, label} = props
     return (
         <>
             <form  noValidate autoComplete="off">
 
                 <CustomTextField
                     id="outlined-number"
-                    label="Tempo (BPM)"
+                    label= {label}
                     type="number"
                     variant="outlined"
                     color="secondary"

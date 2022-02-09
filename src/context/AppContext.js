@@ -3,6 +3,8 @@ import timeSignaturesList from '../timeSignaturesList.json';
 import samplesList from '../samplesList.json';
 import noteDict from '../noteDict.json';
 import popupsList from '../popupsList.json';
+import effectList from '../effectList.json';
+import wetList from '../wetList.json';
 import {useSelectedRhythm} from "../hooks";
 import produce from "immer";
 
@@ -11,6 +13,7 @@ export const AppContext = React.createContext({});
 export function useAppContext() {
     /*Settings*/
     const [bpm, setBpm] = useState(90);
+
     const [isPlay, setPlay] = useState(false);
     const [volume, setVolume] = useState(50);
     const [mute, setMute] = useState(false);
@@ -20,11 +23,14 @@ export function useAppContext() {
     const [numStepButtons, setNumStepButton] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [load, setLoad] = useState(false);
+    const [effect, setEffect] = useState(null);
 
     /*JSON*/
     const [db, setDb] = useState([{
         timeSignature : "",
         numStepButtons: 0,
+        effect: "",
+        wet: 0.0,
         instruments: []
     }]);/*Salva le informazioni di un ritmo*/
 
@@ -69,13 +75,32 @@ export function useAppContext() {
         setNumStepButton(newNumStepButton);
         setTimeSignature(newTimeSignature);
 
+            setDb(produce(db, draft => {
+                draft[idRhythm].timeSignature = newTimeSignature;
+                draft[idRhythm].numStepButtons = newNumStepButton;
+                draft[idRhythm].denominator = newDenominator;
+                updatePad(draft, idRhythm);
+            }))
+        }
+
+    const updateEffect = (newEffect) => {
+
+        setEffect(newEffect);
+
         setDb(produce(db, draft => {
-            draft[idRhythm].timeSignature = newTimeSignature;
-            draft[idRhythm].numStepButtons = newNumStepButton;
-            draft[idRhythm].denominator = newDenominator;
-            updatePad(draft, idRhythm);
+            draft[idRhythm].effect = newEffect;
+
         }))
     }
+
+    const updateWet = (newWet) => {
+
+        setDb(produce(db, draft => {
+            draft[idRhythm].wet = newWet;
+
+        }))
+    }
+
 
 
 
@@ -86,6 +111,8 @@ export function useAppContext() {
             timeSignaturesList,
             samplesList,
             noteDict,
+            effectList,
+            wetList,
 
             math:{
                 lcm: lcm,
@@ -116,6 +143,8 @@ export function useAppContext() {
                 data: db,
                 setData: setDb,
                 update: updateUserRhythms,
+                updateEffect: updateEffect,
+                updateWet: updateWet,
 
             },
             timeSignature: { /*tempo della battuta */
@@ -133,10 +162,16 @@ export function useAppContext() {
             mute: {
                 value: mute,
                 setValue: setMute
+            },
+
+
+            effect: {
+                value: effect,
+                setEffect: setEffect
             }
         }),
         [bpm, setBpm, isPlay, volume, mute, timeSignature,
             numStepButtons, numRhythm, idRhythm, itemSelectedRhythm, currentIndex,
-            load]
+            load, effect]
     );
 }

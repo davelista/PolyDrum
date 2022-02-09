@@ -4,6 +4,7 @@ import SampleLine from "./SampleLine/SampleLine";
 import Dropdown from "./Dropdown/Dropdown";
 import CheckBox from "./CheckBox/CheckBox";
 import NumberControl from "./NumberControl/NumberControl";
+import WetControl from "./NumberControl/WetControl";
 import Drumpad from "./PagesSections/RhythmSection/Drumpad/Drumpad";
 import Button from "./Button/Button";
 import VerticalSlider from "./Slider/VerticalSlider";
@@ -21,4 +22,4 @@ import CustomInstrument from "./CustomInstrument/CustomInstrument";
 
 export {StepButton, HorizontalSlider, SampleLine, Dropdown, CheckBox,
     NumberControl, Drumpad, Button, VerticalSlider,SettingsSection, RhythmSection, StepButtonsList, ButtonsList,
-    SlidersContainer, PlayRhythm, Display, Popup, InstructionPopup, DetailsPopup, CustomInstrument}
+    SlidersContainer, PlayRhythm, Display, Popup, InstructionPopup, DetailsPopup, CustomInstrument, WetControl}

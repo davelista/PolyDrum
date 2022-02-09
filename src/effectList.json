@@ -1,9 +1,9 @@
 [
   {
-    "value": "filter"
+    "value": "autoFilter"
   },
   {
-    "value": "panning"
+    "value": "autoPanner"
   },
   {
     "value": "autoWah"
@@ -15,10 +15,10 @@
     "value": "distortion"
   },
   {
-    "value": "feedback"
+    "value": "feedbackDelay"
   },
   {
-    "value": "reverb"
+    "value": "freeverb"
   },
   {
   "value": "panVol"

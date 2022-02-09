@@ -1,5 +1,5 @@
 import React from 'react';
-import {Song, Track} from "reactronica";
+import {Effect, Song, Track} from "reactronica";
 import {useSteps} from "../../hooks";
 import {CustomInstrument} from "../index";
 
@@ -21,6 +21,8 @@ const PlayRhythm = (props) => {
                         steps={x}
 
                     >
+                        <Effect type={item.effect} wet={item.wet}/>
+
                         {/*<Instrument
                             type="sampler"
                             samples={noteDict[0]}

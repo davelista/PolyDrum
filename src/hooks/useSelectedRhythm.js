@@ -16,6 +16,8 @@ const useSelectedRhythm = (idRhythm, db, setDb) => {
         let item = {
             timeSignature : "",
             numStepButtons: 0,
+            effect: "",
+            wet: 0.0,
             instruments: []
         }
         temp[idRhythm] = item;

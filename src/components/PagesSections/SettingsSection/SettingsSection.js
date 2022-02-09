@@ -1,6 +1,16 @@
 import React, {useContext, useState} from 'react';
 import styles from "./SettingsSection.module.css";
-import {Dropdown, HorizontalSlider, NumberControl, Button, ButtonsList, Popup, InstructionPopup, DetailsPopup} from "../../index";
+import {
+    Dropdown,
+    HorizontalSlider,
+    NumberControl,
+    Button,
+    ButtonsList,
+    Popup,
+    InstructionPopup,
+    DetailsPopup,
+    WetControl
+} from "../../index";
 import {
     HiVolumeUp,
     HiVolumeOff,
@@ -40,7 +50,13 @@ const SettingsSection = (props) => {
                         {/*<Button onClick={() => setOpen(!open)} buttonStyle={"btn--secondary"}><BsQuestionSquareFill size={20}/></Button>*/}
 
                         <Button onClick={() => setOpen(!open)} buttonStyle={"btn--secondary"} style={{marginRight: "0.2rem"}}><BsInfoSquare size={30}/></Button>
-                        <Dropdown name={"CHOOSE TIME"}/>
+                        {appData.userRhythms.data[appData.selectedRhythm.number] !== undefined && (
+                        <Dropdown name={"Choose Time"}
+                                  listInRhythm={appData.userRhythms.data[appData.selectedRhythm.number].timeSignature}
+                                  jsonList={appData.timeSignaturesList}
+                                  type={"time"}
+                        />
+                        )}
                         <NumberControl tempo={appData.tempo} play={appData.play} label={"BPM"}/>
                         <Button onClick={() => setOpen2(!open2)} buttonStyle={"btn--secondary"}><BsQuestionSquareFill size={20}/></Button>
 
@@ -64,8 +80,22 @@ const SettingsSection = (props) => {
                 <div className={styles.auxButtons}>
                     {/*<Button onClick={() => setOpen(!open)} buttonStyle={"btn--secondary"}><BsQuestionSquareFill size={20}/></Button>*/}
 
-                    <NumberControl tempo={appData.tempo} play={appData.play} label={"Wet %"}/>
-                    <Dropdown name={"Effects"}/>
+                    {/*<WetControl wet={appData.userRhythms.data[appData.selectedRhythm.number].wet}
+                                 rhythm={appData.userRhythms} label={"Wet %"}/>*/}
+                    {appData.userRhythms.data[appData.selectedRhythm.number] !== undefined && (
+                        <Dropdown name={"Wet %"}
+                                  listInRhythm={appData.userRhythms.data[appData.selectedRhythm.number].wet}
+                                  jsonList={appData.wetList}
+                                  type={"wet"}
+                        />)
+                    }
+                    {appData.userRhythms.data[appData.selectedRhythm.number] !== undefined &&  (<Dropdown name={"Effects"}
+                              listInRhythm={appData.userRhythms.data[appData.selectedRhythm.number].effect}
+                              jsonList={appData.effectList}
+                              type={"effect"}
+
+                    />
+                    )}
                     <Button onClick={() => setOpen3(!open3)} buttonStyle={"btn--secondary"}><BsQuestionSquareFill size={20}/></Button>
 
 

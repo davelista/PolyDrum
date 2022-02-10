@@ -22,7 +22,7 @@
 
 /* slider part*/
 .slidersContainer {
-    min-height: 49%;
+    min-height: 45%;
     width: 110%;
     padding: 1%;
     display: flex;
@@ -76,7 +76,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0rem;
 
 }
 
@@ -87,7 +87,7 @@
     width: 120%;
     align-items: center;
     margin-top: 0rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 @media (max-width: 1366px) {

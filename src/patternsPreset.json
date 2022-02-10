@@ -1,3 +1,242 @@
 [
-
+  {
+    "name": "Drum&Bass",
+    "rhythm":
+    {
+      "timeSignature": "4/4",
+      "numStepButtons": 4,
+      "effect": "",
+      "wet": 0,
+      "instruments": [
+        {
+          "name": "Kick",
+          "pad": [
+            true
+          ],
+          "volume": 50
+        },
+        {
+          "name": "808",
+          "pad": [
+            true,
+            null,
+            false
+          ],
+          "volume": 50
+        },
+        {
+          "name": "Snare",
+          "pad": [
+            null,
+            true,
+            null,
+            true
+          ],
+          "volume": 50
+        },
+        {
+          "name": "Clap",
+          "pad": [
+            null,
+            false,
+            null,
+            true
+          ],
+          "volume": 50
+        },
+        {
+          "name": "OpenHats",
+          "pad": [
+            true
+          ],
+          "volume": 50
+        },
+        {
+          "name": "HiHats",
+          "pad": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "volume": 50
+        },
+        {
+          "name": "Percs",
+          "pad": [
+            null,
+            null,
+            null,
+            true
+          ],
+          "volume": 50
+        },
+        {
+          "name": "Vox",
+          "pad": [
+            true,
+            false
+          ],
+          "volume": 50
+        }
+      ],
+      "denominator": 4
+    }
+  },
+  {
+    "name": "Techno",
+    "rhythm": {
+      "timeSignature": "4/4",
+      "numStepButtons": 4,
+      "effect": "",
+      "wet": 0,
+      "instruments": [
+        {
+          "name": "Kick",
+          "pad": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "volume": 50
+        },
+        {
+          "name": "808",
+          "pad": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "volume": 50
+        },
+        {
+          "name": "Snare",
+          "pad": [
+            null,
+            true,
+            null,
+            true
+          ],
+          "volume": 50
+        },
+        {
+          "name": "Clap",
+          "pad": [
+            null,
+            false,
+            null,
+            true
+          ],
+          "volume": 50
+        },
+        {
+          "name": "OpenHats",
+          "pad": [
+            true
+          ],
+          "volume": 50
+        },
+        {
+          "name": "HiHats",
+          "pad": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "volume": 50
+        },
+        {
+          "name": "Percs",
+          "pad": [
+            null,
+            null,
+            null,
+            true
+          ],
+          "volume": 50
+        },
+        {
+          "name": "Vox",
+          "pad": [
+            true,
+            false
+          ],
+          "volume": 50
+        }
+      ],
+      "denominator": 4
+    }
+  },
+  {
+    "name": "Rap",
+    "rhythm": {
+      "timeSignature": "4/4",
+      "numStepButtons": 4,
+      "effect": "",
+      "wet": 0,
+      "instruments": [
+        {
+          "name": "Kick",
+          "pad": [
+            true
+          ],
+          "volume": 50
+        },
+        {
+          "name": "808",
+          "pad": [],
+          "volume": 50
+        },
+        {
+          "name": "Snare",
+          "pad": [
+            null,
+            true,
+            null,
+            true
+          ],
+          "volume": 50
+        },
+        {
+          "name": "Clap",
+          "pad": [
+            null,
+            null,
+            null,
+            true
+          ],
+          "volume": 50
+        },
+        {
+          "name": "OpenHats",
+          "pad": [],
+          "volume": 50
+        },
+        {
+          "name": "HiHats",
+          "pad": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "volume": 50
+        },
+        {
+          "name": "Percs",
+          "pad": [],
+          "volume": 50
+        },
+        {
+          "name": "Vox",
+          "pad": [],
+          "volume": 50
+        }
+      ],
+      "denominator": 4
+    }
+  }
 ]

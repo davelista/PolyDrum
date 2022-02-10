@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Button} from "../../index";
+import styles from "./SettingsSection.module.css"
 import {GiMetronome} from "react-icons/all";
 
 function CalculateBpm(props) {
@@ -36,7 +37,8 @@ function CalculateBpm(props) {
         <>
             <div onKeyDown={handleMouseDown}>
                 <Button onMouseDown={handleMouseDown}>
-                    <GiMetronome size={25}/>
+                    <div className={styles.text}>BPM by CLICK </div>
+                    {/*<GiMetronome size={25}/> */}
                 </Button>
             </div>
             </>

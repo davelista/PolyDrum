@@ -7,7 +7,7 @@
 }
 
 .dropdown--secondary{ /*DROPDOWN PER WET*/
-    width: 5rem !important;
+    width: 7rem;
     height: 3rem;
     text-align: center;
     padding-right: 0;
@@ -39,8 +39,8 @@
     justify-content: space-evenly;
     padding: 0.5rem;
     background: linear-gradient(#3C3B3D, black);
-    width: 3.8rem;
-    max-width: 5rem;
+    width: 6rem;
+    max-width: 5.8rem;
     z-index: 999;
     position: absolute;
     border: 1px outset white;

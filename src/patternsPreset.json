@@ -1,16 +1,127 @@
 [
   {
-    "name": "Drum&Bass",
+    "name": "PRESET 1",
     "rhythm":
     {
-      "timeSignature": "4/4",
-      "numStepButtons": 4,
+      "timeSignature": "8/4",
+      "numStepButtons": 8,
+      "effect": "",
+      "wet": 0,
+      "BPM": 195,
+      "instruments": [
+        {
+          "name": "Kick",
+          "pad": [
+            null,
+            true,
+            null,
+            null,
+            null,
+            true,
+            true
+          ],
+          "volume": 50
+        },
+        {
+          "name": "808",
+          "pad": [
+            null,
+            true,
+            null
+          ],
+          "volume": 2
+        },
+        {
+          "name": "Snare",
+          "pad": [
+            null,
+            true,
+            null,
+            null,
+            null,
+            true
+          ],
+          "volume": 15
+        },
+        {
+          "name": "Clap",
+          "pad": [
+            null,
+            null,
+            null,
+            true,
+            null,
+            null,
+            null,
+            true
+          ],
+          "volume": 40
+        },
+        {
+          "name": "OpenHats",
+          "pad": [
+            null,
+            true,
+            null,
+            true,
+            null,
+            true,
+            null,
+            true
+          ],
+          "volume": 20
+        },
+        {
+          "name": "HiHats",
+          "pad": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "volume": 20
+        },
+        {
+          "name": "Percs",
+          "pad": [
+            null
+          ],
+          "volume": 2
+        },
+        {
+          "name": "Vox",
+          "pad": [
+            true,
+            false
+          ],
+          "volume": 10
+        }
+      ],
+      "denominator": 4
+    }
+  },
+  {
+    "name": "PRESET 2",
+    "rhythm": {
+      "timeSignature": "8/4",
+      "numStepButtons": 8,
       "effect": "",
       "wet": 0,
       "instruments": [
         {
           "name": "Kick",
           "pad": [
+            null,
+            true,
+            null,
+            true,
+            null,
+            true,
+            null,
             true
           ],
           "volume": 50
@@ -20,17 +131,14 @@
           "pad": [
             true,
             null,
-            false
+            true
           ],
-          "volume": 50
+          "volume": 30
         },
         {
           "name": "Snare",
           "pad": [
-            null,
-            true,
-            null,
-            true
+            null
           ],
           "volume": 50
         },
@@ -38,7 +146,11 @@
           "name": "Clap",
           "pad": [
             null,
-            false,
+            null,
+            null,
+            true,
+            null,
+            null,
             null,
             true
           ],
@@ -55,8 +167,11 @@
           "name": "HiHats",
           "pad": [
             true,
+            null,
             true,
+            null,
             true,
+            null,
             true
           ],
           "volume": 50
@@ -64,18 +179,18 @@
         {
           "name": "Percs",
           "pad": [
-            null,
-            null,
-            null,
-            true
+            null
           ],
           "volume": 50
         },
         {
           "name": "Vox",
           "pad": [
-            true,
-            false
+            null,
+            null,
+            null,
+            null,
+            true
           ],
           "volume": 50
         }
@@ -84,10 +199,10 @@
     }
   },
   {
-    "name": "Techno",
+    "name": "PRESET 3",
     "rhythm": {
-      "timeSignature": "4/4",
-      "numStepButtons": 4,
+      "timeSignature": "8/4",
+      "numStepButtons": 8,
       "effect": "",
       "wet": 0,
       "instruments": [
@@ -95,92 +210,12 @@
           "name": "Kick",
           "pad": [
             true,
-            true,
-            true,
-            true
-          ],
-          "volume": 50
-        },
-        {
-          "name": "808",
-          "pad": [
-            true,
-            true,
-            true,
-            true
-          ],
-          "volume": 50
-        },
-        {
-          "name": "Snare",
-          "pad": [
-            null,
-            true,
-            null,
-            true
-          ],
-          "volume": 50
-        },
-        {
-          "name": "Clap",
-          "pad": [
-            null,
-            false,
-            null,
-            true
-          ],
-          "volume": 50
-        },
-        {
-          "name": "OpenHats",
-          "pad": [
-            true
-          ],
-          "volume": 50
-        },
-        {
-          "name": "HiHats",
-          "pad": [
-            true,
-            true,
-            true,
-            true
-          ],
-          "volume": 50
-        },
-        {
-          "name": "Percs",
-          "pad": [
             null,
             null,
-            null,
-            true
-          ],
-          "volume": 50
-        },
-        {
-          "name": "Vox",
-          "pad": [
             true,
-            false
-          ],
-          "volume": 50
-        }
-      ],
-      "denominator": 4
-    }
-  },
-  {
-    "name": "Rap",
-    "rhythm": {
-      "timeSignature": "4/4",
-      "numStepButtons": 4,
-      "effect": "",
-      "wet": 0,
-      "instruments": [
-        {
-          "name": "Kick",
-          "pad": [
+            true,
+            null,
+            null,
             true
           ],
           "volume": 50
@@ -193,7 +228,10 @@
         {
           "name": "Snare",
           "pad": [
+            true,
             null,
+            null,
+            true,
             true,
             null,
             true
@@ -203,8 +241,6 @@
         {
           "name": "Clap",
           "pad": [
-            null,
-            null,
             null,
             true
           ],
@@ -218,6 +254,10 @@
         {
           "name": "HiHats",
           "pad": [
+            true,
+            null,
+            true,
+            true,
             true,
             true,
             true,

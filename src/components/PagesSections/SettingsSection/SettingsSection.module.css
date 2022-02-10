@@ -89,6 +89,14 @@
     margin-top: 0rem;
     margin-bottom: 1.5rem;
 }
+.text{
+    font-size: 9px;
+    font-weight: bold;
+    color: var(--fourthColor);
+}
+.text:hover{
+    color: var(--thirdColor);
+}
 
 @media (max-width: 1366px) {
     .container{

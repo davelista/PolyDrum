@@ -6,6 +6,7 @@ import popupsList from '../popupsList.json';
 import effectList from '../effectList.json';
 import wetList from '../wetList.json';
 import patternList from '../patternList.json'
+import patternsPreset from '../patternsPreset.json'
 import {useSelectedRhythm} from "../hooks";
 import produce from "immer";
 
@@ -25,6 +26,7 @@ export function useAppContext() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [load, setLoad] = useState(false);
     const [effect, setEffect] = useState(null);
+
 
     /*JSON*/
     const [db, setDb] = useState([{
@@ -102,6 +104,16 @@ export function useAppContext() {
         }))
     }
 
+    const insertPattern = (pattern, i) => {
+        if (db[idRhythm] !== undefined){
+            setDb(produce(db, draft => {
+                draft[idRhythm] = patternsPreset[i].rhythm;
+
+            }))
+            console.log(patternList[i])
+        }
+    }
+
 
 
 
@@ -115,6 +127,7 @@ export function useAppContext() {
             effectList,
             wetList,
             patternList,
+            patternsPreset,
 
             math:{
                 lcm: lcm,
@@ -147,6 +160,7 @@ export function useAppContext() {
                 update: updateUserRhythms,
                 updateEffect: updateEffect,
                 updateWet: updateWet,
+                insertPattern: insertPattern
 
             },
             timeSignature: { /*tempo della battuta */

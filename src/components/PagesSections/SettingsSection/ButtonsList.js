@@ -4,6 +4,7 @@ import {Button, Popup} from "../../index";
 import styles from "./SettingsSection.module.css";
 import {AppContext} from "../../../context/AppContext";
 import produce from "immer";
+import CalculateBpm from "./CalculateBpm";
 
 const ButtonsList = (props) => {
     const [open, setOpen] = useState(false);
@@ -15,10 +16,9 @@ const ButtonsList = (props) => {
             <div className={styles.playButtons}>
                 <Button onClick={() => {
                     appData.play.setValue(!appData.play.value);
-                    /*if(appData.play.load){
-                        appData.play.setLoad(false);
-                    }*/
                 }} >{appData.play.value ?<FaPause/> : <FaPlay/>} </Button>
+                <CalculateBpm tempo={appData.tempo}/>
+
             </div>
 
             <div className={styles.rhythmButtonsSection} >

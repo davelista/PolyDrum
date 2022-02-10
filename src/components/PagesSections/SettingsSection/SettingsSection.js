@@ -22,6 +22,7 @@ import {
 import {AppContext} from "../../../context/AppContext";
 import SlidersContainer from "./SlidersContainer";
 import EffectPopup from "../../Popup/EffectPopup";
+import CalculateBpm from "./CalculateBpm";
 
 
 
@@ -33,6 +34,7 @@ const SettingsSection = (props) => {
 
     return (
         <>
+
             <div className={styles.container}>
                 <div style={{
                     width: "120%",

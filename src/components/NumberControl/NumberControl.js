@@ -60,8 +60,7 @@ const NumberControl = (props) => {
 
                     }}
                     inputProps={{min: 1, style: {textAlign: 'center'}}}
-
-                    defaultValue={tempo.value}/*NON CAMBIARE*/
+                    value={tempo.value}
                     onChange={(e) => tempo.setValue(e.target.value)}/*NON CAMBIARE*/
 
                 />

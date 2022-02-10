@@ -13,7 +13,8 @@ const useStyles = makeStyles({ /*come avere un file VerticalSlider.module.css*/
         alignItems: "center",
         justifyContent: "center",
         borderColor: "white",
-        border: 2
+        border: 2,
+        marginTop: "0rem"
     },
     title: {
         marginTop: "0.5rem",

@@ -7,13 +7,31 @@ return <>
     <div>
         Here is the list of available effect:
         <ul>
-            <li><b>m/n</b>: m beats, each an n-th of the whole note (first)</li>
-            <li><b>i/j</b>: i beats, each an j-th of the whole note (second)</li>
+            <li><b>autoFilter</b>:</li>
         </ul>
-
         <ul>
-            <li>The first rhythm fits a measure of m beats, each lasting 1/n of a whole note</li>
-            <li>The second rhythm fits a measure of i beats, each lasting 1/j of a whole note</li>
+            <li><b>autoPanner</b>:</li>
+        </ul>
+        <ul>
+            <li><b>autoWah</b>:</li>
+        </ul>
+        <ul>
+            <li><b>bitCrusher</b>:</li>
+        </ul>
+        <ul>
+            <li><b>distortion</b>:</li>
+        </ul>
+        <ul>
+            <li><b>feedbackDelay</b>:</li>
+        </ul>
+        <ul>
+            <li><b>freeVerb</b>:</li>
+        </ul>
+        <ul>
+            <li><b>panVol</b>:</li>
+        </ul>
+        <ul>
+            <li><b>tremolo</b>:</li>
         </ul>
 
         How to use these effects?

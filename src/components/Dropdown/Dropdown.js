@@ -21,7 +21,7 @@ const Dropdown = (props) => {
             {appData.userRhythms.data[appData.selectedRhythm.number] !== undefined && (
                 <div className={`${checkDropdownStyle}`}>
                     <div className={open ? styles.activeDrop : styles.button} onClick={() => {setOpen(!open)}}>
-                        {listInRhythm === "" || listInRhythm === null ?
+                        {listInRhythm === "" || listInRhythm === 0 ?
                             <> <div className={styles.dropLabel}>{name}</div> <RiArrowDownSLine/></> :
                             <>{type === "wet" ? listInRhythm*100 : listInRhythm} <RiArrowDownSLine/> </>}
                         {/* VECCHIO

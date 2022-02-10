@@ -18,7 +18,6 @@
 
 /*PALLINO*/
 .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -26,8 +25,16 @@
     transition: background .15s ease-in-out;
 }
 
+.slider::-webkit-slider-runnable-track {
+    width: 20px;
+    height: 20px;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background .15s ease-in-out;
+}
+
 .slider::-moz-range-thumb {
-    -webkit-appearance: none;
     width: 20px;
     height: 20px;
     border: 0;
@@ -37,6 +44,12 @@
 }
 
 .slider::-moz-range-progress{
+    background: red;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.slider::-webkit-progress-value{
     background: red;
     height: 10px;
     border-radius: 5px;

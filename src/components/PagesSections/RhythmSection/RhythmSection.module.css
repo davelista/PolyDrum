@@ -24,6 +24,7 @@
 .patterns{
     display: flex;
     flex-flow: row nowrap;
+    justify-content: space-evenly;
 }
 
 @media (max-width: 1366px) {

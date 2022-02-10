@@ -39,13 +39,12 @@
     justify-content: space-evenly;
     padding: 0.5rem;
     background: linear-gradient(#3C3B3D, black);
-    width: 10.8rem;
-    max-width: 11rem;
+    width: 3.8rem;
+    max-width: 5rem;
     z-index: 999;
     position: absolute;
     border: 1px outset white;
     border-radius: var(--borderRadSett);
     border-top: transparent;
-    height: 40%;
-    background: red;
+    height: 45%;
 }

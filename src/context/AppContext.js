@@ -5,6 +5,7 @@ import noteDict from '../noteDict.json';
 import popupsList from '../popupsList.json';
 import effectList from '../effectList.json';
 import wetList from '../wetList.json';
+import patternList from '../patternList.json'
 import {useSelectedRhythm} from "../hooks";
 import produce from "immer";
 
@@ -113,6 +114,7 @@ export function useAppContext() {
             noteDict,
             effectList,
             wetList,
+            patternList,
 
             math:{
                 lcm: lcm,

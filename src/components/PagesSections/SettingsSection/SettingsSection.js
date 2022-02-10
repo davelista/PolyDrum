@@ -87,6 +87,8 @@ const SettingsSection = (props) => {
                                   listInRhythm={appData.userRhythms.data[appData.selectedRhythm.number].wet}
                                   jsonList={appData.wetList}
                                   type={"wet"}
+                                  dropdownStyle={'dropdown--secondary'}
+                                  contentStyle={'content--secondary'}
                         />)
                     }
                     {appData.userRhythms.data[appData.selectedRhythm.number] !== undefined &&  (<Dropdown name={"Effects"}

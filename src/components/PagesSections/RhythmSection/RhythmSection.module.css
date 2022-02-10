@@ -21,6 +21,11 @@
     overflow-y: scroll;
 }
 
+.patterns{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
 @media (max-width: 1366px) {
     .container{
         width: 90%;

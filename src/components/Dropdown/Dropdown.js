@@ -1,19 +1,25 @@
 import React, {useContext, useState} from 'react';
 import styles from "./Dropdown.module.css";
-import {FaArrowDown, RiArrowDownSLine} from "react-icons/all";
+//per modifcare le diverse tipologie di dropdown (primary = time signature and effects | secondary = wet)
+import "./DiffertDropdown.css";
+import {RiArrowDownSLine} from "react-icons/all";
 import {AppContext} from "../../context/AppContext";
-import {MenuItem} from "@material-ui/core";
+
+const dropdownStyles = ['dropdown--primary', 'dropdown--secondary'];
+const contentStyles = ['content--primary','content--secondary'];
 
 const Dropdown = (props) => {
     const appData = useContext(AppContext);
     const [open, setOpen] = useState(false);
-    const {name, listInRhythm, jsonList, type} = props;
+    const {name, listInRhythm, jsonList, type, dropdownStyle, contentStyle} = props;
 
+    const checkDropdownStyle = dropdownStyles.includes(dropdownStyle) ? dropdownStyle : dropdownStyles[0];
+    const checkContentStyle = contentStyles.includes(contentStyle) ? contentStyle : contentStyles[0];
     return (
         <>
 
             {appData.userRhythms.data[appData.selectedRhythm.number] !== undefined && (
-                <div className={styles.dropdown}>
+                <div className={`${checkDropdownStyle}`}>
                     <div className={open ? styles.activeDrop : styles.button} onClick={() => {setOpen(!open)}}>
                         {listInRhythm === "" || listInRhythm === null ?
                             <> <div className={styles.dropLabel}>{name}</div> <RiArrowDownSLine/></> :
@@ -26,7 +32,7 @@ const Dropdown = (props) => {
                     </div>
 
                     {open ? (
-                        <div className={styles.content}>
+                        <div className={`${checkContentStyle}`}>
                             {jsonList.map((x) => {
                                 if(type === "time"){
                                     return <div className={styles.item} onClick={() => {

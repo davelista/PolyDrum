@@ -105,6 +105,39 @@
     box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.42);
 }
 
+/*Bottoni dei pattern*/
+
+.btn--patterns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    background: transparent;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.btn--patterns:hover{
+    position: relative;
+    background: blue;
+    color: white;
+
+}
+
+.btn--patterns--active{
+    border-color: green;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.42);
+}
+
 @media (max-width: 1366px) {
     .btn--secondary{
         margin-top: 0.8rem;

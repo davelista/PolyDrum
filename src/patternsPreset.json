@@ -278,5 +278,191 @@
       ],
       "denominator": 4
     }
+  },
+
+  {
+    "name": "PRESET 4",
+    "rhythm":
+    {
+      "timeSignature": "11/4",
+      "numStepButtons": 11,
+      "effect": "",
+      "wet": 0,
+      "instruments": [
+        {
+          "name": "Kick",
+          "pad": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "volume": 50
+        },
+        {
+          "name": "808",
+          "pad": [
+            null,
+            null,
+            null,
+            true,
+            null,
+            null,
+            null,
+            true
+          ],
+          "volume": 1
+        },
+        {
+          "name": "Snare",
+          "pad": [
+          ],
+          "volume": 50
+        },
+        {
+          "name": "Clap",
+          "pad": [
+          true
+          ],
+          "volume": 40
+        },
+        {
+          "name": "OpenHats",
+          "pad": [
+            null,
+            null,
+            null,
+            true,
+            null,
+            null,
+            true,
+            null,
+            null,
+            null,
+            true
+          ],
+          "volume": 20
+        },
+        {
+          "name": "HiHats",
+          "pad": [
+            null,
+            true,
+            true,
+            null,
+            true,
+            true,
+            null,
+            null,
+            true,
+            true
+          ],
+          "volume": 20
+        },
+        {
+          "name": "Percs",
+          "pad": [
+            null
+          ],
+          "volume": 50
+        },
+        {
+          "name": "Vox",
+          "pad": [
+            null
+          ],
+          "volume": 50
+        }
+      ],
+      "denominator": 4
+    }
+  },
+
+
+  {
+    "name": "PRESET 5",
+    "rhythm":
+    {
+      "timeSignature": "6/4",
+      "numStepButtons": 6,
+      "effect": "",
+      "wet": 0,
+      "instruments": [
+        {
+          "name": "Kick",
+          "pad": [
+            true,
+            true,
+            true
+          ],
+          "volume": 50
+        },
+        {
+          "name": "808",
+          "pad": [
+            null
+          ],
+          "volume": 50
+        },
+        {
+          "name": "Snare",
+          "pad": [
+            null
+          ],
+          "volume": 50
+        },
+        {
+          "name": "Clap",
+          "pad": [
+            null,
+            null,
+            null,
+            true
+          ],
+          "volume": 50
+        },
+        {
+          "name": "OpenHats",
+          "pad": [
+            null
+          ],
+          "volume": 50
+        },
+        {
+          "name": "HiHats",
+          "pad": [
+            null,
+            null,
+            null,
+            null,
+            true,
+            true
+          ],
+          "volume": 50
+        },
+        {
+          "name": "Percs",
+          "pad": [
+            null
+          ],
+          "volume": 50
+        },
+        {
+          "name": "Vox",
+          "pad": [
+            null
+          ],
+          "volume": 50
+        }
+      ],
+      "denominator": 4
+    }
   }
 ]

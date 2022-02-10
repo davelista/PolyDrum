@@ -1,18 +1,21 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {AppContext} from "../../../../context/AppContext";
 import styles from "./Display.module.css";
 import {useIndices} from "../../../../hooks";
+import app from "../../../../App";
 
 const FinalInstrumentsRhythm = (props) => {
     const appData = useContext(AppContext);
     const [indices, setIndices] = useIndices();
-    let minute = 55000; //minute in milliseconds
-    let seconds = minute/appData.tempo.value - appData.tempo.value/2.5;
-    if(seconds > 120 && seconds <= 150){
-        seconds = minute/appData.tempo.value - appData.tempo.value/2.7;
+    let minute = 60000;
+    let seconds = minute/appData.tempo.value;
+
+     if(appData.tempo.value >= 120 && appData.tempo.value <= 150){
+        seconds = (minute/appData.tempo.value - appData.tempo.value/4);
+        console.log("SECONDI", seconds)
     }
-    if(seconds > 150){
-        seconds = minute/appData.tempo.value - appData.tempo.value/3;
+    else if(appData.tempo.value > 150){
+        seconds = (minute/appData.tempo.value - appData.tempo.value/6);
     }
 
     useEffect(() => { /*Funzione per evidenziare l'index suonato*/

@@ -12,7 +12,15 @@ const RhythmSection = (props) => {
                  style={appData.selectedRhythm.number == null ? {justifyContent: "center"} : {justifyContent: "space-between"}}>
                 <Display/>
 
-                <PatternSections list={appData.patternList} rhythms={appData.userRhythms}/>
+
+                <div
+                    style={appData.selectedRhythm.number == null ? {display: "none"} : {display: ""}}> {/*Se ha selezionato tutto mostra solo display*/}
+                    <PatternSections list={appData.patternList} rhythms={appData.userRhythms}/>
+                </div>
+
+                {/*<PatternSections list={appData.patternList} rhythms={appData.userRhythms}
+                                 style={appData.selectedRhythm.number == null ? {display: "none"} : {display: ""}}>
+                </PatternSections> */}
 
                 <div className={styles.drumpad}
                      style={appData.selectedRhythm.number == null ? {display: "none"} : {display: ""}}> {/*Se ha selezionato tutto mostra solo display*/}

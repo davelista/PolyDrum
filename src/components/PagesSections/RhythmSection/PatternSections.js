@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from "./RhythmSection.module.css";
 import {Button} from "../../index";
+import {AppContext} from "../../../context/AppContext";
 
 const PatternSections = (props) => {
     const {list, rhythms} = props

@@ -35,7 +35,7 @@ const InstructionPopup = (props) => {
             Choose between the following modalities:
             <ul>
                 <li>CUSTOM MODE:<b> choose the time, then use the pad!</b></li>
-                <li>QUICK MODE:<b> just press PLAY to generate a random pattern!</b></li>
+                <li>QUICK MODE:<b> choose and press a PRESET!</b></li>
             </ul>
 
         </div>

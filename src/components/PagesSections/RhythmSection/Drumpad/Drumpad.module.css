@@ -5,6 +5,7 @@
     background: url("../../../../assets/logo.png") center right no-repeat;
     background-size: 150px 168px;
     max-height: 20rem;
+    overflow: hidden;
 
 }
 

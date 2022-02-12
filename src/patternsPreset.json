@@ -398,7 +398,10 @@
         {
           "name": "Kick",
           "pad": [
+            null,
             true,
+            true,
+            null,
             true,
             true
           ],
@@ -421,7 +424,7 @@
         {
           "name": "Clap",
           "pad": [
-            null,
+            true,
             null,
             null,
             true
@@ -438,12 +441,8 @@
         {
           "name": "HiHats",
           "pad": [
-            null,
-            null,
-            null,
-            null,
-            true,
-            true
+            null
+
           ],
           "volume": 50
         },

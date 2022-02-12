@@ -8,7 +8,7 @@
     background-color: #202020;
     max-width: 44rem;
     padding: 2% 2%;
-    max-height: 18rem;
+    /*max-height: 18rem;*/
 }
 
 .container{
@@ -17,8 +17,6 @@
     align-items: center;
     margin: 1%;
     width: 80%;
-    max-height: 18rem;
-
 }
 
 .title{
@@ -85,6 +83,13 @@
     background: white;
     border: 2px solid var(--secondColor);
 }
+@media (max-width: 1921px) {
+    .display{
+        max-width: 55rem;
+        /*max-height: 24rem;*/
+    }
+
+}
 
 @media (max-width: 1366px) {
     .display {
@@ -92,7 +97,7 @@
         max-width: 42rem;
         padding: 2% 2%;
         margin: 0;
-        min-height: 18rem;
+        max-height: 20rem;
     }
     .columnTitles {
         height: auto;

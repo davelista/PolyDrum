@@ -5,7 +5,7 @@
     align-items: center;
     background: transparent;
     padding: 1% 1%;
-    margin-top: 1%;
+    margin-top: 0.5rem;
 
 }
 /* drumpad section */
@@ -30,12 +30,13 @@
 @media (max-width: 1366px) {
     .container{
         width: 90%;
-        padding: 2% 2%;
+        padding: 0 2% 2% 2%;
     }
     .drumpad{
-        height: auto;
+        min-height: 22rem;
         width: 95%;
-        padding: 2% 0 2% 4%;
+        padding: 1% 0 0 4%;
+        justify-content: space-between;
     }
 }
 
@@ -50,5 +51,6 @@
         min-height: 43%;
         width: 95%;
         padding: 2% 0 2% 4%;
+
     }
 }

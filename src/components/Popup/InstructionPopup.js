@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button} from "../index";
+import styles from "./Popup.module.css"
 import {BiHash, BiSelectMultiple,BsFillArrowRightSquareFill, BsInfoSquare,  FaMinus, FaPlay, FaPlus} from "react-icons/all";
 
 const InstructionPopup = (props) => {
@@ -23,6 +24,11 @@ const InstructionPopup = (props) => {
             </div>
             <div style={{display: "flex", height: "3rem", alignItems:"center"}}>
                 <Button><BiHash/></Button>
+                <div style={{marginLeft: "1rem"}}>button to select a specific rhythm</div>
+            </div>
+            <div style={{display: "flex", height: "3rem", alignItems:"center"}}>
+
+                <Button><div className={styles.text}>BPM by CLICK </div></Button>
                 <div style={{marginLeft: "1rem"}}>button to select a specific rhythm</div>
             </div>
             <br/>

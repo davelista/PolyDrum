@@ -73,7 +73,14 @@
     background: black;
     border-radius: 5rem;
 }
-
+.text{
+    font-size: 9px;
+    font-weight: bold;
+    color: var(--fourthColor);
+}
+.text:hover{
+    color: var(--thirdColor);
+}
 @media screen and (max-width: 960px) {
 
     .popup{

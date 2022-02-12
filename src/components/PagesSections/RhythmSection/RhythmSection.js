@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import styles from "./RhythmSection.module.css";
-import {CheckBox, Drumpad, Display} from "../../index";
+import {Drumpad, Display} from "../../index";
 import {AppContext} from "../../../context/AppContext";
 import PatternSections from "./PatternSections";
 
@@ -14,13 +14,9 @@ const RhythmSection = (props) => {
 
 
                 <div
-                    style={appData.selectedRhythm.number == null ? {display: "none"} : {display: ""}}> {/*Se ha selezionato tutto mostra solo display*/}
+                     style={appData.selectedRhythm.number == null ? {display: "none"} : {display: ""}}> {/*Se ha selezionato tutto mostra solo display*/}
                     <PatternSections list={appData.patternList} rhythms={appData.userRhythms}/>
                 </div>
-
-                {/*<PatternSections list={appData.patternList} rhythms={appData.userRhythms}
-                                 style={appData.selectedRhythm.number == null ? {display: "none"} : {display: ""}}>
-                </PatternSections> */}
 
                 <div className={styles.drumpad}
                      style={appData.selectedRhythm.number == null ? {display: "none"} : {display: ""}}> {/*Se ha selezionato tutto mostra solo display*/}

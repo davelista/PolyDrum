@@ -21,7 +21,8 @@ const PlayRhythm = (props) => {
                         steps={x}
 
                     >
-                        <Effect type={item.effect} wet={item.wet}/>
+                        {item.wet !== 0 ? <Effect type={item.effect} wet={item.wet}/> : null}
+
 
                         {/*<Instrument
                             type="sampler"

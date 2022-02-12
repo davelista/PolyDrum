@@ -20,7 +20,7 @@ const RhythmSection = (props) => {
 
                 <div className={styles.drumpad}
                      style={appData.selectedRhythm.number == null ? {display: "none"} : {display: ""}}> {/*Se ha selezionato tutto mostra solo display*/}
-                    <Drumpad/>
+                    <Drumpad />
                 </div>
 
             </div>

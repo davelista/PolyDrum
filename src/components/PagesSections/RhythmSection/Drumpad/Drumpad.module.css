@@ -29,6 +29,11 @@
     height: 2.5rem;
 }
 
+.title:hover{
+    cursor: pointer;
+    color: var(--secondColor)
+}
+
 @media (max-width: 1366px) {
     .container{
         width:  100%;

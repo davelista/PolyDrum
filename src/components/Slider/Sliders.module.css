@@ -21,34 +21,30 @@
 /* bianco con alcuni px di bordo rosso*/
 
 .slider::-webkit-slider-thumb {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: darkred;
-    cursor: pointer;
-    transition: background .15s ease-in-out;
-}
-
-.slider::-webkit-slider-runnable-track {
-    width: 20px;
-    height: 20px;
-    border: 0;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background .15s ease-in-out;
-}
-.slider::-webkit-slider-runnable-track {
     -webkit-appearance: none;
-    width: 20px;
-    height: 20px;
-    border: 0;
+    width: 25px;
+    height: 25px;
+    border: 3px solid darkred;
     border-radius: 50%;
     cursor: pointer;
     transition: background .15s ease-in-out;
+    margin-top: -7px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    background-color: white;
 }
 
-.slider::-webkit-progress-value{
-    background: red;
+.slider::-webkit-slider-runnable-track {
+    height: 10px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    background: darkred;
+
+}
+
+
+/*MOZILLA*/
+.slider::-moz-range-track{
+    background-color: white;
     height: 10px;
     border-radius: 5px;
 }
@@ -56,24 +52,20 @@
 .slider::-moz-range-thumb {
     width: 20px;
     height: 20px;
-    border: 0;
+    border: 3px solid darkred;
     border-radius: 50%;
     cursor: pointer;
     transition: background .15s ease-in-out;
+    background-color: white;
 }
 
 .slider::-moz-range-progress{
-    background: red;
+    background: darkred;
     height: 10px;
     border-radius: 5px;
 }
 
-.slider::-webkit-progress-value{
-    background: red;
-    height: 10px;
-    border-radius: 5px;
-}
-/*FINE PALLINO*/
+/*FINE MOZILLA*/
 
 .value {
     display: inline-block;

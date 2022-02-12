@@ -1,6 +1,5 @@
 import StepButton from "./StepButton/StepButton";
 import HorizontalSlider from "./Slider/HorizontalSlider";
-import SampleLine from "./SampleLine/SampleLine";
 import Dropdown from "./Dropdown/Dropdown";
 import CheckBox from "./CheckBox/CheckBox";
 import NumberControl from "./NumberControl/NumberControl";
@@ -20,6 +19,6 @@ import InstructionPopup from "./Popup/InstructionPopup";
 import DetailsPopup from "./Popup/DetailsPopup";
 import CustomInstrument from "./CustomInstrument/CustomInstrument";
 
-export {StepButton, HorizontalSlider, SampleLine, Dropdown, CheckBox,
+export {StepButton, HorizontalSlider, Dropdown, CheckBox,
     NumberControl, Drumpad, Button, VerticalSlider,SettingsSection, RhythmSection, StepButtonsList, ButtonsList,
     SlidersContainer, PlayRhythm, Display, Popup, InstructionPopup, DetailsPopup, CustomInstrument, WetControl}

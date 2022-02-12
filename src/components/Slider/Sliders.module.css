@@ -5,7 +5,8 @@
     align-items: center;
     justify-content: center;
 }
-
+/*  a sinistra bianco e a destra darkred, però invertirei le due cose
+    così più alto diventa più rosso*/
 .slider {
     -webkit-appearance: none;
     width: 100%;
@@ -17,10 +18,13 @@
 }
 
 /*PALLINO*/
+/* bianco con alcuni px di bordo rosso*/
+
 .slider::-webkit-slider-thumb {
     width: 20px;
     height: 20px;
     border-radius: 50%;
+    background-color: darkred;
     cursor: pointer;
     transition: background .15s ease-in-out;
 }

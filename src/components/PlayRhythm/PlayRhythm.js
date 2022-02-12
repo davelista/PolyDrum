@@ -8,7 +8,7 @@ const PlayRhythm = (props) => {
     const {play, tempo, volume, mute, item, noteDict, numStepButtons} = props;
     const [steps, setSteps] = useSteps(item, numStepButtons);
     let bpm = tempo * (item.denominator/4);
-    let newVolume = volume/10
+    let newVolume = volume/25
     return (
 
         <>
@@ -16,7 +16,7 @@ const PlayRhythm = (props) => {
                   isMuted={mute || volume === 0}>
                 {steps.map((x, i) => {
                     return (<Track
-                        volume={item.instruments[i].volume/10} /*divido per 25 altrimenti gracchia troppo*/
+                        volume={item.instruments[i].volume/5} /*divido per 25 altrimenti gracchia troppo*/
                         mute={item.instruments[i].volume === 0 || mute}
                         steps={x}
 

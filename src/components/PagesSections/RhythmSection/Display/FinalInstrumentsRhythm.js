@@ -70,7 +70,7 @@ const FinalInstrumentsRhythm = (props) => {
 
     return (
         <>
-            <div className={styles.columnTitles}>
+            <div className={styles.columnTitles} style={appData.selectedRhythm.number == null ? {marginTop: "8%"} : null}>
                 {appData.samplesList.map((x) => {
                     return <>
                         <div className={styles.title} style={appData.selectedRhythm.number == null ? {height: "3rem"} : null}>

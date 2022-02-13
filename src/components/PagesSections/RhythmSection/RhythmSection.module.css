@@ -8,6 +8,30 @@
     margin-top: 0.5rem;
 
 }
+
+.sounds{
+    display: flex;
+    flex-flow: row nowrap;
+
+}
+
+.setSounds{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.arrow{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.arrow:hover{
+    color: var(--secondColor);
+    cursor: pointer;
+}
+
 /* drumpad section */
 .drumpad {
     height: 50%;

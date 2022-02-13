@@ -26,7 +26,7 @@ export function useAppContext() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [load, setLoad] = useState(false);
     const [effect, setEffect] = useState(null);
-
+    let indexOfSounds = [];
 
     /*JSON*/
     const [db, setDb] = useState([{
@@ -128,6 +128,8 @@ export function useAppContext() {
             wetList,
             patternList,
             patternsPreset,
+
+
 
             math:{
                 lcm: lcm,

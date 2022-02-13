@@ -21,23 +21,6 @@
     flex-direction: row;
 }
 
-.setSounds{
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-}
-
-.arrow{
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-}
-
-.arrow:hover{
-    color: var(--secondColor);
-    cursor: pointer;
-}
-
 .title{
     display: flex;
     flex-direction:row;

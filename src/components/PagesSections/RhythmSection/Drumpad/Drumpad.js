@@ -24,30 +24,18 @@ const playItem = (item, appData, indexNoteDict) => {
 }
 
 const Drumpad = (props) => {
+    const {noteDict, indexNoteDict, onChangeNoteDict, onChangeIndexNoteDict} = props
     const appData = useContext(AppContext);
     /*const noteDict = ["A1", "A#1", "B1", "C1", "C#1", "D1", "D#1", "E1"]*/
     const [notes, setNotes] = useState(null);
-    const [indexNoteDict, setIndexNoteDict] = useState(0);
-    const [noteDict, setNoteDict] = useState(Object.keys(appData.noteDict[0]))
 
-    useEffect(() => {
-        setNoteDict(Object.keys(appData.noteDict[indexNoteDict]));
-    }, [indexNoteDict])
+
 
     return (
         <>
             <div className={styles.container}>
 
-                <div className={styles.setSounds}>Set of sounds:
-                    {indexNoteDict > 0 ? <div className={styles.arrow}><IoIosArrowBack onClick={() => {
-                        setIndexNoteDict(indexNoteDict - 1);
-                    }}/></div> : null} { indexNoteDict + 1 }
-                    {
-                        indexNoteDict < appData.noteDict.length - 1  ?  <div className={styles.arrow}><IoIosArrowForward onClick={() => {
-                            setIndexNoteDict(indexNoteDict + 1);
-                        }}/></div> : null}
 
-                </div>
 
                 {appData.selectedRhythm.number !== null ? playItem(appData.selectedRhythm.item, appData, indexNoteDict) :
                     appData.selectedRhythm.item.length === appData.rhythmsList.item.length ?

@@ -21,7 +21,7 @@ const PlayRhythm = (props) => {
 
         <>
             <Song isPlaying={play.value } bpm={bpm} volume={newVolume}
-                  isMuted={mute || volume === 0}>
+                  isMuted={mute || newVolume === 0}>
                 {steps.map((x, i) => {
                     return (<Track
                         volume={item.instruments[i].volume/5} /*divido per 25 altrimenti gracchia troppo*/

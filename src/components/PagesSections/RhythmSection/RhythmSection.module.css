@@ -12,19 +12,26 @@
 .sounds{
     display: flex;
     flex-flow: row nowrap;
-
+    align-items: center;
 }
 
 .setSounds{
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+
 }
 
 .arrow{
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    border: 2px solid var(--secondColor);
+    background: var(--thirdColor);
+    border-radius: 5px;
+    color: black;
+    height: 27px;
+    margin: 0 0.5rem;
 }
 
 .arrow:hover{

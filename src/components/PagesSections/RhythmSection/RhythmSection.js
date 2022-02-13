@@ -26,11 +26,11 @@ const RhythmSection = (props) => {
                     <div className={styles.setSounds}>Set of sounds:
                         {indexNoteDict > 0 ? <div className={styles.arrow}><IoIosArrowBack onClick={() => {
                             setIndexNoteDict(indexNoteDict - 1);
-                        }}/></div> : <div style={{visibility: "hidden"}}><IoIosArrowBack/></div>} { indexNoteDict + 1 }
+                        }}/></div> : <div className={styles.arrow} style={{visibility: "hidden"}}><IoIosArrowBack/></div>} { indexNoteDict + 1 }
                         {
                             indexNoteDict < appData.noteDict.length - 1  ?  <div className={styles.arrow}><IoIosArrowForward onClick={() => {
                                 setIndexNoteDict(indexNoteDict + 1);
-                            }}/></div> : <div style={{visibility: "hidden"}}><IoIosArrowForward/></div>}
+                            }}/></div> : <div className={styles.arrow} style={{visibility: "hidden"}}><IoIosArrowForward/></div>}
 
                     </div>
                     <div

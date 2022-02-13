@@ -5,7 +5,7 @@
     align-items: center;
     background: transparent;
     padding: 1% 1%;
-    margin-top: 0.5rem;
+    margin-top: 0.1rem;
 
 }
 
@@ -27,16 +27,19 @@
     flex-flow: row nowrap;
     align-items: center;
     border: 2px solid var(--secondColor);
-    background: var(--thirdColor);
+    background: var(--fourthColor);
     border-radius: 5px;
-    color: black;
+    color: var(--thirdColor);
     height: 27px;
     margin: 0 0.5rem;
+    box-shadow: 0 2px 2px 1px rgba(220, 220, 220, 0.6);
 }
 
 .arrow:hover{
-    color: var(--secondColor);
+    background-color: var(--thirdColor);
     cursor: pointer;
+    color: var(--fourthColor);
+    box-shadow: 0 2px 2px 1px rgba(220, 220, 220, 0.6);
 }
 
 /* drumpad section */

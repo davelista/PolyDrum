@@ -19,7 +19,7 @@
             true,
             true
           ],
-          "volume": 50
+          "volume": 30
         },
         {
           "name": "808",
@@ -28,7 +28,7 @@
             true,
             null
           ],
-          "volume": 2
+          "volume": 10
         },
         {
           "name": "Snare",
@@ -54,7 +54,7 @@
             null,
             true
           ],
-          "volume": 40
+          "volume": 30
         },
         {
           "name": "OpenHats",
@@ -89,7 +89,7 @@
           "pad": [
             null
           ],
-          "volume": 2
+          "volume": 10
         },
         {
           "name": "Vox",
@@ -208,14 +208,6 @@
         {
           "name": "Kick",
           "pad": [
-            true,
-            null,
-            null,
-            true,
-            true,
-            null,
-            null,
-            true
           ],
           "volume": 50
         },
@@ -235,7 +227,7 @@
             null,
             true
           ],
-          "volume": 50
+          "volume": 10
         },
         {
           "name": "Clap",
@@ -262,11 +254,20 @@
             true,
             true
           ],
-          "volume": 50
+          "volume": 30
         },
         {
           "name": "Percs",
-          "pad": [],
+          "pad": [
+            true,
+            null,
+            null,
+            true,
+            true,
+            null,
+            null,
+            true
+          ],
           "volume": 50
         },
         {
@@ -303,7 +304,7 @@
             true,
             true
           ],
-          "volume": 50
+          "volume": 40
         },
         {
           "name": "808",
@@ -404,7 +405,7 @@
             true,
             true
           ],
-          "volume": 50
+          "volume": 10
         },
         {
           "name": "808",

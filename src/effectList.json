@@ -3,9 +3,6 @@
     "value": "autoFilter"
   },
   {
-    "value": "autoPanner"
-  },
-  {
     "value": "autoWah"
   },
   {
@@ -19,12 +16,6 @@
   },
   {
     "value": "freeverb"
-  },
-  {
-  "value": "panVol"
-  },
-  {
-    "value": "tremolo"
   }
 ]
 

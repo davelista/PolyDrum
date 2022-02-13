@@ -22,7 +22,7 @@ const RhythmSection = (props) => {
                 <Display/>
 
 
-                <div className={styles.sounds}>
+                <div className={styles.sounds} style={appData.selectedRhythm.number == null ? {marginTop: '2rem'} : null}>
                     <div className={styles.setSounds}>Set of sounds:
                         {indexNoteDict > 0 ? <div className={styles.arrow}><IoIosArrowBack onClick={() => {
                             setIndexNoteDict(indexNoteDict - 1);

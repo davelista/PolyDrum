@@ -13,7 +13,9 @@ const PlayRhythm = (props) => {
 
     useEffect(() =>{
         setSample(noteDict[indexNoteDict])
-    }, [indexNoteDict])
+
+    }, [indexNoteDict, sample])
+
 
     return (
 
@@ -38,7 +40,7 @@ const PlayRhythm = (props) => {
                             }}
                         />
 */}
-                        <CustomInstrument samples={sample} />
+                        <CustomInstrument samples={sample}/>
                     </Track>)
                 })}
 

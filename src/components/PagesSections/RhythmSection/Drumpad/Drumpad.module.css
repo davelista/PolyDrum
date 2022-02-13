@@ -4,7 +4,7 @@
     padding: 1%;
     background: url("../../../../assets/logo.png") center right no-repeat;
     background-size: 150px 168px;
-    max-height: 20rem;
+    max-height: 90%;
     overflow: hidden;
 
 }
@@ -19,6 +19,23 @@
 .stepButton{
     display: flex;
     flex-direction: row;
+}
+
+.setSounds{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.arrow{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.arrow:hover{
+    color: var(--secondColor);
+    cursor: pointer;
 }
 
 .title{

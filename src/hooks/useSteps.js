@@ -1,15 +1,15 @@
 import {useEffect, useState} from 'react';
 
-const useSteps = (item, length) => {
+const useSteps = (item, length, noteDict) => {
     const [steps, setSteps] = useState([])
 
-    const noteDict = ["A1", "A#1", "B1", "C1", "C#1", "D1", "D#1", "E1"]
+
     useEffect(() => {
         /*if(item !== undefined && item.instruments !== undefined) {
             updateSteps();
         }*/
         updateSteps()
-    }, [item, length]);
+    }, [item, length, noteDict]);
 
     const updateSteps = () => { /* crea steps per poter settare singolarmente tutti i volumi*/
         let temp = [];

@@ -1,14 +1,20 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Effect, Song, Track} from "reactronica";
 import {useSteps} from "../../hooks";
 import {CustomInstrument} from "../index";
 
 const PlayRhythm = (props) => {
 
-    const {play, tempo, volume, mute, item, noteDict, numStepButtons} = props;
-    const [steps, setSteps] = useSteps(item, numStepButtons);
+    const {play, tempo, volume, mute, item, noteDict, numStepButtons, indexNoteDict} = props;
+    const [steps, setSteps] = useSteps(item, numStepButtons, Object.keys(noteDict[indexNoteDict]));
+    const [sample, setSample] = useState(noteDict[indexNoteDict])
     let bpm = tempo * (item.denominator/4);
     let newVolume = volume/25
+
+    useEffect(() =>{
+        setSample(noteDict[indexNoteDict])
+    }, [indexNoteDict])
+
     return (
 
         <>
@@ -32,7 +38,7 @@ const PlayRhythm = (props) => {
                             }}
                         />
 */}
-                        <CustomInstrument samples={noteDict[0]} />
+                        <CustomInstrument samples={sample} />
                     </Track>)
                 })}
 

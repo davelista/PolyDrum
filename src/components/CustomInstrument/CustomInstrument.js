@@ -9,6 +9,9 @@ const CustomInstrument = React.memo(props => {
                 <Instrument
                     type="sampler"
                     samples={samples}
+                    onLoad={(buffers) => {
+                        // Runs when all samples are loaded
+                    }}
                 />
 
             </>

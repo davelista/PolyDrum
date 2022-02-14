@@ -8,9 +8,9 @@ PolyDrum is characterized by an user-friendly GUI, to semplify the creative proc
 
 You can see the final result at the link: https://polydrum.davidelista.com.
 
-Demo: https://youtu.be/TCcaa5_AfbI
+Demo: https://youtu.be/ZDzpMLMNAI4
 
-Find out more here: https://docs.google.com/presentation/d/1bH37KyKsFvFZ2wo8crd3C_4BsbbjnIMHdvlArrXP7c8/edit?usp=sharing
+Find out more here: https://docs.google.com/presentation/d/1it-jrwA-6I0aFz6QtJdZe-6kwr1KZusp_ZqaybgX2p4/edit?usp=sharing
 
 *This version is avaiable only for desktop device.*
 

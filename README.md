@@ -18,11 +18,9 @@ Find out more here: https://docs.google.com/presentation/d/1it-jrwA-6I0aFz6QtJdZ
 
 *This version is avaiable only for desktop device.*
 
-## How to run
 
 ***
-
-# To dowload: Getting Started
+## How to run
 
 Clone the repo with
 > git clone https://github.com/davelista/PolyDrum.git

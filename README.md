@@ -1,10 +1,14 @@
-    # PolyDrum
+# PolyDrum
+
 <p align="center">
   <img src="logo-black.png">
 </p>
 
-PolyDrum is a polymetric drum machine, implemented in React.js. Its peculiarity is a display to clearly see the final rhythm. 
-PolyDrum is characterized by an user-friendly GUI, to semplify the creative process.
+## What is PolyDrum?
+
+PolyDrum is a polymetric drum machine, designed to provide a clear and intuitive experience for creating complex rhythms. Its standout feature is a display that allows users to immediately visualize the final rhythm, making it easier to understand and manipulate polymetric structures.
+
+With its user-friendly graphical interface, PolyDrum simplifies the creative process, enabling users to explore and experiment with polyrhythms and polymeters in a simple and effective way.
 
 You can see the final result at the link: https://polydrum.davidelista.com.
 
@@ -13,6 +17,8 @@ Demo: https://youtu.be/ZDzpMLMNAI4
 Find out more here: https://docs.google.com/presentation/d/1it-jrwA-6I0aFz6QtJdZe-6kwr1KZusp_ZqaybgX2p4/edit?usp=sharing
 
 *This version is avaiable only for desktop device.*
+
+## How to run
 
 ***
 
